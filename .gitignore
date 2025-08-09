@@ -1,0 +1,11 @@
+api_secrets.*
+.env
+myenv
+venv
+rpi-rgb-led-matrix
+.ipynb_checkpoints
+gtfs_filtered
+src/led-matrix.csv
+led-matrix.csv
+gtfs_full
+rnv_statuscodes.csv
