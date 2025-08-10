@@ -2,4 +2,4 @@ pandas
 numpy
 python-dotenv
 requests
-
+xmltodict
