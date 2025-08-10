@@ -6,4 +6,4 @@ source /home/robin/Documents/github/rnv-train-monitor/myenv/bin/activate
 
 cd /home/robin/Documents/github/rnv-train-monitor/src/rnv
 
-sudo python ./rnv_compute_statuscodes.py
+sudo python ./rnv_compute_animationcodes.py

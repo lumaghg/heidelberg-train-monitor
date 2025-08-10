@@ -1,3 +1,3 @@
 # init display connection
 # startup animation
-# animate statuscodes once a minute
+# animate animationcodes once a minute

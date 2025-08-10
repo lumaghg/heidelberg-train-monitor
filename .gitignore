@@ -8,4 +8,4 @@ gtfs_filtered
 src/led-matrix.csv
 led-matrix.csv
 gtfs_full
-rnv_statuscodes.csv
+rnv_animationcodes.csv
