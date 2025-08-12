@@ -21,26 +21,33 @@ class DisplayCSV(MatrixBase):
 
     def run(self):
         offset_canvas = self.matrix.CreateFrameCanvas()
-
-
         # loop
 
         while True:
             try:
-                led_matrix = pd.read_csv('led-matrix.csv', header=None, dtype=str, index_col=None)
+                
+                # background: 
+                
+                df_background_lighting = pd.read_csv('./background/background_lighting.csv', dtype=str)
+                
+                df_background_lighting = df_background_lighting.reset_index()  # make sure indexes pair with number of rows
+                
+                print(df_background_lighting.head(5))
 
-                # iterate over every cell
-                no_rows, no_columns = led_matrix.shape
-
-                for y in range(0,no_rows):
-                    for x in range(0,no_columns):
-                        color_hex = led_matrix.at[y,x]                    
-                        color_rgb = ImageColor.getcolor(f"#{color_hex}", "RGB")
-                        offset_canvas.SetPixel(x, y, color_rgb[0], color_rgb[1], color_rgb[2])      
+                for index, row in df_background_lighting.iterrows():
+                    led = row['led']
+                    color_hex = row['color']
+                
+                    x = int(led.split("-")[0])
+                    y = int(led.split("-")[1])
+                                   
+                    color_rgb = ImageColor.getcolor(f"#{color_hex}", "RGB")
+                    offset_canvas.SetPixel(x, y, color_rgb[0], color_rgb[1], color_rgb[2])      
                 offset_canvas = self.matrix.SwapOnVSync(offset_canvas)
 
                 time.sleep(2)
-            except Exception:
+            except Exception as e:
+                print(e)
                 continue
            
 
