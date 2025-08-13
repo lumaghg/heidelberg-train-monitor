@@ -186,7 +186,7 @@ def compute_animation_color(category):
     
     if category in ['FLX']:
         # Color of Flixtrains
-        return "6AFA9A"
+        return "00FF55"
     
     if category in ['NJ']:
         # Color of Nightjets, maybe needs to be lightened to be visible
