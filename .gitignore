@@ -11,3 +11,4 @@ gtfs_full
 rnv_animationcodes.csv
 temp.csv
 temp.*
+__pycache__
