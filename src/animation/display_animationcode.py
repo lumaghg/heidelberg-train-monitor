@@ -44,6 +44,15 @@ class DisplayCSV(MatrixBase):
                     color_rgb = ImageColor.getcolor(f"#{color_hex}", "RGB")
                     offset_canvas.SetPixel(x, y, color_rgb[0], color_rgb[1], color_rgb[2])      
                 offset_canvas = self.matrix.SwapOnVSync(offset_canvas)
+                
+                # process animationcodes
+                
+                df_statuscodes = pd.read_csv('../db/db_animationcodes.csv', dtype=str)
+                
+                
+                
+                
+                
 
                 time.sleep(2)
             except Exception as e:
