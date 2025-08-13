@@ -1,6 +1,6 @@
 statuscode,readable,leds_primary,leds_secondary
-HDHBF_northwest,HDHBF_northwest,26-13&27-12&28-11,29-10
-HDHBF_southeast,HDHBF_southeast,29-10&28-11&27-12,26-13
+HDHBF_northwest,HDHBF_northwest,,
+HDHBF_southeast,HDHBF_southeast,,
 west_1_outbound,west_1_outbound,,
 west_1_inbound,west_1_inbound,,
 west_2_outbound,west_2_outbound,,
