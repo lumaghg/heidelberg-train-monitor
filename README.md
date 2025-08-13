@@ -11,3 +11,10 @@ primaryColor and secondaryColor are the colors which are used to light the prima
 1. Straßenbahnen Richtungsinvariant implementieren => Hbf Süd als 4272 für alle Steige statt 427234 / 427202 / 427201 / 427211 / 427212
 2. Stop times im preprocess_static filtern nach ids, deren services tatsächlich auch am heutigen Tag verkehren, um den Rechenaufwand zu verringern
 3. Live DB Timetable updates
+
+
+
+
+Geschwindigkeiten:
+
+Auf diagonalen Strcken und auf dem Verbundungsstück Pfaffengrund 2 Pixel pro Tick, auf der langen geradeaus Strecke Kirchheim / Rohrbach 3 Pixel pro Tick, S-Bahn fährt erst ab Bahnhof Kirchheim Rohrbach mit Beschleunigung 3 Ticks
