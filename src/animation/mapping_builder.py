@@ -153,6 +153,7 @@ class DisplayCSV(MatrixBase):
             current_x, current_y = letUserInputPixels(True, current_x, current_y, offset_canvas)
             current_x, current_y = letUserInputPixels(False, current_x, current_y, offset_canvas)
             df_mapping.to_csv('db_rfv_mapping.csv', index=False)    
+            print('\n\n')
                 
                 
                 
