@@ -31,8 +31,6 @@ class DisplayCSV(MatrixBase):
                 df_background_lighting = pd.read_csv('../background/background_lighting.csv', dtype=str)
                 
                 df_background_lighting = df_background_lighting.reset_index()  # make sure indexes pair with number of rows
-                
-                print(df_background_lighting.head(5))
 
                 for index, row in df_background_lighting.iterrows():
                     led = row['led']
@@ -43,6 +41,7 @@ class DisplayCSV(MatrixBase):
                                    
                     color_rgb = ImageColor.getcolor(f"#{color_hex}", "RGB")
                     offset_canvas.SetPixel(x, y, color_rgb[0], color_rgb[1], color_rgb[2])      
+                
                 
                 # process animationcodes
 
@@ -80,8 +79,8 @@ class DisplayCSV(MatrixBase):
                     pixels_xy = primary_leds.split("&")
                     
                     for pixel in pixels_xy:
-                        x = pixel[0]
-                        y = pixel[1]
+                        x = int(pixel.split("-")[0])
+                        y = int(pixel.split("-")[1])
                         
                         offset_canvas.SetPixel(x, y, primary_color_rgb[0], primary_color_rgb[1], primary_color_rgb[2])   
                         
@@ -90,14 +89,14 @@ class DisplayCSV(MatrixBase):
                     pixels_xy = secondary_leds.split("&")
                     
                     for pixel in pixels_xy:
-                        x = pixel[0]
-                        y = pixel[1]
+                        x = int(pixel.split("-")[0])
+                        y = int(pixel.split("-")[1])
                         
                         offset_canvas.SetPixel(x, y, secondary_color_rgb[0], secondary_color_rgb[1], secondary_color_rgb[2])   
                 
+                df_animationcodes['animationcode'].map(process_animationcodes)
+                
                 offset_canvas = self.matrix.SwapOnVSync(offset_canvas)
-                
-                
                 
 
                 time.sleep(2)
