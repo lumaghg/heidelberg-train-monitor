@@ -16,9 +16,9 @@ import platform
 import sys
 
 
-MAPPING_PATH = 'db_rfv_mapping.csv'
+MAPPING_PATH = 'db_snv_mapping.csv'
 
-NO_PRIMARY_LEDS = 3
+NO_PRIMARY_LEDS = 2
 NO_SECONDARY_LEDS = 1
 
 # Plattform erkennen
@@ -91,7 +91,7 @@ class DisplayCSV(MatrixBase):
             leds_secondary = df_mapping.at[index, 'leds_secondary']
             
             # skip already filled rows
-            if not pd.isna(leds_primary) and not pd.isna(leds_secondary):
+            if not pd.isna(leds_primary) or not pd.isna(leds_secondary):
                 continue
 
 
@@ -152,7 +152,7 @@ class DisplayCSV(MatrixBase):
                 
             current_x, current_y = letUserInputPixels(True, current_x, current_y, offset_canvas)
             current_x, current_y = letUserInputPixels(False, current_x, current_y, offset_canvas)
-            df_mapping.to_csv('db_rfv_mapping.csv', index=False)    
+            df_mapping.to_csv(MAPPING_PATH, index=False)    
             print('\n\n')
                 
                 

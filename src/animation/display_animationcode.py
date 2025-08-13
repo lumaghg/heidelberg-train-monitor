@@ -48,6 +48,7 @@ class DisplayCSV(MatrixBase):
                 df_animationcodes = pd.read_csv('../db/db_animationcodes.csv', dtype=str)
 
                 df_db_rfv_mapping = pd.read_csv('./db_rfv_mapping.csv', dtype=str)
+                df_db_snv_mapping = pd.read_csv('./db_snv_mapping.csv', dtype=str)
 
 
                 def process_animationcodes(animationcode: str):
@@ -61,7 +62,7 @@ class DisplayCSV(MatrixBase):
                     
                     df_mapping = None
                     if type == 'DB_SNV':
-                        return
+                        df_mapping = df_db_snv_mapping
                     elif type == 'DB_RFV':
                         df_mapping = df_db_rfv_mapping
                     else:
@@ -76,23 +77,25 @@ class DisplayCSV(MatrixBase):
                     
                     primary_leds:str = mapping_row['leds_primary']
                     
-                    pixels_xy = primary_leds.split("&")
-                    
-                    for pixel in pixels_xy:
-                        x = int(pixel.split("-")[0])
-                        y = int(pixel.split("-")[1])
+                    if not pd.isna(primary_leds):
+                        pixels_xy = primary_leds.split("&")
                         
-                        offset_canvas.SetPixel(x, y, primary_color_rgb[0], primary_color_rgb[1], primary_color_rgb[2])   
+                        for pixel in pixels_xy:
+                            x = int(pixel.split("-")[0])
+                            y = int(pixel.split("-")[1])
+                            
+                            offset_canvas.SetPixel(x, y, primary_color_rgb[0], primary_color_rgb[1], primary_color_rgb[2])   
                         
                         
                     secondary_leds:str = mapping_row['leds_secondary']
-                    pixels_xy = secondary_leds.split("&")
                     
-                    for pixel in pixels_xy:
-                        x = int(pixel.split("-")[0])
-                        y = int(pixel.split("-")[1])
-                        
-                        offset_canvas.SetPixel(x, y, secondary_color_rgb[0], secondary_color_rgb[1], secondary_color_rgb[2])   
+                    if not pd.isna(secondary_leds):
+                        pixels_xy = secondary_leds.split("&")
+                        for pixel in pixels_xy:
+                            x = int(pixel.split("-")[0])
+                            y = int(pixel.split("-")[1])
+                            
+                            offset_canvas.SetPixel(x, y, secondary_color_rgb[0], secondary_color_rgb[1], secondary_color_rgb[2])   
                 
                 df_animationcodes['animationcode'].map(process_animationcodes)
                 
