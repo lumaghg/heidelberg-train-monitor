@@ -11,7 +11,7 @@ west_4_outbound,west_4_outbound,24-16,24-15
 west_4_inbound,west_4_inbound,24-15,24-16
 west_5_outbound,west_5_outbound,24-17,24-16
 west_5_inbound,west_5_inbound,24-16,24-17
-west_6_outbound,west_6_outbound,24-19,24-17
+west_6_outbound,west_6_outbound,24-18,24-17
 west_6_inbound,west_6_inbound,24-17,24-18
 west_7_outbound,west_7_outbound,24-19,24-18
 west_7_inbound,west_7_inbound,24-18,24-19
