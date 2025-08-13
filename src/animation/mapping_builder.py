@@ -16,9 +16,9 @@ import platform
 import sys
 
 
-MAPPING_PATH = 'db_snv_mapping.csv'
+MAPPING_PATH = 'db_rfv_mapping.csv'
 
-NO_PRIMARY_LEDS = 2
+NO_PRIMARY_LEDS = 3
 NO_SECONDARY_LEDS = 1
 
 # Plattform erkennen
