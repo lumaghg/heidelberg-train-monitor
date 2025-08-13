@@ -4,3 +4,4 @@ python-dotenv
 requests
 xmltodict
 opencv-python
+pillow
