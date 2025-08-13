@@ -18,3 +18,5 @@ primaryColor and secondaryColor are the colors which are used to light the prima
 Geschwindigkeiten:
 
 Auf diagonalen Strcken und auf dem Verbundungsstück Pfaffengrund 2 Pixel pro Tick, auf der langen geradeaus Strecke Kirchheim / Rohrbach 3 Pixel pro Tick, S-Bahn fährt erst ab Bahnhof Kirchheim Rohrbach mit Beschleunigung 3 Ticks
+
+/home/robin/cronlogs/htm_display_codes.log

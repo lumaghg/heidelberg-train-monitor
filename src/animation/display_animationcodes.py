@@ -102,7 +102,7 @@ class DisplayCSV(MatrixBase):
                 offset_canvas = self.matrix.SwapOnVSync(offset_canvas)
                 
 
-                time.sleep(1)
+                time.sleep(15)
             except Exception as e:
                 print(e)
                 continue
