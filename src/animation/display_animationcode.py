@@ -43,13 +43,59 @@ class DisplayCSV(MatrixBase):
                                    
                     color_rgb = ImageColor.getcolor(f"#{color_hex}", "RGB")
                     offset_canvas.SetPixel(x, y, color_rgb[0], color_rgb[1], color_rgb[2])      
-                offset_canvas = self.matrix.SwapOnVSync(offset_canvas)
                 
                 # process animationcodes
+
+                df_animationcodes = pd.read_csv('../db/db_animationcodes.csv', dtype=str)
+
+                df_db_rfv_mapping = pd.read_csv('./db_rfv_mapping.csv', dtype=str)
+
+
+                def process_animationcodes(animationcode: str):
+                    type, statuscode, colors = animationcode.split(":")
+                    
+                    primary_color_hex = colors.split("_")[0]
+                    primary_color_rgb = ImageColor.getcolor(f"#{primary_color_hex}", "RGB")
+                    
+                    secondary_color_hex = colors.split("_")[1]
+                    secondary_color_rgb = ImageColor.getcolor(f"#{secondary_color_hex}", "RGB")
+                    
+                    df_mapping = None
+                    if type == 'DB_SNV':
+                        return
+                    elif type == 'DB_RFV':
+                        df_mapping = df_db_rfv_mapping
+                    else:
+                        return
+                    
+                    applicable_mapping_rows = df_mapping[df_mapping['statuscode'] == statuscode].reset_index(drop=True)
+                    
+                    if len(applicable_mapping_rows) == 0:
+                        return
+
+                    mapping_row = applicable_mapping_rows.iloc[0]
+                    
+                    primary_leds:str = mapping_row['leds_primary']
+                    
+                    pixels_xy = primary_leds.split("&")
+                    
+                    for pixel in pixels_xy:
+                        x = pixel[0]
+                        y = pixel[1]
+                        
+                        offset_canvas.SetPixel(x, y, primary_color_rgb[0], primary_color_rgb[1], primary_color_rgb[2])   
+                        
+                        
+                    secondary_leds:str = mapping_row['leds_secondary']
+                    pixels_xy = secondary_leds.split("&")
+                    
+                    for pixel in pixels_xy:
+                        x = pixel[0]
+                        y = pixel[1]
+                        
+                        offset_canvas.SetPixel(x, y, secondary_color_rgb[0], secondary_color_rgb[1], secondary_color_rgb[2])   
                 
-                df_statuscodes = pd.read_csv('../db/db_animationcodes.csv', dtype=str)
-                
-                
+                offset_canvas = self.matrix.SwapOnVSync(offset_canvas)
                 
                 
                 
