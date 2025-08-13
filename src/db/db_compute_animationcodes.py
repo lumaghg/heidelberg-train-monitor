@@ -177,7 +177,7 @@ df_timetable['animation_class'] = df_timetable['category'].map(compute_animation
 def compute_animation_color(category):
     if category in ['S']:
         # Color of the S-Bahn Logo
-        return "03FD10"
+        return "49974A"
     
     # maybe change RE to bwegt yellow color
     if category in ['RE', 'RB']:
