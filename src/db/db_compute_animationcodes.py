@@ -171,18 +171,18 @@ df_timetable['animation_class'] = df_timetable['category'].map(compute_animation
 # each category receives a (not unique) color, which is used to display the respective trip.
 # The color will later be included into the animationcode in two ways, the original color and a dimmed color for the trail
 
-# In[7]:
+# In[ ]:
 
 
 def compute_animation_color(category):
     if category in ['S']:
         # Color of the S-Bahn Logo
-        return '308446'
+        return "5EFD89"
     
     # maybe change RE to bwegt yellow color
     if category in ['RE', 'RB']:
         # Color of DB Regional Trains (Verkehrsrot)
-        return 'E3131E'
+        return "FD1621"
     
     if category in ['FLX']:
         # Color of Flixtrains
@@ -190,15 +190,15 @@ def compute_animation_color(category):
     
     if category in ['NJ']:
         # Color of Nightjets, maybe needs to be lightened to be visible
-        return "2B2B81"
+        return "3D3DB3"
     
     if category in ['IC', 'ICE']:
         # White, like IC and ICE are painted <3
-        return 'FFFFFF'
+        return "FFFFFF"
     
     if category in ['RJ', 'RJX', 'TGV']:
         # Bright pink to signalize something special
-        return 'BF1F9F'
+        return "FC2DD2"
     
     # yellow for unknown train categories
     return 'F8FC00'
