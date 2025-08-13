@@ -48,6 +48,29 @@ else:
         finally:
             termios.tcsetattr(fd, termios.TCSADRAIN, old_settings)
         return ch.lower()
+    
+    
+    
+    
+# prepare base_overlay
+base_overlay = np.full((64,32), "000000")
+
+# backgrund lighting
+df_background_lighting = pd.read_csv('../background/background_lighting.csv', dtype=str)
+
+df_background_lighting = df_background_lighting.reset_index()  # make sure indexes pair with number of rows
+
+for index, row in df_background_lighting.iterrows():
+    led = row['led']
+    color_hex = row['color']
+    
+    x = int(led.split("-")[0])
+    y = int(led.split("-")[1])
+    
+    base_overlay[x,y] = color_hex
+    
+    
+    
 
 class DisplayCSV(MatrixBase):
     def __init__(self, *args, **kwargs):
@@ -97,10 +120,8 @@ class DisplayCSV(MatrixBase):
                                 current_y += 1
                                 
                             #print(current_x, current_y)
-                            
-                                
-                            # display new pixel
-                            overlay = np.full((64,32), "000000")
+                            overlay = base_overlay.copy()
+                            # current pixel
                             overlay[int(current_x), int(current_y)] = "FFFFFF"
                             
                             for x in range(overlay.shape[0]):
