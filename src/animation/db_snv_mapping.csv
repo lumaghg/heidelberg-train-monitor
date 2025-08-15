@@ -175,8 +175,8 @@ south_13_outbound,south_13_outbound,40-9,39-9
 south_13_inbound,south_13_inbound,39-9,40-9
 south_14_outbound,south_14_outbound,40-9,39-9
 south_14_inbound,south_14_inbound,39-9,40-9
-south_15_outbound,south_15_outbound,40-9,42-9
-south_15_inbound,south_15_inbound,42-9,41-9
+south_15_outbound,south_15_outbound,41-9,40-9
+south_15_inbound,south_15_inbound,40-9,41-9
 south_16_outbound,south_16_outbound,42-9,41-9
 south_16_inbound,south_16_inbound,41-9,42-9
 south_17_outbound,south_17_outbound,43-9,42-9
