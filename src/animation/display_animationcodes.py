@@ -10,13 +10,28 @@ import pandas as pd
 import numpy as np
 
 
+# prepare base_overlay
+base_overlay = np.full((64,32), "000000")
+
+# backgrund lighting
+df_background_lighting = pd.read_csv('../background/background_lighting.csv', dtype=str)
+
+df_background_lighting = df_background_lighting.reset_index()  # make sure indexes pair with number of rows
+
+for index, row in df_background_lighting.iterrows():
+    led = row['led']
+    color_hex = row['color']
+    
+    x = int(led.split("-")[0])
+    y = int(led.split("-")[1])
+    
+    base_overlay[x,y] = color_hex
+
+
 
 class DisplayCSV(MatrixBase):
     def __init__(self, *args, **kwargs):
         super(DisplayCSV, self).__init__(*args, **kwargs)
-
-
-
 
 
     def run(self):
@@ -27,21 +42,7 @@ class DisplayCSV(MatrixBase):
             try:
                 
                 # background: 
-                
-                df_background_lighting = pd.read_csv('../background/background_lighting.csv', dtype=str)
-                
-                df_background_lighting = df_background_lighting.reset_index()  # make sure indexes pair with number of rows
-
-                for index, row in df_background_lighting.iterrows():
-                    led = row['led']
-                    color_hex = row['color']
-                
-                    x = int(led.split("-")[0])
-                    y = int(led.split("-")[1])
-                                   
-                    color_rgb = ImageColor.getcolor(f"#{color_hex}", "RGB")
-                    offset_canvas.SetPixel(x, y, color_rgb[0], color_rgb[1], color_rgb[2])      
-                
+                overlay = base_overlay.copy()
                 
                 # process animationcodes
 
@@ -57,10 +58,7 @@ class DisplayCSV(MatrixBase):
                         type, statuscode, colors = animationcode.split(":")
                         
                         primary_color_hex = colors.split("_")[0]
-                        primary_color_rgb = ImageColor.getcolor(f"#{primary_color_hex}", "RGB")
-                        
                         secondary_color_hex = colors.split("_")[1]
-                        secondary_color_rgb = ImageColor.getcolor(f"#{secondary_color_hex}", "RGB")
                         
                         df_mapping = None
                         if type == 'DB_SNV':
@@ -86,7 +84,7 @@ class DisplayCSV(MatrixBase):
                                 x = int(pixel.split("-")[0])
                                 y = int(pixel.split("-")[1])
                                 
-                                offset_canvas.SetPixel(x, y, primary_color_rgb[0], primary_color_rgb[1], primary_color_rgb[2])   
+                                overlay[x,y] = primary_color_hex
                             
                             
                         secondary_leds:str = mapping_row['leds_secondary']
@@ -97,12 +95,18 @@ class DisplayCSV(MatrixBase):
                                 x = int(pixel.split("-")[0])
                                 y = int(pixel.split("-")[1])
                                 
-                                offset_canvas.SetPixel(x, y, secondary_color_rgb[0], secondary_color_rgb[1], secondary_color_rgb[2])   
+                                overlay[x,y] = secondary_color_hex
+                                
                     except Exception as e:
                         print(e)
                     
-                    
                 df_animationcodes['animationcode'].map(process_animationcode)    
+                
+                for x in range(overlay.shape[0]):
+                    for y in range(overlay.shape[1]):
+                        color_hex = overlay[x,y]                    
+                        color_rgb = ImageColor.getcolor(f"#{color_hex}", "RGB")
+                        offset_canvas.SetPixel(int(x), int(y), color_rgb[0], color_rgb[1], color_rgb[2])   
                 offset_canvas = self.matrix.SwapOnVSync(offset_canvas)
                 
                 
