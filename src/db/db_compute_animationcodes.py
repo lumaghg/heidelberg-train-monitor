@@ -180,9 +180,13 @@ def compute_animation_color(category):
         return "019704"
     
     # maybe change RE to bwegt yellow color
-    if category in ['RE', 'RB']:
+    if category in ['RB']:
         # Color of DB Regional Trains (Verkehrsrot)
         return "FD1621"
+    
+    if category in ['RE']:
+        # Color of DB Regional Trains (Verkehrsrot)
+        return "FFC924"
     
     if category in ['FLX']:
         # Color of Flixtrains
@@ -192,7 +196,7 @@ def compute_animation_color(category):
         # Color of Nightjets, maybe needs to be lightened to be visible
         return "3D3DB3"
     
-    if category in ['IC', 'ICE']:
+    if category in ['IC','EC', 'ICE']:
         # White, like IC and ICE are painted <3
         return "FFFFFF"
     

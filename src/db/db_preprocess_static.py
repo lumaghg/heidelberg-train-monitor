@@ -132,13 +132,16 @@ def process_timetable_stop(timetable_stop):
     
     # line (just for development)
     line = None
-    
-    if category in ["ICE", "IC", "FLX", "RJ", "RJX", "NJ", "TGV"]:
-        line = trip_label['@n']
-    elif 'ar' in timetable_stop:
-        line = timetable_stop['ar']['@l']
-    elif 'dp' in timetable_stop:
-        line = timetable_stop['dp']['@l']
+    try:
+        if category in ["ICE", "IC", "FLX", "RJ", "RJX", "NJ", "TGV"]:
+            line = trip_label['@n']
+        elif 'ar' in timetable_stop:
+            line = timetable_stop['ar']['@l']
+        elif 'dp' in timetable_stop:
+            line = timetable_stop['dp']['@l']
+    except Exception as e:
+        print(e) 
+        
             
     timetable_row = pd.DataFrame(data={'category':[category], 'line': [line], 'arrival_dbdatetime': [arrival_dbdatetime], 'arrival_path':[arrival_path], 'departure_dbdatetime':[departure_dbdatetime], 'departure_path':[departure_path]})
     return timetable_row
