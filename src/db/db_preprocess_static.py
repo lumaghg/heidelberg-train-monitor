@@ -13,7 +13,7 @@
 
 # ### helper functions for handling db dates
 
-# In[5]:
+# In[1]:
 
 
 import datetime
@@ -58,7 +58,7 @@ print(DBDateToDate("250810"))
 print(DBDatetimeToDatetime("2508101222"))
 
 
-# In[6]:
+# In[2]:
 
 
 # download all 23 available timeslots for the day
@@ -102,49 +102,51 @@ for hour in range(1,24):
 # 
 # now that we have saved all the xmls we need, we can go through them one by one, extract the relevant attributes and save them in a dataframe 
 
-# In[7]:
+# In[3]:
 
 
 import pandas as pd
 
 def process_timetable_stop(timetable_stop):
-    # category (e.g. ICE, RE, S)
-    trip_label = timetable_stop['tl']
-    category = trip_label['@c']
-    
-    # arrival
-    arrival_dbdatetime = None
-    arrival_path = None
-    
-    if 'ar' in timetable_stop:
-        arrival = timetable_stop['ar']
-        arrival_dbdatetime = arrival['@pt']
-        arrival_path = arrival['@ppth']
-        
-    # departure
-    departure_dbdatetime = None
-    departure_path = None
-    
-    if 'dp' in timetable_stop:
-        departure = timetable_stop['dp']
-        departure_dbdatetime = departure['@pt']
-        departure_path = departure['@ppth']
-    
-    # line (just for development)
-    line = None
     try:
+        
+        # category (e.g. ICE, RE, S)
+        trip_label = timetable_stop['tl']
+        category = trip_label['@c']
+        
+        # arrival
+        arrival_dbdatetime = None
+        arrival_path = None
+        
+        if 'ar' in timetable_stop:
+            arrival = timetable_stop['ar']
+            arrival_dbdatetime = arrival['@pt']
+            arrival_path = arrival['@ppth']
+            
+        # departure
+        departure_dbdatetime = None
+        departure_path = None
+        
+        if 'dp' in timetable_stop:
+            departure = timetable_stop['dp']
+            departure_dbdatetime = departure['@pt']
+            departure_path = departure['@ppth']
+        
+        # line (just for development)
+        line = None
+        
         if category in ["ICE", "IC", "FLX", "RJ", "RJX", "NJ", "TGV"]:
             line = trip_label['@n']
         elif 'ar' in timetable_stop:
             line = timetable_stop['ar']['@l']
         elif 'dp' in timetable_stop:
             line = timetable_stop['dp']['@l']
+                
+        timetable_row = pd.DataFrame(data={'category':[category], 'line': [line], 'arrival_dbdatetime': [arrival_dbdatetime], 'arrival_path':[arrival_path], 'departure_dbdatetime':[departure_dbdatetime], 'departure_path':[departure_path]})
+        return timetable_row
+    
     except Exception as e:
-        print(e) 
-        
-            
-    timetable_row = pd.DataFrame(data={'category':[category], 'line': [line], 'arrival_dbdatetime': [arrival_dbdatetime], 'arrival_path':[arrival_path], 'departure_dbdatetime':[departure_dbdatetime], 'departure_path':[departure_path]})
-    return timetable_row
+        print(e)
 
 
 timetable_rows = []
@@ -171,7 +173,7 @@ print(df_timetable.head(5))
 
 # finally, sort the list by arrival_dbdatetime and save the timetable to disk for later use throughout the day
 
-# In[8]:
+# In[4]:
 
 
 df_timetable = df_timetable.drop_duplicates()

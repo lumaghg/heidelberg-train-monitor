@@ -13,7 +13,7 @@
 # 
 # ## convenience functions
 
-# In[ ]:
+# In[1]:
 
 
 # settings
@@ -171,7 +171,7 @@ df_timetable['animation_class'] = df_timetable['category'].map(compute_animation
 # each category receives a (not unique) color, which is used to display the respective trip.
 # The color will later be included into the animationcode in two ways, the original color and a dimmed color for the trail
 
-# In[ ]:
+# In[7]:
 
 
 def compute_animation_color(category):
@@ -196,7 +196,7 @@ def compute_animation_color(category):
         # Color of Nightjets, maybe needs to be lightened to be visible
         return "3D3DB3"
     
-    if category in ['IC','EC', 'ICE']:
+    if category in ['IC','EC','ICE']:
         # White, like IC and ICE are painted <3
         return "FFFFFF"
     
@@ -246,66 +246,71 @@ def dim_hex_color(hex_color, factor):
 
 def add_statuscode(timetable_row):
     
-    arrival_datetime = DBDatetimeToDatetime(timetable_row['arrival_dbdatetime'])
-    departure_datetime = DBDatetimeToDatetime(timetable_row['departure_dbdatetime'])
-    now_datetime = datetime.datetime.now()
-    
-    statuscode = ''
-    
-    # arrival has happened, departure hasn't happened -> standing in Heidelberg Hbf
-    if(arrival_datetime < now_datetime < departure_datetime):
-        departure_direction = timetable_row['departure_direction']
+    try:
         
-        facing_to = None
-        if departure_direction in ['north', 'west']:
-            facing_to = 'northwest'
-        elif departure_direction in ['south', 'east']:
-            facing_to = 'southeast'
-        # if the train is ending, it has no departure direction, therefore we need to check arrival direction and invert
-        elif arrival_direction in ['north', 'west']:
-            facing_to = 'southeast'
-        elif arrival_direction in ['south', 'east']:
-            facing_to = 'northwest'
+        arrival_datetime = DBDatetimeToDatetime(timetable_row['arrival_dbdatetime'])
+        departure_datetime = DBDatetimeToDatetime(timetable_row['departure_dbdatetime'])
+        now_datetime = datetime.datetime.now()
+        
+        statuscode = ''
+        
+        # arrival has happened, departure hasn't happened -> standing in Heidelberg Hbf
+        if(arrival_datetime < now_datetime < departure_datetime):
+            departure_direction = timetable_row['departure_direction']
             
-        statuscode = f'HDHBF_{facing_to}'
+            facing_to = None
+            if departure_direction in ['north', 'west']:
+                facing_to = 'northwest'
+            elif departure_direction in ['south', 'east']:
+                facing_to = 'southeast'
+            # if the train is ending, it has no departure direction, therefore we need to check arrival direction and invert
+            elif arrival_direction in ['north', 'west']:
+                facing_to = 'southeast'
+            elif arrival_direction in ['south', 'east']:
+                facing_to = 'northwest'
+                
+            statuscode = f'HDHBF_{facing_to}'
 
-    # arrival hasn't happened -> inbound
-    elif(now_datetime < arrival_datetime):
-        arrival_direction = timetable_row['arrival_direction']
+        # arrival hasn't happened -> inbound
+        elif(now_datetime < arrival_datetime):
+            arrival_direction = timetable_row['arrival_direction']
+            
+            timedelta_to_arrival = arrival_datetime - now_datetime
+            seconds_to_arrival = timedelta_to_arrival.total_seconds()
+            ticks_to_arrival = math.ceil(seconds_to_arrival / TICK_LENGTH_SECONDS)
+            
+            # ignore everything that doesn't arrive for another 30 minutes and just return row unchanged
+            if seconds_to_arrival > 30 * 60:
+                return timetable_row
+            
+            statuscode = f"{arrival_direction}_{ticks_to_arrival}_inbound"
+            
+        # departure has happened -> outbound
+        elif(departure_datetime < now_datetime):
+            departure_direction = timetable_row['departure_direction']
+            
+            timedelta_since_departure = now_datetime - departure_datetime
+            seconds_since_departure = timedelta_since_departure.total_seconds()
+            ticks_since_departure = math.ceil(seconds_since_departure / TICK_LENGTH_SECONDS)
+            
+            # ignore everything that departed more than 30 minutes ago and just return row unchanged
+            if seconds_since_departure > 30 * 60:
+                return timetable_row
+            
+            statuscode = f"{departure_direction}_{ticks_since_departure}_outbound"
         
-        timedelta_to_arrival = arrival_datetime - now_datetime
-        seconds_to_arrival = timedelta_to_arrival.total_seconds()
-        ticks_to_arrival = math.ceil(seconds_to_arrival / TICK_LENGTH_SECONDS)
-        
-        # ignore everything that doesn't arrive for another 30 minutes and just return row unchanged
-        if seconds_to_arrival > 30 * 60:
-            return timetable_row
-        
-        statuscode = f"{arrival_direction}_{ticks_to_arrival}_inbound"
-        
-    # departure has happened -> outbound
-    elif(departure_datetime < now_datetime):
-        departure_direction = timetable_row['departure_direction']
-        
-        timedelta_since_departure = now_datetime - departure_datetime
-        seconds_since_departure = timedelta_since_departure.total_seconds()
-        ticks_since_departure = math.ceil(seconds_since_departure / TICK_LENGTH_SECONDS)
-        
-         # ignore everything that departed more than 30 minutes ago and just return row unchanged
-        if seconds_since_departure > 30 * 60:
-            return timetable_row
-        
-        statuscode = f"{departure_direction}_{ticks_since_departure}_outbound"
     
+        animation_class = timetable_row['animation_class']
+        primary_animation_color = timetable_row['animation_color']
+        secondary_animation_color = dim_hex_color(primary_animation_color, SECONDARY_COLOR_DIM_FACTOR)
+        
+        animationcode = f"DB_{animation_class}:{statuscode}:{primary_animation_color}_{secondary_animation_color}"
+        
+        timetable_row['animationcode'] = animationcode
+        return timetable_row
     
-    animation_class = timetable_row['animation_class']
-    primary_animation_color = timetable_row['animation_color']
-    secondary_animation_color = dim_hex_color(primary_animation_color, SECONDARY_COLOR_DIM_FACTOR)
-    
-    animationcode = f"DB_{animation_class}:{statuscode}:{primary_animation_color}_{secondary_animation_color}"
-    
-    timetable_row['animationcode'] = animationcode
-    return timetable_row
+    except Exception as e:
+        print(e)
 
 df_timetable = df_timetable.apply(add_statuscode, axis=1)
 
