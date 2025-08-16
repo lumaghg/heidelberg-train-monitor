@@ -292,7 +292,8 @@ for i, active_trip in trips.iterrows():
         
         
         route_id = active_trip['route_id']
-        primary_color = routes.loc[routes['route_id'] == route_id]['route_color'].iat[0]
+        route_color = routes.loc[routes['route_id'] == route_id]['route_color'].iat[0]
+        primary_color = dim_hex_color(route_color, 0.6)
         secondary_color = dim_hex_color(primary_color, 0.3)
         
         # for the animationcode the last two digits are cut off as they only specify the platform, which is irrelevant for animation.

@@ -16,7 +16,7 @@ import platform
 import sys
 
 
-MAPPING_PATH = 'db_rfv_mapping.csv'
+MAPPING_PATH = 'rnv_mapping.csv'
 
 NO_PRIMARY_LEDS = 1
 NO_SECONDARY_LEDS = 1

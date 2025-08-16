@@ -46,10 +46,16 @@ class DisplayCSV(MatrixBase):
                 
                 # process animationcodes
 
-                df_animationcodes = pd.read_csv('../db/db_animationcodes.csv', dtype=str)
+                
+                
+                df_db_animationcodes = pd.read_csv('../db/db_animationcodes.csv', dtype=str)
+                df_rnv_animationcodes = pd.read_csv('../rnv/rnv_animationcodes.csv', dtype=str)
+                df_animationcodes = pd.concat([df_db_animationcodes, df_rnv_animationcodes])
+                
 
                 df_db_rfv_mapping = pd.read_csv('./db_rfv_mapping.csv', dtype=str)
                 df_db_snv_mapping = pd.read_csv('./db_snv_mapping.csv', dtype=str)
+                df_rnv_mapping = pd.read_csv('./rnv_mapping.csv', dtype=str)
 
 
                 def process_animationcode(animationcode: str):
@@ -66,7 +72,7 @@ class DisplayCSV(MatrixBase):
                         elif type == 'DB_RFV':
                             df_mapping = df_db_rfv_mapping
                         else:
-                            return
+                            df_mapping = df_rnv_mapping
                         
                         applicable_mapping_rows = df_mapping[df_mapping['statuscode'] == statuscode].reset_index(drop=True)
                         
@@ -114,7 +120,7 @@ class DisplayCSV(MatrixBase):
                 print(e)
                 continue
            
-            time.sleep(14)
+            time.sleep(13)
 
 # Main function
 if __name__ == "__main__":
