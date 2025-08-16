@@ -62,18 +62,15 @@ class DisplayCSV(MatrixBase):
                 df_rnv_animationcodes = pd.read_csv('../rnv/rnv_animationcodes.csv', dtype=str)
 
                 # always do two ticks of db, then two ticks of rnv
-                if tick_counter == 0 or tick_counter == 1:
+                if tick_counter <= 2:
                     overlay = base_overlay_db.copy()
                     df_animationcodes = df_db_animationcodes
-                    tick_counter += 1
                     
-                if tick_counter == 2 or tick_counter == 3:
+                if tick_counter >= 3:
                     overlay = base_overlay_rnv.copy()
                     df_animationcodes = df_rnv_animationcodes
-                    tick_counter +=1
                     
-                if tick_counter == 4:
-                    tick_counter = 0
+                tick_counter = tick_counter + 1 if tick_counter != 6 else 0
                      
                 
                 #df_animationcodes = pd.concat([df_db_animationcodes, df_rnv_animationcodes])
