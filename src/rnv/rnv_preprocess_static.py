@@ -14,7 +14,7 @@
 
 # ## 1. convenience functions for gtfs date formats
 
-# In[1]:
+# In[105]:
 
 
 import datetime
@@ -48,7 +48,7 @@ def addSecondsToTimeObject(time:datetime.time, seconds) -> datetime.time:
 # 
 # convenience function for downloading and extracting zip:
 
-# In[2]:
+# In[106]:
 
 
 # convenience function for downloading and extracting zip
@@ -66,7 +66,7 @@ def download_and_extract_zip(url, extract_to='.'):
 
 # fetch and extract the gtfs zip:
 
-# In[3]:
+# In[107]:
 
 
 from pandas import read_csv, DataFrame
@@ -115,11 +115,11 @@ download_and_extract_zip(gtfs_url, './gtfs_full')
 
 
 
-# ## 3. filter relevant routes, trips and stop_times
+# ## 3. filter relevant routes, trips, stops and stop_times
 # 
 # Before we start, lets load the data from the filesystem.
 
-# In[4]:
+# In[108]:
 
 
 gtfs_path = path.join(getcwd(), 'gtfs_full')
@@ -141,7 +141,7 @@ print('read gtfs static data from files')
 # First, we want to remove all unneccessary data entries.
 # As we will focus on the line 22 for the start, we only want routes, trips and stop_times for the line 22. 
 
-# In[5]:
+# In[109]:
 
 
 relevant_lines = ['22', '26', '5', '23', '21', '24']
@@ -150,7 +150,7 @@ relevant_trip_prefixes = [line + "-" for line in relevant_lines]
 
 # To achieve this, we firstly  select all rows from the routes that have a ´route_id´ starting with 22, indicating the route to be on line 22. By doing this instead of looking at the ´route_short_name´, special services like line E for shortened services to and from the depot are included.
 
-# In[6]:
+# In[110]:
 
 
 # select relevant columns
@@ -165,7 +165,7 @@ print(routes.head(5))
 
 # Let's do the same with trips.
 
-# In[7]:
+# In[111]:
 
 
 # select relevant columns
@@ -180,7 +180,7 @@ print(trips.head(5))
 
 # And finally, we also filter the stop_times by looking at the prefix of the trip_id.
 
-# In[8]:
+# In[112]:
 
 
 # select relevant columns
@@ -193,12 +193,20 @@ print('found ',stop_times.shape[0], 'stop times on lines', relevant_lines)
 print(stop_times.head(5))
 
 
+# let's also drop unneccesarry columns from the stops
+
+# In[113]:
+
+
+stops = stops[['stop_id', 'stop_name', 'platform_code']]
+
+
 # ## 4. add start and end times to trips
 
 # To make it easy to identify the active trips, we will now add start and end times to each trip.
 # First, we will create a function to get all the stop_times for a specific ´trip_id´. Then we will sort the stop_times and return the first ´arrival_time´ as trip start and the last ´departure_time´ as trip end.
 
-# In[9]:
+# In[114]:
 
 
 def getTripStartTime(trip_id:str) -> tuple[str, str]:
@@ -231,7 +239,7 @@ print('trip_id:', example_trip_id, '\nTrip Start Time: ', example_start, '\nTrip
 
 # Now let's add the new columns by using the function we just created.
 
-# In[10]:
+# In[115]:
 
 
 trips['start_time'] = trips['trip_id'].map(getTripStartTime)
@@ -240,9 +248,28 @@ trips['end_time'] = trips['trip_id'].map(getTripEndTime)
 print(trips.head(5))
 
 
-# ## 6. save filtered data to filesystem
+# # 6. compute stop bases
+# to later use the stops.txt to build a mapping, we need the stop bases and therefore drop the last two digits of the stop id, cause they are the ones later used in the animationcodes
 
-# In[11]:
+# In[116]:
+
+
+stops['stop_base_id'] = stops['stop_id'].map(lambda stop_id: str(stop_id)[:-2])
+
+
+# # 7. add stops name to stop times
+# 
+# add stop name and stop base id to stop time for ease of use
+
+# In[117]:
+
+
+stop_times = stop_times.merge(stops, how='left', on='stop_id')
+
+
+# ## 8. save filtered data to filesystem
+
+# In[118]:
 
 
 import os

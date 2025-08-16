@@ -188,7 +188,7 @@ print(trips.head(5))
 
 # First, let's define some functions:
 
-# In[6]:
+# In[7]:
 
 
 import pandas as pd
@@ -295,7 +295,9 @@ for i, active_trip in trips.iterrows():
         primary_color = routes.loc[routes['route_id'] == route_id]['route_color'].iat[0]
         secondary_color = dim_hex_color(primary_color, 0.3)
         
-        animationcode = f"RNV:{previous_stop_id}_{next_stop_id}:{primary_color}_{secondary_color}" 
+        # for the animationcode the last two digits are cut off as they only specify the platform, which is irrelevant for animation.
+        
+        animationcode = f"RNV:{str(previous_stop_id)[:-2]}_{str(next_stop_id)[:-2]}:{primary_color}_{secondary_color}" 
     else: 
         status = 'ERROR'
 
@@ -312,7 +314,7 @@ for i, active_trip in trips.iterrows():
 print(status_df)
 
 
-# In[7]:
+# In[ ]:
 
 
 # save to disk
