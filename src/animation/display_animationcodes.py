@@ -120,7 +120,7 @@ class DisplayCSV(MatrixBase):
                 print(e)
                 continue
            
-            time.sleep(14)
+            time.sleep(13)
 
 # Main function
 if __name__ == "__main__":
