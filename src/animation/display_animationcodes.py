@@ -28,7 +28,6 @@ for index, row in df_background_lighting.iterrows():
     base_overlay[x,y] = color_hex
 
 
-
 class DisplayCSV(MatrixBase):
     def __init__(self, *args, **kwargs):
         super(DisplayCSV, self).__init__(*args, **kwargs)
@@ -38,6 +37,8 @@ class DisplayCSV(MatrixBase):
         offset_canvas = self.matrix.CreateFrameCanvas()
         # loop
 
+        tick_counter = 0
+        
         while True:
             try:
                 
@@ -45,12 +46,23 @@ class DisplayCSV(MatrixBase):
                 overlay = base_overlay.copy()
                 
                 # process animationcodes
-
-                
-                
                 df_db_animationcodes = pd.read_csv('../db/db_animationcodes.csv', dtype=str)
                 df_rnv_animationcodes = pd.read_csv('../rnv/rnv_animationcodes.csv', dtype=str)
-                df_animationcodes = pd.concat([df_db_animationcodes, df_rnv_animationcodes])
+
+                # always do two ticks of db, then two ticks of rnv
+                if tick_counter == 0 or tick_counter == 1:
+                    df_animationcodes = df_db_animationcodes
+                    tick_counter += 1
+                    
+                if tick_counter == 2 or tick_counter == 3:
+                    df_animationcodes = df_rnv_animationcodes
+                    tick_counter +=1
+                    
+                if tick_counter == 4:
+                    tick_counter = 0
+                     
+                
+                #df_animationcodes = pd.concat([df_db_animationcodes, df_rnv_animationcodes])
                 
 
                 df_db_rfv_mapping = pd.read_csv('./db_rfv_mapping.csv', dtype=str)
@@ -120,7 +132,7 @@ class DisplayCSV(MatrixBase):
                 print(e)
                 continue
            
-            time.sleep(13)
+            time.sleep(15)
 
 # Main function
 if __name__ == "__main__":
