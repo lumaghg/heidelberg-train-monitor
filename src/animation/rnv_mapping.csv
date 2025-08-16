@@ -1,175 +1,177 @@
 statuscode,readable,leds_primary,leds_secondary
-1219_1207,Kirchheim Rathaus -> Kirchheim Friedhof,,
-1207_1219,Kirchheim Friedhof -> Kirchheim Rathaus,,
-1216_1219,Odenwaldstraße -> Kirchheim Rathaus,,
-1219_1216,Kirchheim Rathaus -> Odenwaldstraße,,
-1200_1216,Albert-Fritz-Straße -> Odenwaldstraße,,
-1216_1200,Odenwaldstraße -> Albert-Fritz-Straße,,
-1218_1200,Ilse-Krall-Straße -> Albert-Fritz-Straße,,
-1200_1218,Albert-Fritz-Straße -> Ilse-Krall-Straße,,
-6795_1218,Messplatz -> Ilse-Krall-Straße,,
-1218_6795,Ilse-Krall-Straße -> Messplatz,,
-1149_6795,Rudolf-Diesel-Straße -> Messplatz,,
-6795_1149,Messplatz -> Rudolf-Diesel-Straße,,
-4272_1149,HD Hauptbahnhof Süd -> Rudolf-Diesel-Straße,,
-1149_4272,Rudolf-Diesel-Straße -> HD Hauptbahnhof Süd,,
-4274_4272,Gadamerplatz -> HD Hauptbahnhof Süd,,
-4272_4274,HD Hauptbahnhof Süd -> Gadamerplatz,,
-4274_4274,Gadamerplatz -> Gadamerplatz,,
-4274_4274,Gadamerplatz -> Gadamerplatz,,
-1151_4274,Czernybrücke -> Gadamerplatz,,
-4274_1151,Gadamerplatz -> Czernybrücke,,
-1144_1151,Betriebshof -> Czernybrücke,,
-1151_1144,Czernybrücke -> Betriebshof,,
-1199_1144,Volkshochschule -> Betriebshof,,
-1144_1199,Betriebshof -> Volkshochschule,,
-1189_1199,Campus Bergheim -> Volkshochschule,,
-1199_1189,Volkshochschule -> Campus Bergheim,,
-1196_1189,Altes Hallenbad -> Campus Bergheim,,
-1189_1196,Campus Bergheim -> Altes Hallenbad,,
-1146_1196,Bismarckplatz -> Altes Hallenbad,,
-1196_1146,Altes Hallenbad -> Bismarckplatz,,
-1260_1146,Brückenstraße -> Bismarckplatz,,
-1146_1260,Bismarckplatz -> Brückenstraße,,
-1233_1260,Kußmaulstraße -> Brückenstraße,,
-1260_1233,Brückenstraße -> Kußmaulstraße,,
-1225_1233,Blumenthalstraße -> Kußmaulstraße,,
-1233_1225,Kußmaulstraße -> Blumenthalstraße,,
-1135_1225,Kapellenweg -> Blumenthalstraße,,
-1225_1135,Blumenthalstraße -> Kapellenweg,,
-1333_1135,Heiligenbergschule -> Kapellenweg,,
-1135_1333,Kapellenweg -> Heiligenbergschule,,
-1333_1136,Heiligenbergschule -> Hans-Thoma-Platz,,
-1136_1333,Hans-Thoma-Platz -> Heiligenbergschule,,
-1226_1333,Technologiepark -> Heiligenbergschule,,
-1333_1226,Heiligenbergschule -> Technologiepark,,
-1228_1226,Bunsengymnasium -> Technologiepark,,
-1226_1228,Technologiepark -> Bunsengymnasium,,
-1229_1228,Jahnstraße -> Bunsengymnasium,,
-1228_1229,Bunsengymnasium -> Jahnstraße,,
-1144_1229,Betriebshof -> Jahnstraße,,
-1229_1144,Jahnstraße -> Betriebshof,,
-1160_1144,HD Hauptbahnhof -> Betriebshof,,
-1144_1160,Betriebshof -> HD Hauptbahnhof,,
-1884_1879,Moltkestraße -> Leimen Friedhof,,
-1879_1884,Leimen Friedhof -> Moltkestraße,,
-1889_1884,Kurpfalz-Centrum -> Moltkestraße,,
-1884_1889,Moltkestraße -> Kurpfalz-Centrum,,
-1886_1889,Georgi-Marktplatz -> Kurpfalz-Centrum,,
-1889_1886,Kurpfalz-Centrum -> Georgi-Marktplatz,,
-1882_1886,Johannes-Reidel-Straße -> Georgi-Marktplatz,,
-1886_1882,Georgi-Marktplatz -> Johannes-Reidel-Straße,,
-1890_1882,Zementwerk -> Johannes-Reidel-Straße,,
-1882_1890,Johannes-Reidel-Straße -> Zementwerk,,
-1278_1890,Rohrbach Süd -> Zementwerk,,
-1890_1278,Zementwerk -> Rohrbach Süd,,
-1267_1278,HD Freiburger Straße -> Rohrbach Süd,,
-1278_1267,Rohrbach Süd -> HD Freiburger Straße,,
-1274_1267,Ortenauer Straße -> HD Freiburger Straße,,
-1267_1274,HD Freiburger Straße -> Ortenauer Straße,,
-1276_1274,Rohrbach Markt -> Ortenauer Straße,,
-1274_1276,Ortenauer Straße -> Rohrbach Markt,,
-1263_1276,Eichendorffplatz -> Rohrbach Markt,,
-1276_1263,Rohrbach Markt -> Eichendorffplatz,,
-1273_1263,Markscheide -> Eichendorffplatz,,
-1263_1273,Eichendorffplatz -> Markscheide,,
-1185_1273,HD Rheinstraße -> Markscheide,,
-1273_1185,Markscheide -> HD Rheinstraße,,
-1143_1185,Bethanienkrankenhaus -> HD Rheinstraße,,
-1185_1143,HD Rheinstraße -> Bethanienkrankenhaus,,
-1141_1143,Bergfriedhof -> Bethanienkrankenhaus,,
-1143_1141,Bethanienkrankenhaus -> Bergfriedhof,,
-1457_1141,S-Bahnhof Weststadt/Südstadt -> Bergfriedhof,,
-1141_1457,Bergfriedhof -> S-Bahnhof Weststadt/Südstadt,,
-1150_1457,Christuskirche -> S-Bahnhof Weststadt/Südstadt,,
-1457_1150,S-Bahnhof Weststadt/Südstadt -> Christuskirche,,
-1187_1150,Römerkreis Süd -> Christuskirche,,
-1150_1187,Christuskirche -> Römerkreis Süd,,
-1193_1187,Stadtbücherei -> Römerkreis Süd,,
-1187_1193,Römerkreis Süd -> Stadtbücherei,,
-1168_1193,Seegarten -> Stadtbücherei,,
-1193_1168,Stadtbücherei -> Seegarten,,
-1146_1168,Bismarckplatz -> Seegarten,,
-1168_1146,Seegarten -> Bismarckplatz,,
-697_696,Eppelheim Rathaus -> Kirchheimer Straße,,
-696_697,Kirchheimer Straße -> Eppelheim Rathaus,,
-695_697,Jakobsgasse -> Eppelheim Rathaus,,
-697_695,Eppelheim Rathaus -> Jakobsgasse,,
-1261_695,Kranichweg/Stotz -> Jakobsgasse,,
-695_1261,Jakobsgasse -> Kranichweg/Stotz,,
-1256_1261,Marktstraße -> Kranichweg/Stotz,,
-1261_1256,Kranichweg/Stotz -> Marktstraße,,
-1252_1256,Henkel-Teroson-Straße -> Marktstraße,,
-1256_1252,Marktstraße -> Henkel-Teroson-Straße,,
-4275_1252,Eppelheimer Terrasse -> Henkel-Teroson-Straße,,
-1252_4275,Henkel-Teroson-Straße -> Eppelheimer Terrasse,,
-4274_4275,Gadamerplatz -> Eppelheimer Terrasse,,
-4275_4274,Eppelheimer Terrasse -> Gadamerplatz,,
-4272_4274,HD Hauptbahnhof Süd -> Gadamerplatz,,
-4274_4272,Gadamerplatz -> HD Hauptbahnhof Süd,,
-6794_4272,Montpellierbrücke -> HD Hauptbahnhof Süd,,
-4272_6794,HD Hauptbahnhof Süd -> Montpellierbrücke,,
-6791_6794,Ringstraße - Montpellierbrücke,,
-6794_6791,Montpellierbrücke -> Ringstraße,,
-1193_6791,Stadtbücherei -> Ringstraße,,
-6791_1193,Ringstraße -> Stadtbücherei,,
-1168_1193,Seegarten -> Stadtbücherei,,
-1193_1168,Stadtbücherei -> Seegarten,,
-1146_1168,Bismarckplatz -> Seegarten,,
-1168_1146,Seegarten -> Bismarckplatz,,
-2591_2594,Seckenheim OEG-Bahnhof -> Seckenheim Rathaus,,
-2594_2591,Seckenheim Rathaus -> Seckenheim OEG-Bahnhof,,
-629_2591,Neu-Edingen Gewerbegebiet -> Seckenheim OEG-Bahnhof,,
-2591_629,Seckenheim OEG-Bahnhof -> Neu-Edingen Gewerbegebiet,,
-623_629,Edingen West -> Neu-Edingen Gewerbegebiet,,
-629_623,Neu-Edingen Gewerbegebiet -> Edingen West,,
-619_623,Edingen Bahnhof -> Edingen West,,
-623_619,Edingen West -> Edingen Bahnhof,,
-1304_619,Wieblingen Taubenfeld -> Edingen Bahnhof,,
-619_1304,Edingen Bahnhof -> Wieblingen Taubenfeld,,
-1302_1304,Wieblingen Mitte -> Wieblingen Taubenfeld,,
-1304_1302,Wieblingen Taubenfeld -> Wieblingen Mitte,,
-1693_1302,SRH Campus -> Wieblingen Mitte,,
-1302_1693,Wieblingen Mitte -> SRH Campus,,
-1180_1693,Ochsenkopf -> SRH Campus,,
-1693_1180,SRH Campus -> Ochsenkopf,,
-1331_1180,Berufsschule -> Ochsenkopf,,
-1180_1331,Ochsenkopf -> Berufsschule,,
-1330_1331,Gneisenaustraße Süd -> Berufsschule,,
-1331_1330,Berufsschule -> Gneisenaustraße Süd,,
-1160_1330,HD Hauptbahnhof -> Gneisenaustraße Süd,,
-1330_1160,Gneisenaustraße Süd -> HD Hauptbahnhof,,
-1194_1160,Stadtwerke -> HD Hauptbahnhof,,
-1160_1194,HD Hauptbahnhof -> Stadtwerke,,
-1193_1194,Stadtbücherei -> Stadtwerke,,
-1194_1193,Stadtwerke -> Stadtbücherei,,
-1168_1193,Seegarten -> Stadtbücherei,,
-1193_1168,Stadtbücherei -> Seegarten,,
-1146_1168,Bismarckplatz -> Seegarten,,
-1168_1146,Seegarten -> Bismarckplatz,,
-1260_1146,Brückenstraße -> Bismarckplatz,,
-1146_1260,Bismarckplatz -> Brückenstraße,,
-1233_1260,Kußmaulstraße -> Brückenstraße,,
-1260_1233,Brückenstraße -> Kußmaulstraße,,
-1225_1233,Blumenthalstraße -> Kußmaulstraße,,
-1233_1225,Kußmaulstraße -> Blumenthalstraße,,
-1135_1225,Kapellenweg -> Blumenthalstraße,,
-1225_1135,Blumenthalstraße -> Kapellenweg,,
-1136_1135,Hans-Thoma-Platz -> Kapellenweg,,
-1135_1136,Kapellenweg -> Hans-Thoma-Platz,,
-1133_1136,Burgstraße -> Hans-Thoma-Platz,,
-1136_1133,Hans-Thoma-Platz -> Burgstraße,,
-516_1133,Dossenheim Süd -> Burgstraße,,
-1133_516,Burgstraße -> Dossenheim Süd,,
-515_516,Dossenheim Bahnhof -> Dossenheim Süd,,
-516_515,Dossenheim Süd -> Dossenheim Bahnhof,,
-5742_515,Dossenheim Nord -> Dossenheim Bahnhof,,
-515_5742,Dossenheim Bahnhof -> Dossenheim Nord,,
-3482_5742,Schriesheim Süd -> Dossenheim Nord,,
-5742_3482,Dossenheim Nord -> Schriesheim Süd,,
-1199_1229,Volkshochschule -> Jahnstraße,,
-1229_1199,Jahnstraße -> Volkshochschule,,
-6791_1194,Ringstraße -> Stadtwerke,,
-1194_6791,Stadtwerke -> Ringstraße,,
-1149_6794,Rudolf-Diesel-Straße -> Montpellierbrücke,,
-6794_1149,Montpellierbrücke -> Rudolf-Diesel-Straße,,
+1219_1207,Kirchheim Rathaus -> Kirchheim Friedhof,44-15,43-14
+1207_1219,Kirchheim Friedhof -> Kirchheim Rathaus,42-13,43-14
+1216_1219,Odenwaldstraße -> Kirchheim Rathaus,42-13,41-12
+1219_1216,Kirchheim Rathaus -> Odenwaldstraße,40-11,41-12
+1200_1216,Albert-Fritz-Straße -> Odenwaldstraße,40-11,39-11
+1216_1200,Odenwaldstraße -> Albert-Fritz-Straße,38-11,39-11
+1218_1200,Ilse-Krall-Straße -> Albert-Fritz-Straße,38-11,37-11
+1200_1218,Albert-Fritz-Straße -> Ilse-Krall-Straße,36-11,37-11
+6795_1218,Messplatz -> Ilse-Krall-Straße,36-11,35-11
+1218_6795,Ilse-Krall-Straße -> Messplatz,34-11,35-11
+1149_6795,Rudolf-Diesel-Straße -> Messplatz,34-11,33-11
+6795_1149,Messplatz -> Rudolf-Diesel-Straße,32-11,33-11
+4272_1149,HD Hauptbahnhof Süd -> Rudolf-Diesel-Straße,32-11,31-11
+1149_4272,Rudolf-Diesel-Straße -> HD Hauptbahnhof Süd,29-13,30-12
+4274_4272,Gadamerplatz -> HD Hauptbahnhof Süd,29-13,28-14
+4272_4274,HD Hauptbahnhof Süd -> Gadamerplatz,27-15,28-14
+4274_4274,Gadamerplatz -> Gadamerplatz,27-15,27-15
+4274_4274,Gadamerplatz -> Gadamerplatz,27-15,27-15
+1151_4274,Czernybrücke -> Gadamerplatz,27-15,26-14
+4274_1151,Gadamerplatz -> Czernybrücke,23-11,24-12
+1144_1151,Betriebshof -> Czernybrücke,23-11,23-10
+1151_1144,Czernybrücke -> Betriebshof,23-9,23-10
+1199_1144,Volkshochschule -> Betriebshof,23-9,23-8
+1144_1199,Betriebshof -> Volkshochschule,23-7,23-8
+1189_1199,Campus Bergheim -> Volkshochschule,23-7,23-6
+1199_1189,Volkshochschule -> Campus Bergheim,23-5,23-6
+1196_1189,Altes Hallenbad -> Campus Bergheim,23-5,23-4
+1189_1196,Campus Bergheim -> Altes Hallenbad,23-3,23-4
+1146_1196,Bismarckplatz -> Altes Hallenbad,23-3,23-2
+1196_1146,Altes Hallenbad -> Bismarckplatz,23-1,23-2
+1260_1146,Brückenstraße -> Bismarckplatz,23-1,22-1
+1146_1260,Bismarckplatz -> Brückenstraße,21-1,22-1
+1233_1260,Kußmaulstraße -> Brückenstraße,21-1,20-1
+1260_1233,Brückenstraße -> Kußmaulstraße,19-1,20-1
+1225_1233,Blumenthalstraße -> Kußmaulstraße,19-1,18-1
+1233_1225,Kußmaulstraße -> Blumenthalstraße,17-1,18-1
+1135_1225,Kapellenweg -> Blumenthalstraße,17-1,16-2
+1225_1135,Blumenthalstraße -> Kapellenweg,15-3,16-2
+1333_1135,Heiligenbergschule -> Kapellenweg,15-3,14-4
+1135_1333,Kapellenweg -> Heiligenbergschule,15-7,14-6
+1333_1136,Heiligenbergschule -> Hans-Thoma-Platz,13-5,14-6
+1136_1333,Hans-Thoma-Platz -> Heiligenbergschule,15-7,14-6
+1226_1333,Technologiepark -> Heiligenbergschule,15-7,16-8
+1333_1226,Heiligenbergschule -> Technologiepark,17-9,16-8
+1228_1226,Bunsengymnasium -> Technologiepark,17-9,18-9
+1226_1228,Technologiepark -> Bunsengymnasium,19-9,18-9
+1229_1228,Jahnstraße -> Bunsengymnasium,19-9,20-9
+1228_1229,Bunsengymnasium -> Jahnstraße,21-9,20-9
+1144_1229,Betriebshof -> Jahnstraße,21-9,22-9
+1229_1144,Jahnstraße -> Betriebshof,23-9,22-9
+1160_1144,HD Hauptbahnhof -> Betriebshof,23-9,24-9
+1144_1160,Betriebshof -> HD Hauptbahnhof,25-9,24-9
+1884_1879,Moltkestraße -> Leimen Friedhof,61-2,60-2
+1879_1884,Leimen Friedhof -> Moltkestraße,59-3,60-2
+1889_1884,Kurpfalz-Centrum -> Moltkestraße,59-3,58-4
+1884_1889,Moltkestraße -> Kurpfalz-Centrum,57-5,58-4
+1886_1889,Georgi-Marktplatz -> Kurpfalz-Centrum,57-5,56-5
+1889_1886,Kurpfalz-Centrum -> Georgi-Marktplatz,55-5,56-5
+1882_1886,Johannes-Reidel-Straße -> Georgi-Marktplatz,55-5,54-5
+1886_1882,Georgi-Marktplatz -> Johannes-Reidel-Straße,53-5,54-5
+1890_1882,Zementwerk -> Johannes-Reidel-Straße,53-5,52-5
+1882_1890,Johannes-Reidel-Straße -> Zementwerk,51-5,52-5
+1278_1890,Rohrbach Süd -> Zementwerk,51-5,50-5
+1890_1278,Zementwerk -> Rohrbach Süd,49-5,50-5
+1267_1278,HD Freiburger Straße -> Rohrbach Süd,49-5,48-5
+1278_1267,Rohrbach Süd -> HD Freiburger Straße,47-5,48-5
+1274_1267,Ortenauer Straße -> HD Freiburger Straße,47-5,46-5
+1267_1274,HD Freiburger Straße -> Ortenauer Straße,45-5,46-5
+1276_1274,Rohrbach Markt -> Ortenauer Straße,45-5,44-5
+1274_1276,Ortenauer Straße -> Rohrbach Markt,43-5,44-5
+1263_1276,Eichendorffplatz -> Rohrbach Markt,43-5,42-4
+1276_1263,Rohrbach Markt -> Eichendorffplatz,41-3,42-4
+1273_1263,Markscheide -> Eichendorffplatz,41-3,40-3
+1263_1273,Eichendorffplatz -> Markscheide,39-3,40-3
+1185_1273,HD Rheinstraße -> Markscheide,39-3,38-3
+1273_1185,Markscheide -> HD Rheinstraße,37-3,38-3
+1143_1185,Bethanienkrankenhaus -> HD Rheinstraße,37-3,36-3
+1185_1143,HD Rheinstraße -> Bethanienkrankenhaus,35-3,36-3
+1141_1143,Bergfriedhof -> Bethanienkrankenhaus,35-3,34-3
+1143_1141,Bethanienkrankenhaus -> Bergfriedhof,33-3,34-3
+1457_1141,S-Bahnhof Weststadt/Südstadt -> Bergfriedhof,33-3,32-3
+1141_1457,Bergfriedhof -> S-Bahnhof Weststadt/Südstadt,31-3,32-3
+1150_1457,Christuskirche -> S-Bahnhof Weststadt/Südstadt,31-3,30-4
+1457_1150,S-Bahnhof Weststadt/Südstadt -> Christuskirche,29-5,30-4
+1187_1150,Römerkreis Süd -> Christuskirche,29-5,28-5
+1150_1187,Christuskirche -> Römerkreis Süd,27-5,28-5
+1193_1187,Stadtbücherei -> Römerkreis Süd,27-5,26-5
+1187_1193,Römerkreis Süd -> Stadtbücherei,25-3,25-4
+1168_1193,Seegarten -> Stadtbücherei,25-3,25-2
+1193_1168,Stadtbücherei -> Seegarten,25-1,25-2
+1146_1168,Bismarckplatz -> Seegarten,25-1,24-1
+1168_1146,Seegarten -> Bismarckplatz,23-1,24-1
+697_696,Eppelheim Rathaus -> Kirchheimer Straße,28-29,28-28
+696_697,Kirchheimer Straße -> Eppelheim Rathaus,28-27,28-28
+695_697,Jakobsgasse -> Eppelheim Rathaus,28-27,28-26
+697_695,Eppelheim Rathaus -> Jakobsgasse,28-25,28-26
+1261_695,Kranichweg/Stotz -> Jakobsgasse,28-25,28-24
+695_1261,Jakobsgasse -> Kranichweg/Stotz,28-23,28-24
+1256_1261,Marktstraße -> Kranichweg/Stotz,28-23,28-22
+1261_1256,Kranichweg/Stotz -> Marktstraße,28-21,28-22
+1252_1256,Henkel-Teroson-Straße -> Marktstraße,28-21,28-20
+1256_1252,Marktstraße -> Henkel-Teroson-Straße,27-19,28-20
+4275_1252,Eppelheimer Terrasse -> Henkel-Teroson-Straße,27-19,26-18
+1252_4275,Henkel-Teroson-Straße -> Eppelheimer Terrasse,26-17,26-18
+4274_4275,Gadamerplatz -> Eppelheimer Terrasse,26-17,26-16
+4275_4274,Eppelheimer Terrasse -> Gadamerplatz,27-15,26-16
+4272_4274,HD Hauptbahnhof Süd -> Gadamerplatz,27-15,28-14
+4274_4272,Gadamerplatz -> HD Hauptbahnhof Süd,29-13,28-14
+6794_4272,Montpellierbrücke -> HD Hauptbahnhof Süd,29-13,30-12
+4272_6794,HD Hauptbahnhof Süd -> Montpellierbrücke,30-10,31-11
+6791_6794,Ringstraße - Montpellierbrücke,30-10,29-9
+6794_6791,Montpellierbrücke -> Ringstraße,27-7,28-8
+1193_6791,Stadtbücherei -> Ringstraße,27-7,26-6
+6791_1193,Ringstraße -> Stadtbücherei,25-3,25-4
+1168_1193,Seegarten -> Stadtbücherei,25-3,25-2
+1193_1168,Stadtbücherei -> Seegarten,25-1,25-2
+1146_1168,Bismarckplatz -> Seegarten,25-1,24-1
+1168_1146,Seegarten -> Bismarckplatz,23-1,24-1
+2591_2594,Seckenheim OEG-Bahnhof -> Seckenheim Rathaus,6-31,7-30
+2594_2591,Seckenheim Rathaus -> Seckenheim OEG-Bahnhof,8-29,7-30
+629_2591,Neu-Edingen Gewerbegebiet -> Seckenheim OEG-Bahnhof,8-29,9-28
+2591_629,Seckenheim OEG-Bahnhof -> Neu-Edingen Gewerbegebiet,10-27,9-28
+623_629,Edingen West -> Neu-Edingen Gewerbegebiet,10-27,11-26
+629_623,Neu-Edingen Gewerbegebiet -> Edingen West,12-25,11-26
+619_623,Edingen Bahnhof -> Edingen West,12-25,13-24
+623_619,Edingen West -> Edingen Bahnhof,14-23,13-24
+1304_619,Wieblingen Taubenfeld -> Edingen Bahnhof,14-23,15-22
+619_1304,Edingen Bahnhof -> Wieblingen Taubenfeld,16-21,15-22
+1302_1304,Wieblingen Mitte -> Wieblingen Taubenfeld,16-21,17-20
+1304_1302,Wieblingen Taubenfeld -> Wieblingen Mitte,18-19,19-18
+1693_1302,SRH Campus -> Wieblingen Mitte,18-19,19-18
+1302_1693,Wieblingen Mitte -> SRH Campus,20-18,19-18
+1180_1693,Ochsenkopf -> SRH Campus,20-18,21-18
+1693_1180,SRH Campus -> Ochsenkopf,22-17,21-18
+1331_1180,Berufsschule -> Ochsenkopf,22-17,22-16
+1180_1331,Ochsenkopf -> Berufsschule,22-15,22-16
+1330_1331,Gneisenaustraße Süd -> Berufsschule,22-15,22-14
+1331_1330,Berufsschule -> Gneisenaustraße Süd,23-13,22-14
+1160_1330,HD Hauptbahnhof -> Gneisenaustraße Süd,23-13,24-12
+1330_1160,Gneisenaustraße Süd -> HD Hauptbahnhof,24-12,25-9
+1194_1160,Stadtwerke -> HD Hauptbahnhof,25-10,25-9
+1160_1194,HD Hauptbahnhof -> Stadtwerke,25-8,25-7
+1193_1194,Stadtbücherei -> Stadtwerke,25-8,25-7
+1194_1193,Stadtwerke -> Stadtbücherei,25-3,25-4
+1168_1193,Seegarten -> Stadtbücherei,25-3,25-2
+1193_1168,Stadtbücherei -> Seegarten,25-1,25-2
+1146_1168,Bismarckplatz -> Seegarten,25-1,24-1
+1168_1146,Seegarten -> Bismarckplatz,23-1,24-1
+1260_1146,Brückenstraße -> Bismarckplatz,23-1,22-1
+1146_1260,Bismarckplatz -> Brückenstraße,21-1,22-1
+1233_1260,Kußmaulstraße -> Brückenstraße,21-1,20-1
+1260_1233,Brückenstraße -> Kußmaulstraße,19-1,20-1
+1225_1233,Blumenthalstraße -> Kußmaulstraße,19-1,18-1
+1233_1225,Kußmaulstraße -> Blumenthalstraße,17-1,18-1
+1135_1225,Kapellenweg -> Blumenthalstraße,17-1,16-2
+1225_1135,Blumenthalstraße -> Kapellenweg,15-3,16-2
+1136_1135,Hans-Thoma-Platz -> Kapellenweg,15-3,14-4
+1135_1136,Kapellenweg -> Hans-Thoma-Platz,13-5,14-4
+1133_1136,Burgstraße -> Hans-Thoma-Platz,13-5,12-5
+1136_1133,Hans-Thoma-Platz -> Burgstraße,9-5,10-5
+516_1133,Dossenheim Süd -> Burgstraße,9-5,8-5
+1133_516,Burgstraße -> Dossenheim Süd,7-5,8-5
+515_516,Dossenheim Bahnhof -> Dossenheim Süd,7-5,6-6
+516_515,Dossenheim Süd -> Dossenheim Bahnhof,5-7,6-6
+5742_515,Dossenheim Nord -> Dossenheim Bahnhof,5-7,4-7
+515_5742,Dossenheim Bahnhof -> Dossenheim Nord,3-7,4-7
+3482_5742,Schriesheim Süd -> Dossenheim Nord,3-7,2-7
+5742_3482,Dossenheim Nord -> Schriesheim Süd,1-7,2-7
+3479_3482,Schriesheim Bahnhof -> Schriesheim Süd,1-7,0-7
+3482_3479,Schriesheim Süd -> Schriesheim Bahnhof,0-7,0-7
+1199_1229,Volkshochschule -> Jahnstraße,21-9,22-9
+1229_1199,Jahnstraße -> Volkshochschule,23-7,23-8
+6791_1194,Ringstraße -> Stadtwerke,25-7,25-6
+1194_6791,Stadtwerke -> Ringstraße,27-7,26-6
+1149_6794,Rudolf-Diesel-Straße -> Montpellierbrücke,30-10,31-11
+6794_1149,Montpellierbrücke -> Rudolf-Diesel-Straße,32-11,31-11

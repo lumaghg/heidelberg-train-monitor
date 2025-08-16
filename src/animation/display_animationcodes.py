@@ -46,7 +46,12 @@ class DisplayCSV(MatrixBase):
                 
                 # process animationcodes
 
-                df_animationcodes = pd.read_csv('../db/db_animationcodes.csv', dtype=str)
+                
+                
+                df_db_animationcodes = pd.read_csv('../db/db_animationcodes.csv', dtype=str)
+                df_rnv_animationcodes = pd.read_csv('../rnv/rnv_animationcodes.csv', dtype=str)
+                df_animationcodes = pd.concat([df_db_animationcodes, df_rnv_animationcodes])
+                
 
                 df_db_rfv_mapping = pd.read_csv('./db_rfv_mapping.csv', dtype=str)
                 df_db_snv_mapping = pd.read_csv('./db_snv_mapping.csv', dtype=str)
