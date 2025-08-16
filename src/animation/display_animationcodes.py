@@ -63,12 +63,12 @@ class DisplayCSV(MatrixBase):
 
                 # always do two ticks of db, then two ticks of rnv
                 if tick_counter == 0 or tick_counter == 1:
-                    overlay = base_overlay_db
+                    overlay = base_overlay_db.copy()
                     df_animationcodes = df_db_animationcodes
                     tick_counter += 1
                     
                 if tick_counter == 2 or tick_counter == 3:
-                    overlay = base_overlay_rnv
+                    overlay = base_overlay_rnv.copy()
                     df_animationcodes = df_rnv_animationcodes
                     tick_counter +=1
                     
