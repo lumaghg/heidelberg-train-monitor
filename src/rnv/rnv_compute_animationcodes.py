@@ -188,7 +188,7 @@ print(trips.head(5))
 
 # First, let's define some functions:
 
-# In[7]:
+# In[6]:
 
 
 import pandas as pd
@@ -260,6 +260,24 @@ def dim_hex_color(hex_color, factor):
     # RGB -> HEX
     return "{:02X}{:02X}{:02X}".format(r, g, b)
 
+
+def get_route_color(route_id:str):
+    if route_id.startswith("5"):
+        return "01FF5A"
+    if route_id.startswith("21"):
+        return 'FF0011'  
+    if route_id.startswith("22"):
+        return 'FFCC00'  
+    if route_id.startswith("23"):
+        return "FF9900"   
+    if route_id.startswith("24"):
+        return '8D2176'   
+    if route_id.startswith("26"):
+        return "FE7F7F"   
+    return 'FFFFFF'
+    
+    
+
 status_df = pd.DataFrame()
 
 for i, active_trip in trips.iterrows():
@@ -292,7 +310,7 @@ for i, active_trip in trips.iterrows():
         
         
         route_id = active_trip['route_id']
-        route_color = routes.loc[routes['route_id'] == route_id]['route_color'].iat[0]
+        route_color = get_route_color(route_id)
         primary_color = dim_hex_color(route_color, 1.0)
         secondary_color = dim_hex_color(primary_color, 0.4)
         
@@ -315,7 +333,7 @@ for i, active_trip in trips.iterrows():
 print(status_df)
 
 
-# In[ ]:
+# In[7]:
 
 
 # save to disk
