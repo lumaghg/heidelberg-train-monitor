@@ -50,6 +50,7 @@ class DisplayCSV(MatrixBase):
 
                 df_db_rfv_mapping = pd.read_csv('./db_rfv_mapping.csv', dtype=str)
                 df_db_snv_mapping = pd.read_csv('./db_snv_mapping.csv', dtype=str)
+                df_rnv_mapping = pd.read_csv('./rnv_mapping.csv', dtype=str)
 
 
                 def process_animationcode(animationcode: str):
@@ -66,7 +67,7 @@ class DisplayCSV(MatrixBase):
                         elif type == 'DB_RFV':
                             df_mapping = df_db_rfv_mapping
                         else:
-                            return
+                            df_mapping = df_rnv_mapping
                         
                         applicable_mapping_rows = df_mapping[df_mapping['statuscode'] == statuscode].reset_index(drop=True)
                         
