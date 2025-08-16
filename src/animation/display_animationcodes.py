@@ -11,21 +11,33 @@ import numpy as np
 
 
 # prepare base_overlay
-base_overlay = np.full((64,32), "000000")
+base_overlay_rnv = np.full((64,32), "000000")
+base_overlay_db = np.full((64,32), "000000")
 
 # backgrund lighting
-df_background_lighting = pd.read_csv('../background/background_lighting.csv', dtype=str)
+df_background_lighting_rnv = pd.read_csv('../background/background_lighting_rnv.csv', dtype=str)
+df_background_lighting_db = pd.read_csv('../background/background_lighting_db.csv', dtype=str)
 
-df_background_lighting = df_background_lighting.reset_index()  # make sure indexes pair with number of rows
+df_background_lighting_rnv = df_background_lighting_rnv.reset_index()  # make sure indexes pair with number of rows
+df_background_lighting_db = df_background_lighting_db.reset_index()  # make sure indexes pair with number of rows
 
-for index, row in df_background_lighting.iterrows():
+for index, row in df_background_lighting_rnv.iterrows():
     led = row['led']
     color_hex = row['color']
     
     x = int(led.split("-")[0])
     y = int(led.split("-")[1])
     
-    base_overlay[x,y] = color_hex
+    base_overlay_rnv[x,y] = color_hex
+    
+for index, row in df_background_lighting_db.iterrows():
+    led = row['led']
+    color_hex = row['color']
+    
+    x = int(led.split("-")[0])
+    y = int(led.split("-")[1])
+    
+    base_overlay_db[x,y] = color_hex
 
 
 class DisplayCSV(MatrixBase):
@@ -43,18 +55,20 @@ class DisplayCSV(MatrixBase):
             try:
                 
                 # background: 
-                overlay = base_overlay.copy()
+                overlay = None
+                df_animationcodes = None
                 
-                # process animationcodes
                 df_db_animationcodes = pd.read_csv('../db/db_animationcodes.csv', dtype=str)
                 df_rnv_animationcodes = pd.read_csv('../rnv/rnv_animationcodes.csv', dtype=str)
 
                 # always do two ticks of db, then two ticks of rnv
                 if tick_counter == 0 or tick_counter == 1:
+                    overlay = base_overlay_db
                     df_animationcodes = df_db_animationcodes
                     tick_counter += 1
                     
                 if tick_counter == 2 or tick_counter == 3:
+                    overlay = base_overlay_rnv
                     df_animationcodes = df_rnv_animationcodes
                     tick_counter +=1
                     
