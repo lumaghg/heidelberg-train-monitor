@@ -138,7 +138,7 @@ statuscode,readable,leds_primary,leds_secondary
 1330_1331,Gneisenaustraße Süd -> Berufsschule,22-15,22-14
 1331_1330,Berufsschule -> Gneisenaustraße Süd,23-13,22-14
 1160_1330,HD Hauptbahnhof -> Gneisenaustraße Süd,23-13,24-12
-1330_1160,Gneisenaustraße Süd -> HD Hauptbahnhof,24-12,25-9
+1330_1160,Gneisenaustraße Süd -> HD Hauptbahnhof,25-10,25-11
 1194_1160,Stadtwerke -> HD Hauptbahnhof,25-10,25-9
 1160_1194,HD Hauptbahnhof -> Stadtwerke,25-8,25-7
 1193_1194,Stadtbücherei -> Stadtwerke,25-8,25-7

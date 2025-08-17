@@ -14,13 +14,12 @@ primaryColor and secondaryColor are the colors which are used to light the prima
 
 
 
-
-Geschwindigkeiten:
-
-Auf diagonalen Strcken und auf dem Verbundungsstück Pfaffengrund 2 Pixel pro Tick, auf der langen geradeaus Strecke Kirchheim / Rohrbach 3 Pixel pro Tick, S-Bahn fährt erst ab Bahnhof Kirchheim Rohrbach mit Beschleunigung 3 Ticks
-
-/home/robin/cronlogs/htm_display_codes.log
-
- * * * * * sleep 30; sudo bash /home/robin/Documents/github/heidelberg-train-monitor/scriptwrappers/db_compute_animationcodes_wrapper.bash >> /home/robin/cronlogs/htm_db_codes.log 2>&1
- * * * * * sleep 15; sudo bash /home/robin/Documents/github/heidelberg-train-monitor/scriptwrappers/db_compute_animationcodes_wrapper.bash >> /home/robin/cronlogs/htm_db_codes.log 2>&1
- * * * * * sleep 45; sudo bash /home/robin/Documents/github/heidelberg-train-monitor/scriptwrappers/db_compute_animationcodes_wrapper.bash >> /home/robin/cronlogs/htm_db_codes.log 2>&1
+# heidelberg-train-monitor
+@reboot sleep 20; sudo bash /home/robin/Documents/github/heidelberg-train-monitor/scriptwrappers/preprocess_static_wrapper.bash >> /home/robin/cronlogs/htm_preprocess_static.log 2>&1
+0 0,6,12,18 * * * sudo bash /home/robin/Documents/github/heidelberg-train-monitor/scriptwrappers/preprocess_static_wrapper.bash >> /home/robin/cronlogs/htm_preprocess_static.log 2>&1
+* * * * * sudo bash /home/robin/Documents/github/heidelberg-train-monitor/scriptwrappers/rnv_compute_animationcodes_wrapper.bash >> /home/robin/cronlogs/htm_rnv_codes.log 2>&1
+* * * * * sudo bash /home/robin/Documents/github/heidelberg-train-monitor/scriptwrappers/db_compute_animationcodes_wrapper.bash >> /home/robin/cronlogs/htm_db_codes.log 2>&1
+* * * * * sleep 15; sudo bash /home/robin/Documents/github/heidelberg-train-monitor/scriptwrappers/db_compute_animationcodes_wrapper.bash >> /home/robin/cronlogs/htm_db_codes.log 2>&1
+* * * * * sleep 30; sudo bash /home/robin/Documents/github/heidelberg-train-monitor/scriptwrappers/db_compute_animationcodes_wrapper.bash >> /home/robin/cronlogs/htm_db_codes.log 2>&1
+* * * * * sleep 45; sudo bash /home/robin/Documents/github/heidelberg-train-monitor/scriptwrappers/db_compute_animationcodes_wrapper.bash >> /home/robin/cronlogs/htm_db_codes.log 2>&1
+@reboot sleep 20; sudo bash /home/robin/Documents/github/heidelberg-train-monitor/scriptwrappers/display_animationcodes_wrapper.bash >> /home/robin/cronlogs/htm_display_codes.log 2>&1
