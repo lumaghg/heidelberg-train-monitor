@@ -177,7 +177,7 @@ df_timetable['animation_class'] = df_timetable['category'].map(compute_animation
 def compute_animation_color(category):
     if category in ['S']:
         # Color of the S-Bahn Logo
-        return "019704"
+        return "01FF5A"
     
     # maybe change RE to bwegt yellow color
     if category in ['RB']:
@@ -185,12 +185,12 @@ def compute_animation_color(category):
         return "FD1621"
     
     if category in ['RE']:
-        # Color of DB Regional Trains (Verkehrsrot)
+        # yellow
         return "FFC924"
     
     if category in ['FLX']:
         # Color of Flixtrains
-        return "00FF55"
+        return "019704"
     
     if category in ['NJ']:
         # Color of Nightjets, maybe needs to be lightened to be visible
@@ -208,7 +208,6 @@ def compute_animation_color(category):
     return 'F8FC00'
 
 df_timetable['animation_color'] = df_timetable['category'].map(compute_animation_color)
-
 
     
     
