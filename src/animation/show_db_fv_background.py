@@ -43,7 +43,7 @@ class DisplayCSV(MatrixBase):
             try:
                 
                 # background: 
-                overlay = None
+                overlay = base_overlay_db
                 
                 for x in range(overlay.shape[0]):
                     for y in range(overlay.shape[1]):
