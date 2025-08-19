@@ -76,9 +76,9 @@ class DisplayCSV(MatrixBase):
                 #df_animationcodes = pd.concat([df_db_animationcodes, df_rnv_animationcodes])
                 
 
-                df_db_rfv_mapping = pd.read_csv('./db_rfv_mapping.csv', dtype=str)
-                df_db_snv_mapping = pd.read_csv('./db_snv_mapping.csv', dtype=str)
-                df_rnv_mapping = pd.read_csv('./rnv_mapping.csv', dtype=str)
+                df_db_rfv_mapping = pd.read_csv('./mappings/db_rfv_mapping.csv', dtype=str)
+                df_db_snv_mapping = pd.read_csv('./mappings/db_snv_mapping.csv', dtype=str)
+                df_rnv_mapping = pd.read_csv('./mappings/rnv_mapping.csv', dtype=str)
 
 
                 def process_animationcode(animationcode: str):
