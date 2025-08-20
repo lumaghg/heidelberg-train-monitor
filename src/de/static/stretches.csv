@@ -1,0 +1,17 @@
+stretch_id,station_name,station_uic,time_fraction_travelled
+hamburg-hannover,Hamburg-Altona,8002553,0
+hamburg-hannover,Hamburg Dammtor,8002548,10
+hamburg-hannover,Hamburg Hbf,8002549,15
+hamburg-hannover,Hamburg-Harburg,8000147,25
+hamburg-hannover,Lüneburg,8000238,43
+hamburg-hannover,Uelzen,8000168,57
+hamburg-hannover,Celle,8000064,79
+hamburg-hannover,Hannover Hbf,8000152,100
+hannover-hamburg,Hannover Hbf,8000152,0
+hannover-hamburg,Celle,8000064,21
+hannover-hamburg,Uelzen,8000168,43
+hannover-hamburg,Lüneburg,8000238,57
+hannover-hamburg,Hamburg-Harburg,8000147,75
+hannover-hamburg,Hamburg Hbf,8002549,85
+hannover-hamburg,Hamburg Dammtor,8002548,90
+hannover-hamburg,Hamburg Dammtor,8002553,100
