@@ -1,17 +1,17 @@
 stretch_id,stretch_priority,station_name,station_uic,time_fraction_travelled
-hamburg-hannover,0,Hamburg-Altona,8002553,0
-hamburg-hannover,0,Hamburg Dammtor,8002548,10
-hamburg-hannover,0,Hamburg Hbf,8002549,15
-hamburg-hannover,0,Hamburg-Harburg,8000147,25
-hamburg-hannover,0,Lüneburg,8000238,43
-hamburg-hannover,0,Uelzen,8000168,57
-hamburg-hannover,0,Celle,8000064,79
-hamburg-hannover,0,Hannover Hbf,8000152,100
-hannover-hamburg,0,Hannover Hbf,8000152,0
-hannover-hamburg,0,Celle,8000064,21
-hannover-hamburg,0,Uelzen,8000168,43
-hannover-hamburg,0,Lüneburg,8000238,57
-hannover-hamburg,0,Hamburg-Harburg,8000147,75
-hannover-hamburg,0,Hamburg Hbf,8002549,85
-hannover-hamburg,0,Hamburg Dammtor,8002548,90
-hannover-hamburg,0,Hamburg Dammtor,8002553,100
+hamburg-hannover,1,Hamburg-Altona,8002553,0
+hamburg-hannover,1,Hamburg Dammtor,8002548,10
+hamburg-hannover,1,Hamburg Hbf,8002549,15
+hamburg-hannover,1,Hamburg-Harburg,8000147,25
+hamburg-hannover,1,Lüneburg,8000238,43
+hamburg-hannover,1,Uelzen,8000168,57
+hamburg-hannover,1,Celle,8000064,79
+hamburg-hannover,1,Hannover Hbf,8000152,100
+hannover-hamburg,1,Hannover Hbf,8000152,0
+hannover-hamburg,1,Celle,8000064,21
+hannover-hamburg,1,Uelzen,8000168,43
+hannover-hamburg,1,Lüneburg,8000238,57
+hannover-hamburg,1,Hamburg-Harburg,8000147,75
+hannover-hamburg,1,Hamburg Hbf,8002549,85
+hannover-hamburg,1,Hamburg Dammtor,8002548,90
+hannover-hamburg,1,Hamburg Dammtor,8002553,100

@@ -23,3 +23,52 @@ primaryColor and secondaryColor are the colors which are used to light the prima
 * * * * * sleep 30; sudo bash /home/robin/Documents/github/heidelberg-train-monitor/scriptwrappers/db_compute_animationcodes_wrapper.bash >> /home/robin/cronlogs/htm_db_codes.log 2>&1
 * * * * * sleep 45; sudo bash /home/robin/Documents/github/heidelberg-train-monitor/scriptwrappers/db_compute_animationcodes_wrapper.bash >> /home/robin/cronlogs/htm_db_codes.log 2>&1
 @reboot sleep 20; sudo bash /home/robin/Documents/github/heidelberg-train-monitor/scriptwrappers/display_animationcodes_wrapper.bash >> /home/robin/cronlogs/htm_display_codes.log 2>&1
+
+
+
+Sprinterstrecken:
+- Hamburg - Essen
+- Köln - Berlin (über Hannover, Hagen ohne Halt)
+- Frankfurt - Berlin (über Hannover, Fulda ohne Halt)
+- Berlin - Nürnberg (pber Erfurt, Halle ohne Halt)
+
+Hauptstrecken:
+- Hamburg - Hannover
+- Hamburg - Berlin
+- Hamburg - Dortmund
+- Hannover - Dortmund - Duisburg - Köln
+- Hannover - Dortmund - Hagen - Köln
+- Hannover - Berlin
+- Hannover - Nürnberg
+- Hannover - Frankfurt
+- Göttingen - Wolfsburg
+- Frankfurt - Nürnberg
+- Frankfurt - Erfurt
+- Berlin - Halle - Erfurt
+- Berlin - Leipzig - Erfurt
+- Erfurt - Nürnberg
+- München - Nürnberg
+- Köln - Montabaur - Frankfurt
+- Frankfurt - Basel 
+- Frankfurt - Stuttgart - München
+- Karlsruhe - Stuttgart (/Esslingen)
+
+Nebenstrecken:
+
+TODO
+
+
+
+ungepixelte Strecken:
+- Berlin - Cottbus (IC zählt als RE)
+- Dresden - Chemnitz (IC zählt als RE)
+- München - Berchtesgarden (keine Züge)
+- Ulm - Oberstdorf (nur 1 IC pro Tag)
+- Augsburg - Oberstdorf (nur 1 IC pro Tag)
+- Stuttgart - Tübingen (nur 1 IC pro Tag)
+- Stuttgart - Tuttlingen (nur 1 IC pro Tag, der nicht als RE zählt)
+- Offenburg - Konstanz (nur 1 ICE pro Tag im Sommer)
+- Koblenz - Luxemburg (keine Züge)
+- Dortmund - Siegen - Frankfurt (Zug zählt als RE)
+- Duisburg - M'gladbach - Aachen (1 Zug pro Tag)
+- Düsseldorf - M'gladbach - Aachen (1 Zug pro Tag)
