@@ -45,13 +45,12 @@ Wo sich ein Zug befindet, wird durch folgende Schritte ermittelt:
 4. Ermittlung der Zugposition auf dem Shortest Path in Zeitprozent
 5. Ermittlung, auf welcher Kante der Zug ist durch Lookup in Tabelle aus 3.5
 6. Durch Zugposition auf dem shortest path in % und Start / Ende Zeitprozent der Kante die relative Position in % auf der Kante bestimmen
+7. Lookup des kantensegments in Tabelle aus Kantenzeitprozent Start + Ende, Kante, Segmentnr., LED
+8. Übersetzung des Gesamtpaths des Zuges aus den Stoptimes in eine Liste von Kantensegmenten (möglich, weil per Definition immer nur ganze Kanten befahren werden können und damit einfach alle Kantensegmente der jeweiligen Kante in die Liste hinzugefügt werden)
+9. Lookup des vorherigen Kantensegments
+10. Beleuchtung der beiden LEDs im aktuellen und vorherigen Kantensegment
 
-Animation durch Tabelle aus kantenname, zeitprozent start + ende, LED primary, LED secondary
--> display.csv lookup anpassen
-
-
--> Das erste Kantensegment wird ohne Trails animiert, da nicht eindeutig ist, wo der Zug herkommt. Zusätzlich ist die Streckenführung im Knotenbereich oft etwas durcheinander, ist also nicht so unrealistisch abgebildet-
--> Entscheidung gegen die Variante, bei der der Zug ab der ersten Sekunde nach der Abfahrt mit der ersten LED außerhalb des Bahnhofs angezeigt wird, um das Animieren des Trails zu ermöglichen, da das bei nah aneinander liegenden Bahnhöfen zu Verwirrung führen würde.
+-> Kanten müssen nur in eine Richtung definiert werden, bei der Suche nach dem Kantensegment in der Tabelle wird die Reihenfolge der beiden Knoten einfach umgedreht. In dem Falle wird dann die Kantenzeitprozentzahl reversed. Hamburg - Bremen 20% ist die gleiche Position wie Bremen - Hamburg 80%.
 
 -> Cost zwischen Haltestellen wird nicht automatisch berechnet sondern von gelookuped, weil es teilweise nachts oder mit IC/ICE Unterschied zu großen Schwankungen in einigen Abschnitten führt, da andere Strecken ausnahmsweise benutzt werden. Der reguläre Fall soll zur Animation verwendet werden. Und weil Spaß :)
 
