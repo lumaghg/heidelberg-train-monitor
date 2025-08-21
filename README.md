@@ -53,6 +53,8 @@ Animation durch Tabelle aus kantenname, zeitprozent start + ende, LED primary, L
 -> Das erste Kantensegment wird ohne Trails animiert, da nicht eindeutig ist, wo der Zug herkommt. Zusätzlich ist die Streckenführung im Knotenbereich oft etwas durcheinander, ist also nicht so unrealistisch abgebildet-
 -> Entscheidung gegen die Variante, bei der der Zug ab der ersten Sekunde nach der Abfahrt mit der ersten LED außerhalb des Bahnhofs angezeigt wird, um das Animieren des Trails zu ermöglichen, da das bei nah aneinander liegenden Bahnhöfen zu Verwirrung führen würde.
 
+-> Cost zwischen Haltestellen wird nicht automatisch berechnet sondern von gelookuped, weil es teilweise nachts oder mit IC/ICE Unterschied zu großen Schwankungen in einigen Abschnitten führt, da andere Strecken ausnahmsweise benutzt werden. Der reguläre Fall soll zur Animation verwendet werden. Und weil Spaß :)
+
 
 
 
