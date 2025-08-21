@@ -46,18 +46,18 @@ Wo sich ein Zug befindet, wird durch folgende Schritte ermittelt:
 5. Ermittlung, auf welcher Kante der Zug ist durch Lookup in Tabelle aus 3.5
 6. Durch Zugposition auf dem shortest path in % und Start / Ende Zeitprozent der Kante die relative Position in % auf der Kante bestimmen
 7. Lookup des kantensegments in Tabelle aus Kantenzeitprozent Start + Ende, Kante, Segmentnr., LED
-8. Übersetzung des Gesamtpaths des Zuges aus den Stoptimes in eine Liste von Kantensegmenten (möglich, weil per Definition immer nur ganze Kanten befahren werden können und damit einfach alle Kantensegmente der jeweiligen Kante in die Liste hinzugefügt werden)
-9. Lookup des vorherigen Kantensegments
-10. Beleuchtung der beiden LEDs im aktuellen und vorherigen Kantensegment
+(8. Übersetzung des Gesamtpaths des Zuges aus den Stoptimes in eine Liste von Kantensegmenten (möglich, weil per Definition immer nur ganze Kanten befahren werden können und damit einfach alle Kantensegmente der jeweiligen Kante in die Liste hinzugefügt werden))
+(9. Lookup der Trail LED durch herausfinden der ersten vorherigen Kantensegments, das eine andere LED hat.
+10. Beleuchtung der LED(s)
+
+-> Es gibt keine Trails an Startbahnhöfen einer Zugfahrt (Macht ja Sinn, der Zug kommt ja noch von nirgendwo :) )
 
 -> Kanten müssen nur in eine Richtung definiert werden, bei der Suche nach dem Kantensegment in der Tabelle wird die Reihenfolge der beiden Knoten einfach umgedreht. In dem Falle wird dann die Kantenzeitprozentzahl reversed. Hamburg - Bremen 20% ist die gleiche Position wie Bremen - Hamburg 80%.
+Convention: Kanten immer so herum festlegen, dass sie möglichst alle in einer Linie und Richtung liegen, damit das mapping nachher nicht so krampfig zu erstellen ist. 
+
+-> So kann jetzt auch zuerst die Variante ohne Trails implementiert werden und die Trails in beliebiger Länge später hinzugefügt werden.
 
 -> Cost zwischen Haltestellen wird nicht automatisch berechnet sondern von gelookuped, weil es teilweise nachts oder mit IC/ICE Unterschied zu großen Schwankungen in einigen Abschnitten führt, da andere Strecken ausnahmsweise benutzt werden. Der reguläre Fall soll zur Animation verwendet werden. Und weil Spaß :)
-
-
-
-
-
 
 
 
