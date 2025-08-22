@@ -309,7 +309,7 @@ def get_color_for_category(category: str):
         return "FFFFFF"
     
     if category in ['FLX','WB']:
-        return "019704"
+        return "00FF00"
     
     if category in ['RJ', 'RJX', 'ECE']:
         return "FFAA00"
