@@ -15,3 +15,5 @@ __pycache__
 db_timetable.csv
 ratelimit.db
 tmp
+trip_statuses.csv
+stoptimes.csv
