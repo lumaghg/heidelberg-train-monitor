@@ -10,17 +10,17 @@ import pandas as pd
 import numpy as np
 
 
-# prepare all base_overlays
+# prepare base_overlay
 base_overlay_rnv = np.full((64,32), "000000")
 base_overlay_db = np.full((64,32), "000000")
-base_overlay_de = np.full((64,32), "000000")
 
-# background lighting
-df_background_lighting_rnv = pd.read_csv('../background/background_lighting_rnv.csv', dtype=str).reset_index()
-df_background_lighting_db = pd.read_csv('../background/background_lighting_db.csv', dtype=str).reset_index()
-df_background_lighting_de = pd.read_csv('../background/background_lighting_de.csv', dtype=str).reset_index()
+# backgrund lighting
+df_background_lighting_rnv = pd.read_csv('../background/background_lighting_rnv.csv', dtype=str)
+df_background_lighting_db = pd.read_csv('../background/background_lighting_db.csv', dtype=str)
 
-# rnv
+df_background_lighting_rnv = df_background_lighting_rnv.reset_index()  # make sure indexes pair with number of rows
+df_background_lighting_db = df_background_lighting_db.reset_index()  # make sure indexes pair with number of rows
+
 for index, row in df_background_lighting_rnv.iterrows():
     led = row['led']
     color_hex = row['color']
@@ -29,8 +29,7 @@ for index, row in df_background_lighting_rnv.iterrows():
     y = int(led.split("-")[1])
     
     base_overlay_rnv[x,y] = color_hex
-
-# db
+    
 for index, row in df_background_lighting_db.iterrows():
     led = row['led']
     color_hex = row['color']
@@ -39,16 +38,6 @@ for index, row in df_background_lighting_db.iterrows():
     y = int(led.split("-")[1])
     
     base_overlay_db[x,y] = color_hex
-
-# de
-for index, row in df_background_lighting_de.iterrows():
-    led = row['led']
-    color_hex = row['color']
-    
-    x = int(led.split("-")[0])
-    y = int(led.split("-")[1])
-    
-    base_overlay_de[x,y] = color_hex
 
 
 class DisplayCSV(MatrixBase):
@@ -71,22 +60,18 @@ class DisplayCSV(MatrixBase):
                 
                 df_db_animationcodes = pd.read_csv('../db/db_animationcodes.csv', dtype=str)
                 df_rnv_animationcodes = pd.read_csv('../rnv/rnv_animationcodes.csv', dtype=str)
-                df_de_animationcodes = pd.read_csv('../rnv/rnv_animationcodes.csv', dtype=str)
 
                 # always do two ticks of db, then two ticks of rnv
-                if tick_counter in range(0,4):
+                if tick_counter <= 2:
                     overlay = base_overlay_db.copy()
-                    df_animationcodes = df_de_animationcodes
+                    df_animationcodes = df_db_animationcodes
                     
-                if tick_counter in range(4,8):
+                if tick_counter >= 3:
                     overlay = base_overlay_rnv.copy()
                     df_animationcodes = df_rnv_animationcodes
                     
-                if tick_counter in range(8,12):
-                    overlay = base_overlay_de.copy()
-                    df_animationcodes = df_db_animationcodes
+                tick_counter = tick_counter + 1 if tick_counter != 6 else 0
                      
-                tick_counter = tick_counter + 1 if tick_counter != 12 else 0
                 
                 #df_animationcodes = pd.concat([df_db_animationcodes, df_rnv_animationcodes])
                 
@@ -94,25 +79,24 @@ class DisplayCSV(MatrixBase):
                 df_db_rfv_mapping = pd.read_csv('./mappings/db_rfv_mapping.csv', dtype=str)
                 df_db_snv_mapping = pd.read_csv('./mappings/db_snv_mapping.csv', dtype=str)
                 df_rnv_mapping = pd.read_csv('./mappings/rnv_mapping.csv', dtype=str)
-                df_de_mapping = pd.read_csv('./mappings/de_mapping.csv', dtype=str)
 
 
                 def process_animationcode(animationcode: str):
                     try:
+                        
                         type, statuscode, colors = animationcode.split(":")
+                        
+                        primary_color_hex = colors.split("_")[0]
+                        secondary_color_hex = colors.split("_")[1]
                         
                         df_mapping = None
                         if type == 'DB_SNV':
                             df_mapping = df_db_snv_mapping
                         elif type == 'DB_RFV':
                             df_mapping = df_db_rfv_mapping
-                        elif type == 'DE':
-                            df_mapping = df_de_mapping
-                        elif type == 'RNV':
-                            df_mapping = df_rnv_mapping
                         else:
-                            return
-                            
+                            df_mapping = df_rnv_mapping
+                        
                         applicable_mapping_rows = df_mapping[df_mapping['statuscode'] == statuscode].reset_index(drop=True)
                         
                         if len(applicable_mapping_rows) == 0:
@@ -120,7 +104,6 @@ class DisplayCSV(MatrixBase):
 
                         mapping_row = applicable_mapping_rows.iloc[0]
                         
-                        primary_color_hex = colors.split("_")[0]
                         primary_leds:str = mapping_row['leds_primary']
                         
                         if not pd.isna(primary_leds):
@@ -131,19 +114,17 @@ class DisplayCSV(MatrixBase):
                                 y = int(pixel.split("-")[1])
                                 
                                 overlay[x,y] = primary_color_hex
-                         
-                         # only DB and RNV statuscodes have secondary colors   
-                        if type in ['DB_SNV', 'DB_RFV', 'RNV']:
-                            secondary_leds:str = mapping_row['leds_secondary']
-                            secondary_color_hex = colors.split("_")[1]
                             
-                            if not pd.isna(secondary_leds):
-                                pixels_xy = secondary_leds.split("&")
-                                for pixel in pixels_xy:
-                                    x = int(pixel.split("-")[0])
-                                    y = int(pixel.split("-")[1])
-                                    
-                                    overlay[x,y] = secondary_color_hex
+                            
+                        secondary_leds:str = mapping_row['leds_secondary']
+                        
+                        if not pd.isna(secondary_leds):
+                            pixels_xy = secondary_leds.split("&")
+                            for pixel in pixels_xy:
+                                x = int(pixel.split("-")[0])
+                                y = int(pixel.split("-")[1])
+                                
+                                overlay[x,y] = secondary_color_hex
                                 
                     except Exception as e:
                         print(e)
