@@ -320,10 +320,10 @@ def compute_primary_animationcodes(row):
 # In[280]:
 
 
-df_trip_statuses['primary_animationcodes'] = df_trip_statuses.apply(compute_primary_animationcodes, axis=1)
+df_trip_statuses['animationcode'] = df_trip_statuses.apply(compute_primary_animationcodes, axis=1)
 df_trip_statuses.to_csv('temp.csv', index=False)
 
-df_trip_statuses['primary_animationcodes'].to_csv('./de_animationcodes.csv', index=False)
+df_trip_statuses['animationcode'].to_csv('./de_animationcodes.csv', index=False)
 
 
 # In[ ]:
