@@ -155,3 +155,13 @@ ungepixelte Strecken:
 - Dortmund - Siegen - Frankfurt (Zug zählt als RE)
 - Duisburg - M'gladbach - Aachen (1 Zug pro Tag)
 - Düsseldorf - M'gladbach - Aachen (1 Zug pro Tag)
+
+
+
+
+# TODOS
+- Sortierung der Animationcodes, damit die selteneren Züge nicht überschrieben werden
+- Echtzeitupdates alle 5 Minuten
+- Trails?
+- Verspätungsview?
+- Follow mode?
