@@ -16,10 +16,10 @@ import platform
 import sys
 
 
-MAPPING_PATH = './mappings/rnv_mapping.csv'
+MAPPING_PATH = './mappings/de_mapping.csv'
 
 NO_PRIMARY_LEDS = 1
-NO_SECONDARY_LEDS = 1
+NO_SECONDARY_LEDS = 0
 
 # Plattform erkennen
 IS_WINDOWS = platform.system() == "Windows"
@@ -56,7 +56,7 @@ else:
 base_overlay = np.full((64,32), "000000")
 
 # backgrund lighting
-df_background_lighting = pd.read_csv('../background/background_lighting.csv', dtype=str)
+df_background_lighting = pd.read_csv('../background/background_lighting_de.csv', dtype=str)
 
 df_background_lighting = df_background_lighting.reset_index()  # make sure indexes pair with number of rows
 
@@ -88,10 +88,9 @@ class DisplayCSV(MatrixBase):
         for index, row in df_mapping.iterrows():
             readable_statuscode = row['readable']
             leds_primary = df_mapping.at[index, 'leds_primary']
-            leds_secondary = df_mapping.at[index, 'leds_secondary']
             
             # skip already filled rows
-            if not pd.isna(leds_primary) or not pd.isna(leds_secondary):
+            if not pd.isna(leds_primary):
                 continue
 
 

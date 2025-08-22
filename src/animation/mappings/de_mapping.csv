@@ -1,4 +1,4 @@
-statuscode,readable,primary_leds
+statuscode,readable,leds_primary
 8002553>8002548_0,Hamburg-Altona -> Hamburg Dammtor_0,
 8002548>8002549_0,Hamburg Dammtor -> Hamburg Hbf_0,
 8002549>8000147_0,Hamburg Hbf -> Hamburg-Harburg_0,

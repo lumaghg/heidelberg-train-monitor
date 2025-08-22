@@ -2,7 +2,7 @@ import sqlite3
 import time
 from pathlib import Path
 
-DB_PATH = Path("tmp/ratelimit_db.db")
+DB_PATH = Path("./tmp/ratelimit_db.db")
 
 def init_db():
     conn = sqlite3.connect(DB_PATH)
@@ -37,8 +37,9 @@ def acquire_slot(limit=60, window=60):
         conn.rollback()
         conn.close()
         return False
-    
-def wait_for_slot(limit: int = 60, window: int = 60, sleep: int = 1):
+
+# leave two slots for hd
+def wait_for_slot(limit: int = 58, window: int = 58, sleep: int = 1):
     """
     Blockiert solange, bis ein Slot frei ist.
     Gibt eine Konsoleninfo aus, wenn gewartet werden muss.

@@ -169,35 +169,6 @@ G.add_edges_from(edges)
 
 
 
-# In[275]:
-
-
-# draw graph for development
-if True:
-    import matplotlib.pyplot as plt
-
-    pos = nx.spring_layout(G, seed=7, weight='attraction_force')  # positions for all nodes - seed for reproducibility
-
-    # nodes
-    nx.draw_networkx_nodes(G, pos, node_size=50)
-
-    # edges
-    nx.draw_networkx_edges(G, pos, edgelist=G.edges, width=3)
-
-    # node labels
-    labels = {n: d["station_name"] for n, d in G.nodes(data=True)}
-    nx.draw_networkx_labels(G, pos, font_size=10, font_family="sans-serif", labels=labels)
-    # edge weight labels
-    edge_labels = nx.get_edge_attributes(G, "travel_cost")
-    nx.draw_networkx_edge_labels(G, pos, edge_labels)
-
-    ax = plt.gca()
-    ax.margins(0.08)
-    plt.axis("off")
-    plt.tight_layout()
-    plt.show()
-
-
 # In[276]:
 
 
