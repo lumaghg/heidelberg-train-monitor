@@ -10,7 +10,7 @@
 # 6. lookup the stretch segment each stretch is on
 # 7. put the statuscode together and output
 
-# In[269]:
+# In[ ]:
 
 
 import datetime
@@ -68,7 +68,7 @@ print(DBDatetimeToDatetime("2508101222"))
 print(datetimeToDBDateAndHourTuple(datetime.datetime(2025, 8, 10, 12, 22)))
 
 
-# In[270]:
+# In[ ]:
 
 
 df_stoptimes = pd.read_csv(STOPTIMES_PATH, dtype=str).dropna(how='all')
@@ -84,7 +84,7 @@ df_stoptimes = pd.read_csv(STOPTIMES_PATH, dtype=str).dropna(how='all')
 df_stoptimes = df_stoptimes.drop(labels=[ 'request_timestamp'], axis=1)
 
 
-# In[271]:
+# In[ ]:
 
 
 # convert arrival and departure to datetimes
@@ -95,7 +95,7 @@ df_stoptimes['departure'] = df_stoptimes['departure_dbdatetime'].map(DBDatetimeT
 df_stoptimes = df_stoptimes.drop(['arrival_dbdatetime', 'departure_dbdatetime'], axis=1)
 
 
-# In[272]:
+# In[ ]:
 
 
 # find active trip ids
@@ -123,7 +123,7 @@ no_active_trips = df_stoptimes['trip_id'].unique().shape[0]
 print(f"found {no_active_trips} active trips")
 
 
-# In[273]:
+# In[ ]:
 
 
 # find the two stations, between which each train is traveling (standing at a station until departure counts to being between the two stations. 
@@ -141,7 +141,7 @@ next_stations = next_stations.drop(labels=['has_departed_station'], axis=1)
 df_trip_statuses = pd.merge(how='inner', left=previous_stations, right=next_stations, on=['trip_id', 'category', 'number'], suffixes=("_previous", "_next"))
 
 
-# In[274]:
+# In[ ]:
 
 
 # load graph representation of network
@@ -169,7 +169,7 @@ G.add_edges_from(edges)
 
 
 
-# In[276]:
+# In[ ]:
 
 
 # calculate where the train is
@@ -255,7 +255,7 @@ df_trip_statuses['position'] = df_trip_statuses.apply(compute_position_on_graph,
 #df_trip_statuses = df_trip_statuses.drop(['station_name_previous','station_uic_previous','arrival_previous','departure_previous','station_name_next','station_uic_next','arrival_next','departure_next'], axis=1)
 
 
-# In[277]:
+# In[ ]:
 
 
 # lookup row in stretch_id + % to stretch_segment / LED mapping
@@ -296,16 +296,34 @@ def compute_primary_statuscode(row):
 df_trip_statuses['primary_statuscode'] = df_trip_statuses.apply(compute_primary_statuscode, axis=1)
 
 
-# In[278]:
+# In[ ]:
 
 
 # color mapping for animationcodes
 
 def get_color_for_category(category: str):
-    return 'FFFFFF'
+    if category in ['IC', 'EC']:
+        return "00FFFF"
+    
+    if category in ['ICE']:
+        return "FFFFFF"
+    
+    if category in ['FLX','WB']:
+        return "019704"
+    
+    if category in ['RJ', 'RJX', 'ECE']:
+        return "FFAA00"
+    
+    if category in ['EST','TGV']:
+        return "FF0000"
+    
+    if category in ['NJ','EN','ES','DN','D','SJ']:
+        return "CC00FF"
+    
+    return "FFFF00"
 
 
-# In[279]:
+# In[ ]:
 
 
 # build animationcodes
@@ -317,7 +335,7 @@ def compute_primary_animationcodes(row):
     return f"DE:{statuscode}:{color}"
 
 
-# In[280]:
+# In[ ]:
 
 
 df_trip_statuses['animationcode'] = df_trip_statuses.apply(compute_primary_animationcodes, axis=1)
