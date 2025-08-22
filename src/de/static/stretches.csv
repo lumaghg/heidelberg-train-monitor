@@ -1,17 +1,8 @@
-stretch_id,stretch_priority,station_name,station_uic,time_fraction_travelled
-hamburg-hannover,1,Hamburg-Altona,8002553,0
-hamburg-hannover,1,Hamburg Dammtor,8002548,10
-hamburg-hannover,1,Hamburg Hbf,8002549,15
-hamburg-hannover,1,Hamburg-Harburg,8000147,25
-hamburg-hannover,1,Lüneburg,8000238,43
-hamburg-hannover,1,Uelzen,8000168,57
-hamburg-hannover,1,Celle,8000064,79
-hamburg-hannover,1,Hannover Hbf,8000152,100
-hannover-hamburg,1,Hannover Hbf,8000152,0
-hannover-hamburg,1,Celle,8000064,21
-hannover-hamburg,1,Uelzen,8000168,43
-hannover-hamburg,1,Lüneburg,8000238,57
-hannover-hamburg,1,Hamburg-Harburg,8000147,75
-hannover-hamburg,1,Hamburg Hbf,8002549,85
-hannover-hamburg,1,Hamburg Dammtor,8002548,90
-hannover-hamburg,1,Hamburg Dammtor,8002553,100
+station_name_from,station_uic_from,station_name_to,station_uic_to,travel_cost,super_name,stretch_id
+Hamburg-Altona,8002553,Hamburg Dammtor,8002548,10,Hamburg Stadtverkehr,hamburg-altona>hamburg-dammtor
+Hamburg Dammtor,8002548,Hamburg Hbf,8002549,4,Hamburg Stadtverkehr,hamburg-dammtor>hamburg-hbf
+Hamburg Hbf,8002549,Hamburg-Harburg,8000147,10,Hamburg Stadtverkehr,hamburg-hbf>hamburg-harburg
+Hamburg-Harburg,8000147,Lüneburg,8000238,17,Hamburg Stadtverkehr,hamburg-harburg>lüneburg
+Lüneburg,8000238,Uelzen,8000168,14,Hamburg - Hannover,lüneburg>uelzen
+Uelzen,8000168,Celle,8000064,21,Hamburg - Hannover,uelzen>celle
+Celle,8000064,Hannover Hbf,8000152,20,Hamburg - Hannover,celle>hannover-hbf

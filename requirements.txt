@@ -5,3 +5,4 @@ requests
 xmltodict
 opencv-python
 pillow
+networkx

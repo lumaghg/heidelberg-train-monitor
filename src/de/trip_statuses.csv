@@ -1,15 +1,16 @@
-trip_id,category,number,station_name_previous,station_uic_previous,arrival_previous,departure_previous,station_name_next,station_uic_next,arrival_next,departure_next,stretch_id
--1302275594339840200,ICE,576,Hannover Hbf,8000152,2025-08-20 17:17:00,2025-08-20 17:20:00,Hamburg Hbf,8002549,2025-08-20 18:36:00,2025-08-20 18:36:00,hamburg-hannover
--2849772715769172580,ICE,1578,Hamburg-Harburg,8000147,2025-08-20 17:19:00,2025-08-20 17:21:00,Hamburg Hbf,8002549,2025-08-20 17:32:00,2025-08-20 17:37:00,hamburg-hannover
--4531120744728068355,ICE,1171,Hamburg Hbf,8002549,2025-08-20 16:20:00,2025-08-20 16:24:00,Hannover Hbf,8000152,2025-08-20 17:38:00,2025-08-20 17:41:00,hamburg-hannover
--5957666693722375587,ICE,773,Hamburg Dammtor,8002548,2025-08-20 17:16:00,2025-08-20 17:16:00,Hamburg Hbf,8002549,2025-08-20 17:20:00,2025-08-20 17:24:00,hamburg-hannover
--7179928820236290043,ICE,683,Hamburg-Harburg,8000147,2025-08-20 17:10:00,2025-08-20 17:12:00,Hannover Hbf,8000152,2025-08-20 18:22:00,2025-08-20 18:26:00,hamburg-hannover
--7714364757423921343,ICE,788,Hannover Hbf,8000152,2025-08-20 16:32:00,2025-08-20 16:36:00,Hamburg-Harburg,8000147,2025-08-20 17:40:00,2025-08-20 17:42:00,hamburg-hannover
--8593658168921970782,IC,2082,Celle,8000064,2025-08-20 17:16:00,2025-08-20 17:17:00,Uelzen,8000168,2025-08-20 17:41:00,2025-08-20 17:43:00,hamburg-hannover
--988583344704703688,ICE,883,Hamburg-Harburg,8000147,2025-08-20 16:10:00,2025-08-20 16:12:00,Hannover Hbf,8000152,2025-08-20 17:20:00,2025-08-20 17:26:00,hamburg-hannover
-2011312559727747204,IC,2084,Celle,8000064,2025-08-20 17:16:00,2025-08-20 17:17:00,Uelzen,8000168,2025-08-20 17:41:00,2025-08-20 17:43:00,hamburg-hannover
-2677562958045670522,ICE,74,Hannover Hbf,8000152,2025-08-20 16:17:00,2025-08-20 16:20:00,Hamburg Hbf,8002549,2025-08-20 17:35:00,2025-08-20 17:39:00,hamburg-hannover
-3520459826486736427,ICE,1675,Uelzen,8000168,2025-08-20 17:13:00,2025-08-20 17:15:00,Celle,8000064,2025-08-20 17:36:00,2025-08-20 17:37:00,hamburg-hannover
-3657993984016871147,ICE,800,Lüneburg,8000238,2025-08-20 16:32:00,2025-08-20 16:36:00,Hamburg Hbf,8002549,2025-08-20 17:17:00,2025-08-20 17:25:00,hamburg-hannover
-8187349158793624860,ICE,1687,Hamburg Dammtor,8002548,2025-08-20 17:19:00,2025-08-20 17:20:00,Hamburg Hbf,8002549,2025-08-20 17:24:00,2025-08-20 17:28:00,hamburg-hannover
-8290912034684684315,ICE,803,Lüneburg,8000238,2025-08-20 17:12:00,2025-08-20 17:14:00,Uelzen,8000168,2025-08-20 17:35:00,2025-08-20 17:36:00,hamburg-hannover
+trip_id,category,number,station_name_previous,station_uic_previous,arrival_previous,departure_previous,station_name_next,station_uic_next,arrival_next,departure_next,position
+-1497213994658544450,ICE,927,Hamburg-Altona,8002553,2025-08-22 11:39:00,2025-08-22 11:39:00,Hamburg Hbf,8002549,2025-08-22 11:49:00,2025-08-22 11:53:00,"{'stretch_id': 'hamburg-altona>hamburg-dammtor', 'percentage': 55, 'travelling_reverse': False}"
+-1533583722018076654,ICE,1704,Uelzen,8000168,2025-08-22 11:28:00,2025-08-22 11:30:00,Hamburg Hbf,8002549,2025-08-22 12:11:00,2025-08-22 12:15:00,"{'stretch_id': 'lüneburg>uelzen', 'percentage': 92, 'travelling_reverse': True}"
+-1618433914809757000,ICE,772,Hannover Hbf,8000152,2025-08-22 11:17:00,2025-08-22 11:20:00,Hamburg Hbf,8002549,2025-08-22 12:36:00,2025-08-22 12:36:00,"{'stretch_id': 'uelzen>celle', 'percentage': 22, 'travelling_reverse': True}"
+-3212205364154915817,ICE,886,Lüneburg,8000238,2025-08-22 11:25:00,2025-08-22 11:27:00,Hamburg-Harburg,8000147,2025-08-22 11:44:00,2025-08-22 11:46:00,"{'stretch_id': 'hamburg-harburg>lüneburg', 'percentage': 93, 'travelling_reverse': True}"
+-6004557489205239816,ICE,474,Hamburg Hbf,8002549,2025-08-22 11:36:00,2025-08-22 11:39:00,Hamburg Dammtor,8002548,2025-08-22 11:42:00,2025-08-22 11:43:00,"{'stretch_id': 'hamburg-dammtor>hamburg-hbf', 'percentage': 131, 'travelling_reverse': True}"
+-7483129902444507423,ICE,577,Hamburg Hbf,8002549,2025-08-22 11:20:00,2025-08-22 11:24:00,Hannover Hbf,8000152,2025-08-22 12:38:00,2025-08-22 12:41:00,"{'stretch_id': 'hamburg-harburg>lüneburg', 'percentage': 64, 'travelling_reverse': False}"
+235347214713352060,ICE,1601,Hamburg-Altona,8002553,2025-08-22 11:34:00,2025-08-22 11:34:00,Hamburg Hbf,8002549,2025-08-22 11:45:00,2025-08-22 11:49:00,"{'stretch_id': 'hamburg-dammtor>hamburg-hbf', 'percentage': 34, 'travelling_reverse': False}"
+2474076290441674812,ICE,1285,Hamburg Hbf,8002549,2025-08-22 11:24:00,2025-08-22 11:28:00,Lüneburg,8000238,2025-08-22 11:53:00,2025-08-22 11:55:00,"{'stretch_id': 'hamburg-harburg>lüneburg', 'percentage': 36, 'travelling_reverse': False}"
+3450532721221209704,ICE,1604,Uelzen,8000168,2025-08-22 11:28:00,2025-08-22 11:30:00,Hamburg Hbf,8002549,2025-08-22 12:11:00,2025-08-22 12:15:00,"{'stretch_id': 'lüneburg>uelzen', 'percentage': 92, 'travelling_reverse': True}"
+3802822263510141639,ICE,1683,Hamburg Hbf,8002549,2025-08-22 11:24:00,2025-08-22 11:28:00,Lüneburg,8000238,2025-08-22 11:53:00,2025-08-22 11:55:00,"{'stretch_id': 'hamburg-harburg>lüneburg', 'percentage': 36, 'travelling_reverse': False}"
+5653087570567167872,ICE,611,Hamburg Dammtor,8002548,2025-08-22 11:37:00,2025-08-22 11:38:00,Hamburg Hbf,8002549,2025-08-22 11:42:00,2025-08-22 11:46:00,"{'stretch_id': 'hamburg-dammtor>hamburg-hbf', 'percentage': 123, 'travelling_reverse': False}"
+7455112292924634520,ICE,1579,Celle,8000064,2025-08-22 11:37:00,2025-08-22 11:38:00,Hannover Hbf,8000152,2025-08-22 11:58:00,2025-08-22 12:01:00,"{'stretch_id': 'celle>hannover-hbf', 'percentage': 24, 'travelling_reverse': False}"
+7517605630292767265,ICE,587,Hamburg-Harburg,8000147,2025-08-22 11:11:00,2025-08-22 11:13:00,Hannover Hbf,8000152,2025-08-22 12:22:00,2025-08-22 12:26:00,"{'stretch_id': 'uelzen>celle', 'percentage': 1, 'travelling_reverse': False}"
+8539762080593158586,ICE,2974,Hamburg Dammtor,8002548,2025-08-22 11:36:00,2025-08-22 11:37:00,Hamburg-Altona,8002553,2025-08-22 11:45:00,2025-08-22 11:45:00,"{'stretch_id': 'hamburg-altona>hamburg-dammtor', 'percentage': 74, 'travelling_reverse': True}"
+9052858960919066097,ICE,682,Hannover Hbf,8000152,2025-08-22 11:32:00,2025-08-22 11:36:00,Hamburg-Harburg,8000147,2025-08-22 12:41:00,2025-08-22 12:43:00,"{'stretch_id': 'celle>hannover-hbf', 'percentage': 38, 'travelling_reverse': True}"
