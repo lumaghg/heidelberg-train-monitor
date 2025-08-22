@@ -1,18 +1,18 @@
 stretch_id,stretch_name,segment_number,lower_bound,upper_bound
-8002553>8002548,hamburg-altona>hamburg-dammtor,0,0,100
-8002548>8002549,hamburg-dammtor>hamburg-hbf,0,0,100
-8002549>8000147,hamburg-hbf>hamburg-harburg,0,0,100
-8000147>8000238,hamburg-harburg>lüneburg,0,0,16
-8000147>8000238,hamburg-harburg>lüneburg,1,16,50
-8000147>8000238,hamburg-harburg>lüneburg,2,50,83
-8000147>8000238,hamburg-harburg>lüneburg,3,83,100
-8000238>8000168,lüneburg>uelzen,0,0,25
-8000238>8000168,lüneburg>uelzen,1,25,75
-8000238>8000168,lüneburg>uelzen,2,75,100
-8000168>8000064,uelzen>celle,0,0,16
-8000168>8000064,uelzen>celle,1,16,50
-8000168>8000064,uelzen>celle,2,50,83
-8000168>8000064,uelzen>celle,3,83,100
-8000064>8000152,celle>hannover-hbf,0,0,25
-8000064>8000152,celle>hannover-hbf,1,25,75
-8000064>8000152,celle>hannover-hbf,2,75,100
+8002553>8002548,Hamburg-Altona -> Hamburg Dammtor,0,0,100
+8002548>8002549,Hamburg Dammtor -> Hamburg Hbf,0,0,100
+8002549>8000147,Hamburg Hbf -> Hamburg-Harburg,0,0,50
+8002549>8000147,Hamburg Hbf -> Hamburg-Harburg,1,50,100
+8000147>8000238,Hamburg-Harburg -> Lüneburg,0,0,25
+8000147>8000238,Hamburg-Harburg -> Lüneburg,1,25,75
+8000147>8000238,Hamburg-Harburg -> Lüneburg,2,75,100
+8000238>8000168,Lüneburg -> Uelzen,0,0,25
+8000238>8000168,Lüneburg -> Uelzen,1,25,75
+8000238>8000168,Lüneburg -> Uelzen,2,75,100
+8000168>8000064,Uelzen -> Celle,0,0,16
+8000168>8000064,Uelzen -> Celle,1,16,50
+8000168>8000064,Uelzen -> Celle,2,50,83
+8000168>8000064,Uelzen -> Celle,3,83,100
+8000064>8000152,Celle -> Hannover Hbf,0,0,25
+8000064>8000152,Celle -> Hannover Hbf,1,25,75
+8000064>8000152,Celle -> Hannover Hbf,2,75,100
