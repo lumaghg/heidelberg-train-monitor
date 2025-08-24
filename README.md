@@ -157,6 +157,8 @@ ungepixelte Strecken:
 
 # Next Steps
 - Echtzeitupdateunterstützung auf neue Stops und Ersatzfahrten erweitern
+-> neue Stops bei bekannter Id: aus anderem Stop die category und number ziehen, Rest aus den fchg Daten nehmen
+-> neue Stops bei unbekannter Id: Wenn kein Trip Label -> keine Ersatzfahrt sondern Regionalverkehr, skippen / Wenn Trip Label -> prüfen auf Fernverkehr, wenn kein Fernverkehr, skippen / wenn Fernverkehr, neuen Stop mit category und number aus dem Trip Label und id aus dem fchg stop anlegen
 - Nodes in PixelStudio festlegen
 - ggf. nochmal Pixeling überarbeiten
 - Stück für Stück alle Strecken zu Stations, Stretches, Stretch-Segments und LED Mapping hinzufügen.
