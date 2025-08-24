@@ -70,7 +70,6 @@ Sprinterstrecken:
 
 Hauptstrecken:
 - Hamburg - Hannover
-- Hamburg - Berlin
 - Hamburg - Dortmund
 - Hannover - Dortmund - Duisburg - Köln
 - Hannover - Dortmund - Hagen - Köln
@@ -88,6 +87,7 @@ Hauptstrecken:
 - Frankfurt - Basel 
 - Frankfurt - Stuttgart - München
 - Karlsruhe - Stuttgart (/Esslingen)
+- Hamburg - Berlin (gerade gesperrt)
 
 Nebenstrecken:
 
@@ -139,9 +139,6 @@ Nebenstrecken:
 - Hannover - Bremen - Leer - Norddeich (Mole)
 
 
-
-
-
 ungepixelte Strecken:
 - Berlin - Cottbus (IC zählt als RE)
 - Dresden - Chemnitz (IC zählt als RE)
@@ -159,9 +156,16 @@ ungepixelte Strecken:
 
 
 # Next Steps
+- Echtzeitupdateunterstützung auf neue Stops und Ersatzfahrten erweitern
 - Nodes in PixelStudio festlegen
 - ggf. nochmal Pixeling überarbeiten
-- alle Strecken zum Graph hinzufügen, mappen etc.
+- Stück für Stück alle Strecken zu Stations, Stretches, Stretch-Segments und LED Mapping hinzufügen.
+
 # Optional Improvements
-- Echtzeitupdateunterstützung auf neue Stops und Ersatzfahrten erweitern
+- Follow - Highlighting
+
+# Rejected Improvements
 - Trails
+-> Trails werden nicht implementiert weil 
+1. um die Trails zu implementieren, müsste man wissen, welche LED zuletzt geleuchtet hat. Das geht nicht über primary und secondary LED im mapping, weil man dann auf dem ersten Segment eines Stretches nicht weiß, von welchem Stretch der Zug kommt. Es geht nicht durch Speichern der letzten berechneten LED, weil es bei sehr schnellen Zügen oder Änderungen in der Verspätung sein kann, dass ein Zug innerhalb eines Ticks mehr als eine LED weiter oder sogar zurück wandert.
+Die einzige Möglichkeit wäre es, alle LEDs, die im Laufe der Fahrt beleuchtet werden, für jeden Trip in ein DF zu schreiben und von der aktuellen LED einen zurück zu gehen. Das ist aber 1. nicht so geil zu implementieren und noch viel wichtiger sehr rechenaufwendig, weil man für jede Fahrt zwischen zwei Halten den shortest Path im Graphen berechnen muss und dann die Stretches, Segmente und LEDs lookupen muss. Und das wird bei > 400 aktiven Trips gleichzeitig mit jeweils 5 - 30 Halten viel zu lange dauern, bzw. nicht so schnell gehen, dass es den Informationszuwachs rechtfertigen würde, weil während der Berechnung das Display auch noch flackert.
