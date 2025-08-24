@@ -359,12 +359,12 @@ def compute_primary_animationcodes(row, color_by: str):
 # In[133]:
 
 
-primary_category_animationcodes = pd.DataFrame(data={'animationcodes': df_trip_statuses.apply(compute_primary_animationcodes, axis=1, args=('category',))})
-primary_delay_animationcodes = pd.DataFrame(data={'animationcodes': df_trip_statuses.apply(compute_primary_animationcodes, axis=1, args=('delay',))})
+primary_category_animationcodes = pd.DataFrame(data={'animationcode': df_trip_statuses.apply(compute_primary_animationcodes, axis=1, args=('category',))})
+primary_delay_animationcodes = pd.DataFrame(data={'animationcode': df_trip_statuses.apply(compute_primary_animationcodes, axis=1, args=('delay',))})
 
 
-primary_category_animationcodes.to_csv('de_category_animationcodes.csv')
-primary_delay_animationcodes.to_csv('de_delay_animationcodes.csv')
+primary_category_animationcodes.to_csv('de_category_animationcodes.csv', index=False)
+primary_delay_animationcodes.to_csv('de_delay_animationcodes.csv', index=False)
 
 
 # In[ ]:

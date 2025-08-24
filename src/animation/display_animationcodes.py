@@ -83,15 +83,15 @@ class DisplayCSV(MatrixBase):
                     overlay = base_overlay_de.copy()
                     df_animationcodes = df_de_category_animationcodes
                     
-                if tick_counter in range(12,15):
+                if tick_counter in range(12,16):
                     overlay = base_overlay_rnv.copy()
                     df_animationcodes = df_rnv_animationcodes
                     
-                if tick_counter in range(15,20):
+                if tick_counter in range(16,20):
                     overlay = base_overlay_db.copy()
                     df_animationcodes = df_db_animationcodes
                      
-                tick_counter = tick_counter + 1 if tick_counter != 12 else 0
+                tick_counter = tick_counter + 1 if tick_counter != 20 else 0
                 
                 #df_animationcodes = pd.concat([df_db_animationcodes, df_rnv_animationcodes])
                 
