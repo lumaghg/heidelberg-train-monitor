@@ -156,6 +156,7 @@ ungepixelte Strecken:
 
 
 # Next Steps
+- neue Farben: Grün, Gelb, Rot, Lila
 - Echtzeitupdateunterstützung auf neue Stops und Ersatzfahrten erweitern
 -> neue Stops bei bekannter Id: aus anderem Stop die category und number ziehen, Rest aus den fchg Daten nehmen
 -> neue Stops bei unbekannter Id: Wenn kein Trip Label -> keine Ersatzfahrt sondern Regionalverkehr, skippen / Wenn Trip Label -> prüfen auf Fernverkehr, wenn kein Fernverkehr, skippen / wenn Fernverkehr, neuen Stop mit category und number aus dem Trip Label und id aus dem fchg stop anlegen
