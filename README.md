@@ -158,11 +158,10 @@ ungepixelte Strecken:
 
 
 
-
-# TODOS
-- Sortierung der Animationcodes, damit die selteneren Züge nicht überschrieben werden
-- Echtzeitupdates alle 5 Minuten
-- Trails?
-- Verspätungsview?
-- Follow mode?
-- Autozüge hinzufügen?
+# Next Steps
+- Nodes in PixelStudio festlegen
+- ggf. nochmal Pixeling überarbeiten
+- alle Strecken zum Graph hinzufügen, mappen etc.
+# Optional Improvements
+- Echtzeitupdateunterstützung auf neue Stops und Ersatzfahrten erweitern
+- Trails
