@@ -165,3 +165,4 @@ ungepixelte Strecken:
 - Trails?
 - Verspätungsview?
 - Follow mode?
+- Autozüge hinzufügen?
