@@ -10,7 +10,7 @@
 # 6. lookup the stretch segment each stretch is on
 # 7. put the statuscode together and output
 
-# In[123]:
+# In[75]:
 
 
 import datetime
@@ -68,7 +68,7 @@ print(DBDatetimeToDatetime("2508101222"))
 print(datetimeToDBDateAndHourTuple(datetime.datetime(2025, 8, 10, 12, 22)))
 
 
-# In[124]:
+# In[76]:
 
 
 df_stoptimes = pd.read_csv(STOPTIMES_PATH, dtype="string", parse_dates=['arrival', "departure"]).dropna(how='all')
@@ -79,7 +79,7 @@ df_stoptimes = pd.read_csv(STOPTIMES_PATH, dtype="string", parse_dates=['arrival
 df_stoptimes = df_stoptimes.drop(labels=['request_timestamp'], axis=1)
 
 
-# In[125]:
+# In[77]:
 
 
 # find active trip ids
@@ -107,7 +107,7 @@ no_active_trips = df_stoptimes['trip_id'].unique().shape[0]
 print(f"found {no_active_trips} active trips")
 
 
-# In[126]:
+# In[78]:
 
 
 # find the two stations, between which each train is traveling (standing at a station until departure counts to being between the two stations. 
@@ -125,7 +125,7 @@ next_stations = next_stations.drop(labels=['has_departed_station'], axis=1)
 df_trip_statuses = pd.merge(how='inner', left=previous_stations, right=next_stations, on=['trip_id', 'category', 'number'], suffixes=("_previous", "_next"))
 
 
-# In[127]:
+# In[79]:
 
 
 # load graph representation of network
@@ -153,7 +153,7 @@ G.add_edges_from(edges)
 
 
 
-# In[128]:
+# In[80]:
 
 
 # calculate where the train is
@@ -239,7 +239,7 @@ df_trip_statuses['position'] = df_trip_statuses.apply(compute_position_on_graph,
 #df_trip_statuses = df_trip_statuses.drop(['station_name_previous','station_uic_previous','arrival_previous','departure_previous','station_name_next','station_uic_next','arrival_next','departure_next'], axis=1)
 
 
-# In[129]:
+# In[81]:
 
 
 # lookup row in stretch_id + % to stretch_segment / LED mapping
@@ -280,7 +280,7 @@ def compute_primary_statuscode(row):
 df_trip_statuses['primary_statuscode'] = df_trip_statuses.apply(compute_primary_statuscode, axis=1)
 
 
-# In[130]:
+# In[82]:
 
 
 # compute delay
@@ -291,18 +291,37 @@ def compute_delay(row):
     
     # train is still travelling    
     if arrival_next > datetime.datetime.now():
-        return row['arrival_delay_next']
+        return int(row['arrival_delay_next'])
     
     # train has reached next station
     else:
-        return row['departure_delay_next']     
+        return int(row['departure_delay_next'])     
     
 df_trip_statuses['delay'] = df_trip_statuses.apply(compute_delay, axis=1)
 
 # if the memory is needed, drop the old delay columns
 
 
-# In[131]:
+# In[83]:
+
+
+# add category priority (higher number = higher priority)
+def compute_category_priority(category: str):
+
+    if category in ['ICE']:
+        return 0
+    
+    if category in ['IC', 'EC']:
+        return 1
+
+    if category in ['FLX','WB', 'RJ', 'RJX', 'ECE', 'EST','TGV', 'NJ','EN','ES','DN','D','SJ']:
+        return 2
+    
+df_trip_statuses['category_priority'] = df_trip_statuses['category'].map(compute_category_priority)
+    
+
+
+# In[84]:
 
 
 # color mapping for animationcodes
@@ -329,8 +348,6 @@ def get_color_for_category(category: str):
     return "FFFF00"
 
 def get_color_for_delay(delay: str):
-    delay = int(delay)
-    
     if delay > 60:
         return "FF0000"
     if delay > 30:
@@ -341,7 +358,7 @@ def get_color_for_delay(delay: str):
         return "00FF00"
 
 
-# In[132]:
+# In[ ]:
 
 
 # build animationcodes
@@ -355,12 +372,14 @@ def compute_primary_animationcodes(row, color_by: str):
     statuscode = row['primary_statuscode']
     return f"DE:{statuscode}:{color}"
 
+# sort by category priority. Later statuscodes override earlier ones, so ascending. Then compute animationcodes
+primary_category_animationcodes = pd.DataFrame(data={'animationcode': df_trip_statuses.sort_values(by=['category_priority']).apply(compute_primary_animationcodes, axis=1, args=('category',))})
 
-# In[133]:
+# sort by delay. Later statuscodes override earlier ones, so ascending. Then compute animationcodes
+primary_delay_animationcodes = pd.DataFrame(data={'animationcode': df_trip_statuses.sort_values(by=['delay']).apply(compute_primary_animationcodes, axis=1, args=('delay',))})
 
 
-primary_category_animationcodes = pd.DataFrame(data={'animationcode': df_trip_statuses.apply(compute_primary_animationcodes, axis=1, args=('category',))})
-primary_delay_animationcodes = pd.DataFrame(data={'animationcode': df_trip_statuses.apply(compute_primary_animationcodes, axis=1, args=('delay',))})
+# In[86]:
 
 
 primary_category_animationcodes.to_csv('de_category_animationcodes.csv', index=False)
