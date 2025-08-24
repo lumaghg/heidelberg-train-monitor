@@ -10,7 +10,7 @@
 # 6. lookup the stretch segment each stretch is on
 # 7. put the statuscode together and output
 
-# In[53]:
+# In[123]:
 
 
 import datetime
@@ -68,7 +68,7 @@ print(DBDatetimeToDatetime("2508101222"))
 print(datetimeToDBDateAndHourTuple(datetime.datetime(2025, 8, 10, 12, 22)))
 
 
-# In[54]:
+# In[124]:
 
 
 df_stoptimes = pd.read_csv(STOPTIMES_PATH, dtype="string", parse_dates=['arrival', "departure"]).dropna(how='all')
@@ -79,7 +79,7 @@ df_stoptimes = pd.read_csv(STOPTIMES_PATH, dtype="string", parse_dates=['arrival
 df_stoptimes = df_stoptimes.drop(labels=['request_timestamp'], axis=1)
 
 
-# In[55]:
+# In[125]:
 
 
 # find active trip ids
@@ -107,7 +107,7 @@ no_active_trips = df_stoptimes['trip_id'].unique().shape[0]
 print(f"found {no_active_trips} active trips")
 
 
-# In[56]:
+# In[126]:
 
 
 # find the two stations, between which each train is traveling (standing at a station until departure counts to being between the two stations. 
@@ -125,7 +125,7 @@ next_stations = next_stations.drop(labels=['has_departed_station'], axis=1)
 df_trip_statuses = pd.merge(how='inner', left=previous_stations, right=next_stations, on=['trip_id', 'category', 'number'], suffixes=("_previous", "_next"))
 
 
-# In[57]:
+# In[127]:
 
 
 # load graph representation of network
@@ -153,7 +153,7 @@ G.add_edges_from(edges)
 
 
 
-# In[58]:
+# In[128]:
 
 
 # calculate where the train is
@@ -239,7 +239,7 @@ df_trip_statuses['position'] = df_trip_statuses.apply(compute_position_on_graph,
 #df_trip_statuses = df_trip_statuses.drop(['station_name_previous','station_uic_previous','arrival_previous','departure_previous','station_name_next','station_uic_next','arrival_next','departure_next'], axis=1)
 
 
-# In[59]:
+# In[129]:
 
 
 # lookup row in stretch_id + % to stretch_segment / LED mapping
@@ -280,7 +280,7 @@ def compute_primary_statuscode(row):
 df_trip_statuses['primary_statuscode'] = df_trip_statuses.apply(compute_primary_statuscode, axis=1)
 
 
-# In[60]:
+# In[130]:
 
 
 # compute delay
@@ -302,7 +302,7 @@ df_trip_statuses['delay'] = df_trip_statuses.apply(compute_delay, axis=1)
 # if the memory is needed, drop the old delay columns
 
 
-# In[ ]:
+# In[131]:
 
 
 # color mapping for animationcodes
@@ -341,38 +341,30 @@ def get_color_for_delay(delay: str):
         return "00FF00"
 
 
-# In[62]:
+# In[132]:
 
 
 # build animationcodes
 
-def compute_category_primary_animationcodes(row):
-    category = row['category']
-    color = get_color_for_category(category)
+def compute_primary_animationcodes(row, color_by: str):
+    if color_by == 'delay':
+        color = get_color_for_delay(row['delay'])
+    else:
+        color = get_color_for_category(row['category'])
+        
     statuscode = row['primary_statuscode']
     return f"DE:{statuscode}:{color}"
 
-def compute_delay_primary_animationcodes(row):
-    delay = row['delay']
-    color = get_color_for_delay(delay)
-    statuscode = row['primary_statuscode']
-    return f"DE:{statuscode}:{color}"
+
+# In[133]:
 
 
-# In[ ]:
+primary_category_animationcodes = pd.DataFrame(data={'animationcodes': df_trip_statuses.apply(compute_primary_animationcodes, axis=1, args=('category',))})
+primary_delay_animationcodes = pd.DataFrame(data={'animationcodes': df_trip_statuses.apply(compute_primary_animationcodes, axis=1, args=('delay',))})
 
 
-df_trip_statuses['category_primary_animationcode'] = df_trip_statuses.apply(compute_category_primary_animationcodes, axis=1)
-df_trip_statuses['delay_primary_animationcode'] = df_trip_statuses.apply(compute_delay_primary_animationcodes, axis=1)
-df_trip_statuses.to_csv('temp.csv', index=False)
-
-# column needs to have the name animationcode
-df_trip_statuses['animationcode'] = df_trip_statuses['category_primary_animationcode']
-df_trip_statuses['animationcode'].to_csv('./de_animationcodes_category.csv', index=False)
-
-# column needs to have the name animationcode
-df_trip_statuses['animationcode'] = df_trip_statuses['delay_primary_animationcode']
-df_trip_statuses['animationcode'].to_csv('./de_animationcodes_delay.csv', index=False)
+primary_category_animationcodes.to_csv('de_category_animationcodes.csv')
+primary_delay_animationcodes.to_csv('de_delay_animationcodes.csv')
 
 
 # In[ ]:
