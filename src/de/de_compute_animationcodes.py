@@ -351,11 +351,11 @@ def get_color_for_delay(delay: str):
     if delay > 60:
         return "8000FF"
     if delay > 30:
-        return "CC0605"
+        return "FF0000"
     if delay > 10:
         return "F0CA00"
     else:
-        return "308556"
+        return "00FF73"
 
 
 # In[ ]:
