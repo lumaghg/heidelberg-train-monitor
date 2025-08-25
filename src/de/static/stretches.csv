@@ -1,4 +1,12 @@
 station_name_from,station_uic_from,station_name_to,station_uic_to,travel_cost,super_name,stretch_id,stretch_name
+Dagebüll Mole,8007769,Niebüll,8004343,27,Niebüll - Dagebüll,8007769>8004343,Dagebüll Mole -> Niebüll
+Westerland(Sylt),8006369,Niebüll,8004343,37,Marschbahn,8006369>8004343,Westerland(Sylt) -> Niebüll
+Niebüll,8004343,Husum,8000181,24,Marschbahn,8004343>8000181,Niebüll -> Husum
+Husum,8000181,Heide(Holst),8000155,23,Marschbahn,8000181>8000155,Husum -> Heide(Holst)
+Heide(Holst),8000155,Itzehoe,8003102,35,Marschbahn,8000155>8003102,Heide(Holst) -> Itzehoe
+Itzehoe,8003102,Elmshorn,8000092,22,Marschbahn,8003102>8000092,Itzehoe -> Elmshorn
+Elmshorn,8000092,Hamburg-Altona,8002553,21,Hamburg - Kiel,8000092>8002553,Elmshorn -> Hamburg-Altona
+Elmshorn,8000092,Hamburg Dammtor,8002548,22,Hamburg - Kiel,8000092>8002548,Elmshorn -> Hamburg Dammtor
 Hamburg-Altona,8002553,Hamburg Dammtor,8002548,10,Hamburg Stadtverkehr,8002553>8002548,Hamburg-Altona -> Hamburg Dammtor
 Hamburg Dammtor,8002548,Hamburg Hbf,8002549,4,Hamburg Stadtverkehr,8002548>8002549,Hamburg Dammtor -> Hamburg Hbf
 Hamburg Hbf,8002549,Hamburg-Harburg,8000147,10,Hamburg Stadtverkehr,8002549>8000147,Hamburg Hbf -> Hamburg-Harburg

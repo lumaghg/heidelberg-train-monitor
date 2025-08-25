@@ -16,3 +16,27 @@ stretch_id,stretch_name,segment_number,lower_bound,upper_bound
 8000064>8000152,Celle -> Hannover Hbf,0,0,25
 8000064>8000152,Celle -> Hannover Hbf,1,25,75
 8000064>8000152,Celle -> Hannover Hbf,2,75,100
+8007769>8004343,Dagebüll Mole -> Niebüll,0,0,50
+8007769>8004343,Dagebüll Mole -> Niebüll,1,50,100
+8006369>8004343,Westerland(Sylt) -> Niebüll,0,0,25
+8006369>8004343,Westerland(Sylt) -> Niebüll,1,25,75
+8006369>8004343,Westerland(Sylt) -> Niebüll,2,75,100
+8004343>8000181,Niebüll -> Husum,0,0,16
+8004343>8000181,Niebüll -> Husum,1,16,50
+8004343>8000181,Niebüll -> Husum,2,50,83
+8004343>8000181,Niebüll -> Husum,3,83,100
+8000181>8000155,Husum -> Heide(Holst),0,0,25
+8000181>8000155,Husum -> Heide(Holst),1,25,75
+8000181>8000155,Husum -> Heide(Holst),2,75,100
+8000155>8003102,Heide(Holst) -> Itzehoe,0,0,25
+8000155>8003102,Heide(Holst) -> Itzehoe,1,25,75
+8000155>8003102,Heide(Holst) -> Itzehoe,2,75,100
+8003102>8000092,Itzehoe -> Elmshorn,0,0,25
+8003102>8000092,Itzehoe -> Elmshorn,1,25,75
+8003102>8000092,Itzehoe -> Elmshorn,2,75,100
+8000092>8002553,Elmshorn -> Hamburg-Altona,0,0,25
+8000092>8002553,Elmshorn -> Hamburg-Altona,1,25,75
+8000092>8002553,Elmshorn -> Hamburg-Altona,2,75,100
+8000092>8002548,Elmshorn -> Hamburg Dammtor,0,0,25
+8000092>8002548,Elmshorn -> Hamburg Dammtor,1,25,75
+8000092>8002548,Elmshorn -> Hamburg Dammtor,2,75,100
