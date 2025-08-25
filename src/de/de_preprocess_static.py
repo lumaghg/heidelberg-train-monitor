@@ -13,7 +13,7 @@
 
 # ### helper functions for handling db dates
 
-# In[37]:
+# In[7]:
 
 
 import datetime
@@ -27,6 +27,7 @@ load_dotenv()
 PLANNED_STOPTIMES_PATH = 'stoptimes_planned.csv'
 STATIONS_PATH = './static/stations.csv'
 REQUEST_LOG_PATH = './request_log.csv'
+FV_CATEGORIES = ["IC", "EC", "ICE", "FLX", "WB", "RJ", "RJX", "ECE", "EST", "TGV", "NJ", "EN", "ES", "DN", "D", "SJ"]
 
 # chatgpt generiert lol
 import datetime
@@ -70,7 +71,7 @@ print(DBDatetimeToDatetime("2508101222"))
 print(datetimeToDBDateAndHourTuple(datetime.datetime(2025, 8, 10, 12, 22)))
 
 
-# In[38]:
+# In[8]:
 
 
 # helper functions
@@ -90,7 +91,7 @@ def extract_tripid_from_stopid(stop_id: str):
     return trip_id
 
 
-# In[39]:
+# In[9]:
 
 
 # calculate which times need to be requested
@@ -109,7 +110,7 @@ print(date_hour_tuples_to_request)
 
 
 
-# In[40]:
+# In[10]:
 
 
 # load stations that need to be requested
@@ -117,7 +118,7 @@ df_stations = pd.read_csv(STATIONS_PATH, dtype=str).dropna(how='all')
 print(df_stations)
 
 
-# In[41]:
+# In[11]:
 
 
 # request and process timetables
@@ -238,7 +239,7 @@ for index, station_row in df_stations.iterrows():
                     
                     
                     # only save Fernverkehr (not using filter flag because NJ dont have them)
-                    if category not in ["IC", "EC", "ICE", "FLX", "WB", "RJ", "RJX", "ECE", "EST", "TGV", "NJ", "EN", "ES", "DN", "D", "SJ"]:
+                    if category not in FV_CATEGORIES:
                         continue
                     
                     # arrival
@@ -289,7 +290,7 @@ for index, station_row in df_stations.iterrows():
     df_request_log.to_csv(REQUEST_LOG_PATH, index=False)
 
 
-# In[42]:
+# In[12]:
 
 
 # sort dataframe by tripid and departure

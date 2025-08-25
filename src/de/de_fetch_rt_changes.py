@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[335]:
+# In[191]:
 
 
 import datetime
@@ -16,8 +16,10 @@ STOPTIMES_PATH = 'stoptimes.csv'
 PLANNED_STOPTIMES_PATH = 'stoptimes_planned.csv'
 STATIONS_PATH = './static/stations.csv'
 
+FV_CATEGORIES = ["IC", "EC", "ICE", "FLX", "WB", "RJ", "RJX", "ECE", "EST", "TGV", "NJ", "EN", "ES", "DN", "D", "SJ"]
 
-# In[336]:
+
+# In[192]:
 
 
 # chatgpt generiert lol
@@ -62,7 +64,7 @@ print(DBDatetimeToDatetime("2508101222"))
 print(datetimeToDBDateAndHourTuple(datetime.datetime(2025, 8, 10, 12, 22)))
 
 
-# In[337]:
+# In[193]:
 
 
 # load stations that need to be requested
@@ -70,7 +72,7 @@ df_stations = pd.read_csv(STATIONS_PATH, dtype=str).dropna(how='all')
 print(df_stations)
 
 
-# In[338]:
+# In[194]:
 
 
 # helper functions
@@ -97,7 +99,7 @@ def extract_tripid_from_stopid(stop_id: str):
 # Fall 2: id ist nicht bekannt => neuer Trip. Trip hat planned data und trip label, neuen stop anlegen.
 # 
 
-# In[339]:
+# In[ ]:
 
 
 # request and process changes
@@ -158,78 +160,171 @@ for index, station_row in df_stations.iterrows():
             timetable_fchg_stops = [timetable_fchg_stops]
         
         for timetable_fchg_stop in timetable_fchg_stops:
+            
+            # reset index after every change to not mess up updates
+            df_stoptimes = df_stoptimes.reset_index(drop=True)
+            
             try:
                 # try to find id in stop_times
                 stop_id = timetable_fchg_stop['@id']
                 trip_id = extract_tripid_from_stopid(stop_id)
                 
-                planned_stop_times_with_id = df_stoptimes[df_stoptimes['trip_id'] == trip_id]
+                planned_stop_times_for_id_and_station = df_stoptimes[(df_stoptimes['trip_id'] == trip_id) & (df_stoptimes['station_uic'] == station_uic)]
                 
-                
-                
-                # Fall 1
-                if len(planned_stop_times_with_id) > 0:
-
-                    planned_stop_times_with_id_and_station = df_stoptimes[(df_stoptimes['trip_id'] == trip_id) & (df_stoptimes['station_uic'] == station_uic)]
+                # Fall 1 - Bahnhof + ID Bekannt -> Stop Update
+                if len(planned_stop_times_for_id_and_station) > 0:
+                    updated_stop_time = planned_stop_times_for_id_and_station.iloc[0].copy()
+                    stop_time_index_to_update = planned_stop_times_for_id_and_station.index[0]
+                    stop_time_position_to_update = df_stoptimes.index.get_loc(stop_time_index_to_update)
                     
-                    # Fall 1.1: id an diesem Bahnhof bekannt -> update
-                    if len(planned_stop_times_with_id_and_station) > 0:
-                        updated_stop_time = planned_stop_times_with_id_and_station.iloc[0].copy()
-                        stop_time_index_to_update = planned_stop_times_with_id_and_station.index[0]
+                    # update arrival if changed
+                    if 'ar' in timetable_fchg_stop:
+                        arrival = timetable_fchg_stop['ar']
                         
-                        # update arrival if changed
-                        if 'ar' in timetable_fchg_stop:
-                            arrival = timetable_fchg_stop['ar']
+                        # cancel if stop was canceled
+                        if '@cs' in arrival:
+                            if arrival['@cs'] == 'c':
+                                updated_stop_time['arrival_actual_dbdatetime'] = None
                             
-                            # cancel if stop was canceled
-                            if '@cs' in arrival:
-                                if arrival['@cs'] == 'c':
-                                    updated_stop_time['arrival_actual_dbdatetime'] = None
-                                
-                            # update if stop was not canceled
-                            elif '@ct' in arrival:
-                                updated_stop_time['arrival_actual_dbdatetime'] = arrival['@ct']
+                        # update if stop was not canceled
+                        elif '@ct' in arrival:
+                            updated_stop_time['arrival_actual_dbdatetime'] = arrival['@ct']
+                       
+                    
+                    # update departure if changed
+                    if 'dp' in timetable_fchg_stop:
+                        departure = timetable_fchg_stop['dp']
                         
-                        # save changed updated stop time
-                        df_stoptimes.loc[stop_time_index_to_update] = updated_stop_time      
-                        
-                        # update departure if changed
-                        if 'dp' in timetable_fchg_stop:
-                            departure = timetable_fchg_stop['dp']
+                        # cancel if stop was canceled
+                        if '@cs' in departure:
+                            if departure['@cs'] == 'c':
+                                updated_stop_time['departure_actual_dbdatetime'] = None
                             
-                            # cancel if stop was canceled
-                            if '@cs' in departure:
-                                if departure['@cs'] == 'c':
-                                    updated_stop_time['departure_actual_dbdatetime'] = None
-                                
-                            # update if stop was not canceled
-                            elif '@ct' in departure:
-                                updated_stop_time['departure_actual_dbdatetime'] = departure['@ct']
-                                
-                        # save changed updated stop time
-                        df_stoptimes.loc[stop_time_index_to_update] = updated_stop_time
+                        # update if stop was not canceled
+                        elif '@ct' in departure:
+                            updated_stop_time['departure_actual_dbdatetime'] = departure['@ct']
+                            
+                            
+                            
+                    # save changed updated stop time
+                    df_stoptimes.iloc[stop_time_position_to_update] = updated_stop_time.reindex(df_stoptimes.columns)
                   
-                        
-                    
-                    # Fall 1.2 - id an diesem Bahnhof unbekannt -> Zusatzhalt
-                    else:
-                        # TODO or ignore
-                        pass
                 
-                # Fall 2
+                # Fall 2 - id +  Bahnhof unbekannt: Zusatzhalt
                 else:
-                    # id unbekannt -> Regionalverkehrstrip oder Ersatzfahrt, wenn trip label mit category in Fernverkehr vorhanden, dann stop anlegen.
-                    # TODO or ignore
-                    pass
+                    # if neither arrival nor departure exist, skip because there is no useful information. Can happen if the timetable sto ponly contains an information
+                    if 'ar' not in timetable_fchg_stop and 'dp' not in timetable_fchg_stop:
+                        continue
+                    
+                    
+                    category = None
+                    number = None
+                    
+                    # wenn trip label dabei ist, verwenden
+                    if 'tl' in timetable_fchg_stop:
+                        trip_label = timetable_fchg_stop['tl']
+                        category = trip_label['@c']
+                        number = trip_label['@n']
+                    
+                    # wenn trip label nicht dabei ist, versuchen den trip über die ID zu finden. Wenn gefunden -> category und number daher nehmen.
+                    # Wenn nicht gefunden -> Ignorieren, da Datensatz nicht gebildet werden kann, wahrscheinlich weil es ein Update für eine Regionalverkehrsfahrt ist
+                    else:
+                        stop_times_for_id = df_stoptimes[df_stoptimes['trip_id'] == trip_id]
+
+                        if len(stop_times_for_id) == 0:
+                            continue
+                        else:
+                            # all stop times for an id have the same category and number
+                            stop_time_for_id = stop_times_for_id.iloc[0]
+                            category = stop_time_for_id['category']
+                            number = stop_time_for_id['number']
+                    
+                    # wenn category nicht Fernverkehr, ignorieren
+                    if category not in FV_CATEGORIES:
+                        continue
+                    
+                    arrival_planned_dbdatetime = None
+                    arrival_actual_dbdatetime = None
+                    departure_planned_dbdatetime = None
+                    departure_actual_dbdatetime = None
+                    
+                    # process arrival if exists
+                    if 'ar' in timetable_fchg_stop:
+                        arrival = timetable_fchg_stop['ar']
+                        
+                        # if no times exist, skip because it is likely only an information like reversed coach order
+                        
+                        if '@pt' not in arrival and '@ct' not in arrival:
+                            continue
+                        
+                        # if only planned time exists, also use it as changed time
+                        if '@pt' in arrival and '@ct' not in arrival:
+                            arrival_planned_dbdatetime = arrival['@pt']
+                            arrival_actual_dbdatetime = arrival['@pt']
+                        
+                        # if only changed time exists, also use it as planned time
+                        if '@ct' in arrival and '@pt' not in arrival:
+                            arrival_planned_dbdatetime = arrival['@ct']                        
+                            arrival_actual_dbdatetime = arrival['@ct']                        
+                        
+                        # if both times exist use it normally
+                        if '@ct' in arrival and '@pt' in arrival:
+                            arrival_planned_dbdatetime = arrival['@pt']                        
+                            arrival_actual_dbdatetime = arrival['@ct']                        
+                        
+                    # process departure if exists
+                    if 'dp' in timetable_fchg_stop:
+                        departure = timetable_fchg_stop['dp']
+                        
+                        # if no times exist, skip because it is likely only an information like reversed coach order
+                        
+                        if '@pt' not in departure and '@ct' not in departure:
+                            continue
+                        
+                        # if only planned time exists, also use it as changed time
+                        if '@pt' in departure and '@ct' not in departure:
+                            departure_planned_dbdatetime = departure['@pt']
+                            departure_actual_dbdatetime = departure['@pt']
+                        
+                        # if only changed time exists, also use it as planned time
+                        if '@ct' in departure and '@pt' not in departure:
+                            departure_planned_dbdatetime = departure['@ct']                        
+                            departure_actual_dbdatetime = departure['@ct']                        
+                        
+                        # if both times exist use it normally
+                        if '@ct' in departure and '@pt' in departure:
+                            departure_planned_dbdatetime = departure['@pt']                        
+                            departure_actual_dbdatetime = departure['@ct']   
+                            
+                    # request timestamp would be the hour in which the trains planned departure or arrival is. So take the planned departure and if not exists the planned 
+                    # arrival and just cut of the minutes
+                    request_timestamp = arrival_planned_dbdatetime[:-2] if arrival_planned_dbdatetime is not None else departure_planned_dbdatetime[:-2]
+                            
+                            
+                    # wenn category Fernverkehr, neuen Stop anlegen
+                    additional_stop = pd.DataFrame(data={
+                        'trip_id': [trip_id],
+                        'category': [category],
+                        'number': [number],
+                        'station_name': [station_name],
+                        'station_uic': [station_uic],
+                        'arrival_planned_dbdatetime': [arrival_planned_dbdatetime],
+                        'departure_planned_dbdatetime': [departure_planned_dbdatetime],
+                        'arrival_actual_dbdatetime': [arrival_actual_dbdatetime],
+                        'departure_actual_dbdatetime': [departure_actual_dbdatetime],
+                        'request_timestamp': [request_timestamp]})
+                    
+                    df_stoptimes = pd.concat([df_stoptimes, additional_stop])
+                    print(additional_stop)
                 
             
             except Exception as e:
-                print("error during processing timetable stop")
+                print("error during processing timetable stop}", timetable_fchg_stop)
                 print(e)
+                
 
     except Exception as e:
-        print(f"error during fetching or postprocessing station {station_name}")
-        print(e)
+        raise e
     
 # POSTPROCESS BEFORE SAVING
 

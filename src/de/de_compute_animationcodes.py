@@ -321,7 +321,7 @@ df_trip_statuses['category_priority'] = df_trip_statuses['category'].map(compute
     
 
 
-# In[84]:
+# In[ ]:
 
 
 # color mapping for animationcodes
@@ -349,13 +349,13 @@ def get_color_for_category(category: str):
 
 def get_color_for_delay(delay: str):
     if delay > 60:
-        return "FF0000"
+        return "8000FF"
     if delay > 30:
-        return "FF8800"
+        return "CC0605"
     if delay > 10:
-        return "FFFF00"
+        return "F0CA00"
     else:
-        return "00FF00"
+        return "308556"
 
 
 # In[ ]:
