@@ -69,19 +69,19 @@ X Hannover - Dortmund
 X Dortmund - Duisburg - Köln
 - Dortmund - Hagen - Köln
 X Hannover - Berlin
-- Hannover - Nürnberg
+- Fulda - Nürnberg
 X Hannover - Frankfurt
 - Göttingen - Wolfsburg
-- Frankfurt - Nürnberg
-- Frankfurt - Erfurt
+- Hanau - Würzburg
+- Fulda - Erfurt
 X Berlin - Halle - Erfurt
-- Berlin - Leipzig - Erfurt
+- Berlin - Leipzig - Halle
 X Erfurt - Nürnberg
 X München - Nürnberg
 X Köln - Montabaur - Frankfurt
-- Frankfurt - Basel 
+- Mannheim - Basel 
 X Frankfurt - Stuttgart - München
-- Karlsruhe - Stuttgart (/Esslingen)
+- Karlsruhe - Vaihingen
 - Hamburg - Berlin (gerade gesperrt)
 
 Nebenstrecken:
