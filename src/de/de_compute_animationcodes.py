@@ -10,7 +10,7 @@
 # 6. lookup the stretch segment each stretch is on
 # 7. put the statuscode together and output
 
-# In[75]:
+# In[6]:
 
 
 import datetime
@@ -68,7 +68,7 @@ print(DBDatetimeToDatetime("2508101222"))
 print(datetimeToDBDateAndHourTuple(datetime.datetime(2025, 8, 10, 12, 22)))
 
 
-# In[76]:
+# In[7]:
 
 
 df_stoptimes = pd.read_csv(STOPTIMES_PATH, dtype="string", parse_dates=['arrival', "departure"]).dropna(how='all')
@@ -79,7 +79,7 @@ df_stoptimes = pd.read_csv(STOPTIMES_PATH, dtype="string", parse_dates=['arrival
 df_stoptimes = df_stoptimes.drop(labels=['request_timestamp'], axis=1)
 
 
-# In[77]:
+# In[8]:
 
 
 # find active trip ids
@@ -107,7 +107,7 @@ no_active_trips = df_stoptimes['trip_id'].unique().shape[0]
 print(f"found {no_active_trips} active trips")
 
 
-# In[78]:
+# In[9]:
 
 
 # find the two stations, between which each train is traveling (standing at a station until departure counts to being between the two stations. 
@@ -125,7 +125,7 @@ next_stations = next_stations.drop(labels=['has_departed_station'], axis=1)
 df_trip_statuses = pd.merge(how='inner', left=previous_stations, right=next_stations, on=['trip_id', 'category', 'number'], suffixes=("_previous", "_next"))
 
 
-# In[79]:
+# In[10]:
 
 
 # load graph representation of network
@@ -147,13 +147,13 @@ G.add_nodes_from(nodes)
 # add edges
 # attraction force is used to draw the graph by defining the attraction force between the two nodes and is the inverted travel time
 edge_list = list(stretches[['station_uic_from', 'station_uic_to', 'station_name_from','station_name_to','travel_cost','super_name']].itertuples(index=False, name=None)) # [(station_name_from, station_uic_from, station_name_to, station_uic_from, travel_cost, super_name)]
-edges = [(edge[0], edge[1], {'station_name_from': edge[2], 'station_name_to': edge[3], 'travel_cost': int(edge[4]), 'super_name': edge[5], 'attraction_force': 1 / int(edge[4])}) for edge in edge_list]
+edges = [(edge[0], edge[1], {'station_name_from': edge[2], 'station_name_to': edge[3], 'travel_cost': int(edge[4]), 'super_name': edge[5]}) for edge in edge_list]
 G.add_edges_from(edges)
 
 
 
 
-# In[80]:
+# In[11]:
 
 
 # calculate where the train is
@@ -239,7 +239,7 @@ df_trip_statuses['position'] = df_trip_statuses.apply(compute_position_on_graph,
 #df_trip_statuses = df_trip_statuses.drop(['station_name_previous','station_uic_previous','arrival_previous','departure_previous','station_name_next','station_uic_next','arrival_next','departure_next'], axis=1)
 
 
-# In[81]:
+# In[ ]:
 
 
 # lookup row in stretch_id + % to stretch_segment / LED mapping
@@ -280,7 +280,7 @@ def compute_primary_statuscode(row):
 df_trip_statuses['primary_statuscode'] = df_trip_statuses.apply(compute_primary_statuscode, axis=1)
 
 
-# In[82]:
+# In[ ]:
 
 
 # compute delay
@@ -302,7 +302,7 @@ df_trip_statuses['delay'] = df_trip_statuses.apply(compute_delay, axis=1)
 # if the memory is needed, drop the old delay columns
 
 
-# In[83]:
+# In[ ]:
 
 
 # add category priority (higher number = higher priority)
@@ -377,7 +377,7 @@ primary_category_animationcodes = pd.DataFrame(data={'animationcode': df_trip_st
 primary_delay_animationcodes = pd.DataFrame(data={'animationcode': df_trip_statuses.sort_values(by=['delay']).apply(compute_primary_animationcodes, axis=1, args=('delay',))})
 
 
-# In[86]:
+# In[ ]:
 
 
 primary_category_animationcodes.to_csv('de_category_animationcodes.csv', index=False)

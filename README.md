@@ -60,33 +60,27 @@ Convention: Kanten immer so herum festlegen, dass sie möglichst alle in einer L
 -> Cost zwischen Haltestellen wird nicht automatisch berechnet sondern von gelookuped, weil es teilweise nachts oder mit IC/ICE Unterschied zu großen Schwankungen in einigen Abschnitten führt, da andere Strecken ausnahmsweise benutzt werden. Der reguläre Fall soll zur Animation verwendet werden. Und weil Spaß :)
 
 
-
-
-Sprinterstrecken:
-- Hamburg - Essen
-- Köln - Berlin (über Hannover, Hagen ohne Halt)
-- Frankfurt - Berlin (über Hannover, Fulda ohne Halt)
-- Berlin - Nürnberg (pber Erfurt, Halle ohne Halt)
+TRAVEL COST AUCH BEI GETEILTEN BAHNHÖFEN MIND. 1 SONST DIVISION DURCH 0 ERROR
 
 Hauptstrecken:
 X Hamburg - Hannover
 - Hamburg - Dortmund
-- Hannover - Dortmund
-- Dortmund - Duisburg - Köln
+X Hannover - Dortmund
+X Dortmund - Duisburg - Köln
 - Dortmund - Hagen - Köln
-- Hannover - Berlin
+X Hannover - Berlin
 - Hannover - Nürnberg
 X Hannover - Frankfurt
 - Göttingen - Wolfsburg
 - Frankfurt - Nürnberg
 - Frankfurt - Erfurt
-- Berlin - Halle - Erfurt
+X Berlin - Halle - Erfurt
 - Berlin - Leipzig - Erfurt
-- Erfurt - Nürnberg
-- München - Nürnberg
-- Köln - Montabaur - Frankfurt
+X Erfurt - Nürnberg
+X München - Nürnberg
+X Köln - Montabaur - Frankfurt
 - Frankfurt - Basel 
-- Frankfurt - Stuttgart - München
+X Frankfurt - Stuttgart - München
 - Karlsruhe - Stuttgart (/Esslingen)
 - Hamburg - Berlin (gerade gesperrt)
 

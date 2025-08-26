@@ -41,7 +41,7 @@ Erfurt Hbf,8010101,Halle(Saale)Hbf,8070814,30,SFS Nürnberg - Leipzig/Halle,8010
 Halle(Saale)Hbf,8070814,Bitterfeld,8010050,16,Berlin - Halle/Leipzig,8070814>8010050,Halle(Saale)Hbf -> Bitterfeld
 Bitterfeld,8010050,Berlin Südkreuz,8011113,51,Berlin - Halle/Leipzig,8010050>8011113,Bitterfeld -> Berlin Südkreuz
 Berlin Südkreuz,8011113,Berlin Hbf,8011160,5,Berlin Stadtverkehr,8011113>8011160,Berlin Südkreuz -> Berlin Hbf
-Berlin Hbf (tief),8098160,Berlin Hbf,8011160,0,Geteilter Bahnhof,8098160>8011160,Berlin Hbf (tief) -> Berlin Hbf
+Berlin Hbf (tief),8098160,Berlin Hbf,8011160,1,Geteilter Bahnhof,8098160>8011160,Berlin Hbf (tief) -> Berlin Hbf
 Berlin Hbf,8011160,Berlin-Spandau,8010404,10,Berlin Stadtverkehr,8011160>8010404,Berlin Hbf -> Berlin-Spandau
 Berlin-Spandau,8010404,Stendal Hbf,8010334,35,SFS Berlin - Hannover,8010404>8010334,Berlin-Spandau -> Stendal Hbf
 Stendal Hbf,8010334,Wolfsburg Hbf,8006552,26,SFS Berlin - Hannover,8010334>8006552,Stendal Hbf -> Wolfsburg Hbf
@@ -53,7 +53,7 @@ Dortmund Hbf,8000080,Essen Hbf,8000098,22,Dortmund - Duisburg - Düsseldorf - K�
 Essen Hbf,8000098,Duisburg Hbf,8000086,12,Dortmund - Duisburg - Düsseldorf - Köln,8000098>8000086,Essen Hbf -> Duisburg Hbf
 Duisburg Hbf,8000086,Düsseldorf Hbf,8000085,11,Dortmund - Duisburg - Düsseldorf - Köln,8000086>8000085,Duisburg Hbf -> Düsseldorf Hbf
 Düsseldorf Hbf,8000085,Köln Messe/Deutz,8003368,20,Dortmund - Duisburg - Düsseldorf - Köln,8000085>8003368,Düsseldorf Hbf -> Köln Messe/Deutz
-Köln Messe/Deutz,8003368,Köln Messe/Deutz Gl.11-12,8073368,0,Geteilter Bahnhof,8003368>8073368,Köln Messe/Deutz -> Köln Messe/Deutz Gl.11-12
+Köln Messe/Deutz,8003368,Köln Messe/Deutz Gl.11-12,8073368,1,Geteilter Bahnhof,8003368>8073368,Köln Messe/Deutz -> Köln Messe/Deutz Gl.11-12
 Köln Messe/Deutz,8003368,Köln Hbf,8000207,3,Köln Stadtverkehr,8003368>8000207,Köln Messe/Deutz -> Köln Hbf
 Köln Messe/Deutz,8003368,Siegburg/Bonn,8005556,13,SFS Köln-Rhein/Main,8003368>8005556,Köln Messe/Deutz -> Siegburg/Bonn
 Siegburg/Bonn,8005556,Montabaur,8000667,19,SFS Köln-Rhein/Main,8005556>8000667,Siegburg/Bonn -> Montabaur

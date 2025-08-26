@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[11]:
+# In[27]:
 
 
 # load graph representation of network
@@ -27,17 +27,20 @@ G.add_nodes_from(nodes)
 # add edges
 # attraction force is used to draw the graph by defining the attraction force between the two nodes and is the inverted travel time
 edge_list = list(stretches[['station_uic_from', 'station_uic_to', 'station_name_from','station_name_to','travel_cost','super_name']].itertuples(index=False, name=None)) # [(station_name_from, station_uic_from, station_name_to, station_uic_from, travel_cost, super_name)]
-edges = [(edge[0], edge[1], {'station_name_from': edge[2], 'station_name_to': edge[3], 'travel_cost': int(edge[4]), 'super_name': edge[5], 'attraction_force': 1 / int(edge[4])}) for edge in edge_list]
+edges = [(edge[0], edge[1], {'station_name_from': edge[2], 'station_name_to': edge[3], 'travel_cost': int(edge[4]), 'super_name': edge[5], 'attraction_force': (1 / int(edge[4])) if int(edge[4]) > 0 else 0}) for edge in edge_list]
 G.add_edges_from(edges)
 
 
-# In[12]:
+# In[28]:
 
 
 if True:
     import matplotlib.pyplot as plt
 
-    pos = nx.spring_layout(G, seed=42, weight='attraction_force')  # positions for all nodes - seed for reproducibility
+    nodes = list(G.nodes())
+    initial_pos = {'8000152': (0,0)}
+
+    pos = nx.spring_layout(G, seed=4, pos=initial_pos, fixed=['8000152'])  # positions for all nodes - seed for reproducibility
 
     # nodes
     nx.draw_networkx_nodes(G, pos, node_size=50)
@@ -57,4 +60,10 @@ if True:
     plt.axis("off")
     plt.tight_layout()
     plt.show()
+
+
+# In[ ]:
+
+
+
 
