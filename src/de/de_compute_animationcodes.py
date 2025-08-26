@@ -348,11 +348,9 @@ def get_color_for_category(category: str):
     return "FFFF00"
 
 def get_color_for_delay(delay: str):
-    if delay > 60:
-        return "8000FF"
-    if delay > 30:
+    if delay > 45:
         return "BF0000"
-    if delay > 10:
+    if delay > 15:
         return "B49700"
     else:
         return "00BF65"
