@@ -82,12 +82,10 @@ stretch_id,stretch_name,segment_number,lower_bound,upper_bound
 8000244>8006053,Mannheim Hbf -> Vaihingen(Enz),2,37,62
 8000244>8006053,Mannheim Hbf -> Vaihingen(Enz),3,62,87
 8000244>8006053,Mannheim Hbf -> Vaihingen(Enz),4,87,100
-8006053>8000096,Vaihingen(Enz) -> Stuttgart Hbf,0,0,25
-8006053>8000096,Vaihingen(Enz) -> Stuttgart Hbf,1,25,75
-8006053>8000096,Vaihingen(Enz) -> Stuttgart Hbf,2,75,100
-8006053>8001920,Vaihingen(Enz) -> Esslingen(Neckar),0,0,25
-8006053>8001920,Vaihingen(Enz) -> Esslingen(Neckar),1,25,75
-8006053>8001920,Vaihingen(Enz) -> Esslingen(Neckar),2,75,100
+8006053>8000096,Vaihingen(Enz) -> Stuttgart Hbf,0,0,50
+8006053>8000096,Vaihingen(Enz) -> Stuttgart Hbf,1,50,100
+8006053>8001920,Vaihingen(Enz) -> Esslingen(Neckar),0,0,50
+8006053>8001920,Vaihingen(Enz) -> Esslingen(Neckar),1,50,100
 8000096>8000170,Stuttgart Hbf -> Ulm Hbf,0,0,16
 8000096>8000170,Stuttgart Hbf -> Ulm Hbf,1,16,50
 8000096>8000170,Stuttgart Hbf -> Ulm Hbf,2,50,83
