@@ -14,3 +14,11 @@ Hamburg-Harburg,8000147,Lüneburg,8000238,17,Hamburg Stadtverkehr,8000147>800023
 Lüneburg,8000238,Uelzen,8000168,14,Hamburg - Hannover,8000238>8000168,Lüneburg -> Uelzen
 Uelzen,8000168,Celle,8000064,21,Hamburg - Hannover,8000168>8000064,Uelzen -> Celle
 Celle,8000064,Hannover Hbf,8000152,20,Hamburg - Hannover,8000064>8000152,Celle -> Hannover Hbf
+Hannover Hbf,8000152,Göttingen,8000128,34,SFS Hannover - Würzburg,8000152>8000128,Hannover Hbf -> Göttingen
+Göttingen,8000128,Kassel-Wilhelmshöhe,8003200,19,SFS Hannover - Würzburg,8000128>8003200,Göttingen -> Kassel-Wilhelmshöhe
+Kassel-Wilhelmshöhe,8003200,Fulda,8000115,30,SFS Hannover - Würzburg,8003200>8000115,Kassel-Wilhelmshöhe -> Fulda
+Fulda,8000115,Hanau Hbf,8000150,40,Frankfurt - Fulda,8000115>8000150,Fulda -> Hanau Hbf
+Hanau Hbf,8000150,Frankfurt(Main)Süd,8002041,13,Frankfurt - Fulda,8000150>8002041,Hanau Hbf -> Frankfurt(Main)Süd
+Frankfurt(Main)Süd,8002041,Frankfurt(Main)Hbf,8000105,11,Frankfurt Stadtverkehr,8002041>8000105,Frankfurt(Main)Süd -> Frankfurt(Main)Hbf
+Frankfurt(Main)Hbf,8000105,Frankfurt(M) Flughafen Fernbf,8070003,12,Frankfurt Stadtverkehr,8000105>8070003,Frankfurt(Main)Hbf -> Frankfurt(M) Flughafen Fernbf
+Frankfurt(M) Flughafen Fernbf,8070003,Frankfurt(Main)Süd,8002041,10,Frankfurt Stadtverkehr,8070003>8002041,Frankfurt(M) Flughafen Fernbf -> Frankfurt(Main)Süd

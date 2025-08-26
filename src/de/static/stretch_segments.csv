@@ -40,3 +40,33 @@ stretch_id,stretch_name,segment_number,lower_bound,upper_bound
 8000092>8002548,Elmshorn -> Hamburg Dammtor,0,0,25
 8000092>8002548,Elmshorn -> Hamburg Dammtor,1,25,75
 8000092>8002548,Elmshorn -> Hamburg Dammtor,2,75,100
+8000152>8000128,Hannover Hbf -> Göttingen,0,0,7
+8000152>8000128,Hannover Hbf -> Göttingen,1,7,21
+8000152>8000128,Hannover Hbf -> Göttingen,2,21,35
+8000152>8000128,Hannover Hbf -> Göttingen,3,35,50
+8000152>8000128,Hannover Hbf -> Göttingen,4,50,64
+8000152>8000128,Hannover Hbf -> Göttingen,5,64,78
+8000152>8000128,Hannover Hbf -> Göttingen,6,78,92
+8000152>8000128,Hannover Hbf -> Göttingen,7,92,100
+8000128>8003200,Göttingen -> Kassel-Wilhelmshöhe,0,0,16
+8000128>8003200,Göttingen -> Kassel-Wilhelmshöhe,1,16,50
+8000128>8003200,Göttingen -> Kassel-Wilhelmshöhe,2,50,83
+8000128>8003200,Göttingen -> Kassel-Wilhelmshöhe,3,83,100
+8003200>8000115,Kassel-Wilhelmshöhe -> Fulda,0,0,8
+8003200>8000115,Kassel-Wilhelmshöhe -> Fulda,1,8,25
+8003200>8000115,Kassel-Wilhelmshöhe -> Fulda,2,25,41
+8003200>8000115,Kassel-Wilhelmshöhe -> Fulda,3,41,58
+8003200>8000115,Kassel-Wilhelmshöhe -> Fulda,4,58,75
+8003200>8000115,Kassel-Wilhelmshöhe -> Fulda,5,75,91
+8003200>8000115,Kassel-Wilhelmshöhe -> Fulda,6,91,100
+8000115>8000150,Fulda -> Hanau Hbf,0,0,16
+8000115>8000150,Fulda -> Hanau Hbf,1,16,50
+8000115>8000150,Fulda -> Hanau Hbf,2,50,83
+8000115>8000150,Fulda -> Hanau Hbf,3,83,100
+8000150>8002041,Hanau Hbf -> Frankfurt(Main)Süd,0,0,50
+8000150>8002041,Hanau Hbf -> Frankfurt(Main)Süd,1,50,100
+8002041>8000105,Frankfurt(Main)Süd -> Frankfurt(Main)Hbf,0,0,100
+8000105>8070003,Frankfurt(Main)Hbf -> Frankfurt(M) Flughafen Fernbf,0,0,50
+8000105>8070003,Frankfurt(Main)Hbf -> Frankfurt(M) Flughafen Fernbf,1,50,100
+8070003>8002041,Frankfurt(M) Flughafen Fernbf -> Frankfurt(Main)Süd,0,0,50
+8070003>8002041,Frankfurt(M) Flughafen Fernbf -> Frankfurt(Main)Süd,1,50,100
