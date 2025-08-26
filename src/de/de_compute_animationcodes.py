@@ -328,22 +328,22 @@ df_trip_statuses['category_priority'] = df_trip_statuses['category'].map(compute
 
 def get_color_for_category(category: str):
     if category in ['IC', 'EC']:
-        return "00FFFF"
+        return "00BFBF"
     
     if category in ['ICE']:
-        return "FFFFFF"
+        return "BFBFBF"
     
     if category in ['FLX','WB']:
-        return "00FF00"
+        return "00BF00"
     
     if category in ['RJ', 'RJX', 'ECE']:
-        return "FFAA00"
+        return "BF7F00"
     
     if category in ['EST','TGV']:
-        return "FF0000"
+        return "BF0000"
     
     if category in ['NJ','EN','ES','DN','D','SJ']:
-        return "CC00FF"
+        return "9900BF"
     
     return "FFFF00"
 
@@ -351,11 +351,11 @@ def get_color_for_delay(delay: str):
     if delay > 60:
         return "8000FF"
     if delay > 30:
-        return "FF0000"
+        return "BF0000"
     if delay > 10:
-        return "F0CA00"
+        return "B49700"
     else:
-        return "00FF73"
+        return "00BF65"
 
 
 # In[ ]:
