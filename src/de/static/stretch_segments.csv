@@ -70,3 +70,139 @@ stretch_id,stretch_name,segment_number,lower_bound,upper_bound
 8000105>8070003,Frankfurt(Main)Hbf -> Frankfurt(M) Flughafen Fernbf,1,50,100
 8070003>8002041,Frankfurt(M) Flughafen Fernbf -> Frankfurt(Main)Süd,0,0,50
 8070003>8002041,Frankfurt(M) Flughafen Fernbf -> Frankfurt(Main)Süd,1,50,100
+8070003>8000244,Frankfurt(M) Flughafen Fernbf -> Mannheim Hbf,0,0,8
+8070003>8000244,Frankfurt(M) Flughafen Fernbf -> Mannheim Hbf,1,8,25
+8070003>8000244,Frankfurt(M) Flughafen Fernbf -> Mannheim Hbf,2,25,41
+8070003>8000244,Frankfurt(M) Flughafen Fernbf -> Mannheim Hbf,3,41,58
+8070003>8000244,Frankfurt(M) Flughafen Fernbf -> Mannheim Hbf,4,58,75
+8070003>8000244,Frankfurt(M) Flughafen Fernbf -> Mannheim Hbf,5,75,91
+8070003>8000244,Frankfurt(M) Flughafen Fernbf -> Mannheim Hbf,6,91,100
+8000244>8006053,Mannheim Hbf -> Vaihingen(Enz),0,0,12
+8000244>8006053,Mannheim Hbf -> Vaihingen(Enz),1,12,37
+8000244>8006053,Mannheim Hbf -> Vaihingen(Enz),2,37,62
+8000244>8006053,Mannheim Hbf -> Vaihingen(Enz),3,62,87
+8000244>8006053,Mannheim Hbf -> Vaihingen(Enz),4,87,100
+8006053>8000096,Vaihingen(Enz) -> Stuttgart Hbf,0,0,25
+8006053>8000096,Vaihingen(Enz) -> Stuttgart Hbf,1,25,75
+8006053>8000096,Vaihingen(Enz) -> Stuttgart Hbf,2,75,100
+8006053>8001920,Vaihingen(Enz) -> Esslingen(Neckar),0,0,25
+8006053>8001920,Vaihingen(Enz) -> Esslingen(Neckar),1,25,75
+8006053>8001920,Vaihingen(Enz) -> Esslingen(Neckar),2,75,100
+8000096>8000170,Stuttgart Hbf -> Ulm Hbf,0,0,16
+8000096>8000170,Stuttgart Hbf -> Ulm Hbf,1,16,50
+8000096>8000170,Stuttgart Hbf -> Ulm Hbf,2,50,83
+8000096>8000170,Stuttgart Hbf -> Ulm Hbf,3,83,100
+8001920>8000170,Esslingen(Neckar) -> Ulm Hbf,0,0,16
+8001920>8000170,Esslingen(Neckar) -> Ulm Hbf,1,16,50
+8001920>8000170,Esslingen(Neckar) -> Ulm Hbf,2,50,83
+8001920>8000170,Esslingen(Neckar) -> Ulm Hbf,3,83,100
+8000170>8000013,Ulm Hbf -> Augsburg Hbf,0,0,12
+8000170>8000013,Ulm Hbf -> Augsburg Hbf,1,12,37
+8000170>8000013,Ulm Hbf -> Augsburg Hbf,2,37,62
+8000170>8000013,Ulm Hbf -> Augsburg Hbf,3,62,87
+8000170>8000013,Ulm Hbf -> Augsburg Hbf,4,87,100
+8000013>8004158,Augsburg Hbf -> München-Pasing,0,0,25
+8000013>8004158,Augsburg Hbf -> München-Pasing,1,25,75
+8000013>8004158,Augsburg Hbf -> München-Pasing,2,75,100
+8004158>8000262,München-Pasing -> München Ost,0,0,100
+8004158>8000261,München-Pasing -> München Hbf,0,0,100
+8000262>8000261,München Ost -> München Hbf,0,0,100
+8000261>8000183,München Hbf -> Ingolstadt Hbf,0,0,10
+8000261>8000183,München Hbf -> Ingolstadt Hbf,1,10,30
+8000261>8000183,München Hbf -> Ingolstadt Hbf,2,30,50
+8000261>8000183,München Hbf -> Ingolstadt Hbf,3,50,70
+8000261>8000183,München Hbf -> Ingolstadt Hbf,4,70,90
+8000261>8000183,München Hbf -> Ingolstadt Hbf,5,90,100
+8000183>8000284,Ingolstadt Hbf -> Nürnberg Hbf,0,0,10
+8000183>8000284,Ingolstadt Hbf -> Nürnberg Hbf,1,10,30
+8000183>8000284,Ingolstadt Hbf -> Nürnberg Hbf,2,30,50
+8000183>8000284,Ingolstadt Hbf -> Nürnberg Hbf,3,50,70
+8000183>8000284,Ingolstadt Hbf -> Nürnberg Hbf,4,70,90
+8000183>8000284,Ingolstadt Hbf -> Nürnberg Hbf,5,90,100
+8000284>8089478,Nürnberg Hbf -> Bamberg,0,0,12
+8000284>8089478,Nürnberg Hbf -> Bamberg,1,12,37
+8000284>8089478,Nürnberg Hbf -> Bamberg,2,37,62
+8000284>8089478,Nürnberg Hbf -> Bamberg,3,62,87
+8000284>8089478,Nürnberg Hbf -> Bamberg,4,87,100
+8089478>8010101,Bamberg -> Erfurt Hbf,0,0,5
+8089478>8010101,Bamberg -> Erfurt Hbf,1,5,16
+8089478>8010101,Bamberg -> Erfurt Hbf,2,16,27
+8089478>8010101,Bamberg -> Erfurt Hbf,3,27,38
+8089478>8010101,Bamberg -> Erfurt Hbf,4,38,50
+8089478>8010101,Bamberg -> Erfurt Hbf,5,50,61
+8089478>8010101,Bamberg -> Erfurt Hbf,6,61,72
+8089478>8010101,Bamberg -> Erfurt Hbf,7,72,83
+8089478>8010101,Bamberg -> Erfurt Hbf,8,83,94
+8089478>8010101,Bamberg -> Erfurt Hbf,9,94,100
+8010101>8070814,Erfurt Hbf -> Halle(Saale)Hbf,0,0,12
+8010101>8070814,Erfurt Hbf -> Halle(Saale)Hbf,1,12,37
+8010101>8070814,Erfurt Hbf -> Halle(Saale)Hbf,2,37,62
+8010101>8070814,Erfurt Hbf -> Halle(Saale)Hbf,3,62,87
+8010101>8070814,Erfurt Hbf -> Halle(Saale)Hbf,4,87,100
+8070814>8010050,Halle(Saale)Hbf -> Bitterfeld,0,0,25
+8070814>8010050,Halle(Saale)Hbf -> Bitterfeld,1,25,75
+8070814>8010050,Halle(Saale)Hbf -> Bitterfeld,2,75,100
+8010050>8011113,Bitterfeld -> Berlin Südkreuz,0,0,8
+8010050>8011113,Bitterfeld -> Berlin Südkreuz,1,8,25
+8010050>8011113,Bitterfeld -> Berlin Südkreuz,2,25,41
+8010050>8011113,Bitterfeld -> Berlin Südkreuz,3,41,58
+8010050>8011113,Bitterfeld -> Berlin Südkreuz,4,58,75
+8010050>8011113,Bitterfeld -> Berlin Südkreuz,5,75,91
+8010050>8011113,Bitterfeld -> Berlin Südkreuz,6,91,100
+8011113>8011160,Berlin Südkreuz -> Berlin Hbf,0,0,50
+8011113>8011160,Berlin Südkreuz -> Berlin Hbf,1,50,100
+8011160>8010404,Berlin Hbf -> Berlin-Spandau,0,0,50
+8011160>8010404,Berlin Hbf -> Berlin-Spandau,1,50,100
+8010404>8010334,Berlin-Spandau -> Stendal Hbf,0,0,10
+8010404>8010334,Berlin-Spandau -> Stendal Hbf,1,10,30
+8010404>8010334,Berlin-Spandau -> Stendal Hbf,2,30,50
+8010404>8010334,Berlin-Spandau -> Stendal Hbf,3,50,70
+8010404>8010334,Berlin-Spandau -> Stendal Hbf,4,70,90
+8010404>8010334,Berlin-Spandau -> Stendal Hbf,5,90,100
+8010334>8006552,Stendal Hbf -> Wolfsburg Hbf,0,0,12
+8010334>8006552,Stendal Hbf -> Wolfsburg Hbf,1,12,37
+8010334>8006552,Stendal Hbf -> Wolfsburg Hbf,2,37,62
+8010334>8006552,Stendal Hbf -> Wolfsburg Hbf,3,62,87
+8010334>8006552,Stendal Hbf -> Wolfsburg Hbf,4,87,100
+8006552>8000152,Wolfsburg Hbf -> Hannover Hbf,0,0,10
+8006552>8000152,Wolfsburg Hbf -> Hannover Hbf,1,10,30
+8006552>8000152,Wolfsburg Hbf -> Hannover Hbf,2,30,50
+8006552>8000152,Wolfsburg Hbf -> Hannover Hbf,3,50,70
+8006552>8000152,Wolfsburg Hbf -> Hannover Hbf,4,70,90
+8006552>8000152,Wolfsburg Hbf -> Hannover Hbf,5,90,100
+8000152>8000036,Hannover Hbf -> Bielefeld Hbf,0,0,12
+8000152>8000036,Hannover Hbf -> Bielefeld Hbf,1,12,37
+8000152>8000036,Hannover Hbf -> Bielefeld Hbf,2,37,62
+8000152>8000036,Hannover Hbf -> Bielefeld Hbf,3,62,87
+8000152>8000036,Hannover Hbf -> Bielefeld Hbf,4,87,100
+8000036>8000149,Bielefeld Hbf -> Hamm(Westf)Hbf,0,0,16
+8000036>8000149,Bielefeld Hbf -> Hamm(Westf)Hbf,1,16,50
+8000036>8000149,Bielefeld Hbf -> Hamm(Westf)Hbf,2,50,83
+8000036>8000149,Bielefeld Hbf -> Hamm(Westf)Hbf,3,83,100
+8000149>8000080,Hamm(Westf)Hbf -> Dortmund Hbf,0,0,50
+8000149>8000080,Hamm(Westf)Hbf -> Dortmund Hbf,1,50,100
+8000080>8000098,Dortmund Hbf -> Essen Hbf,0,0,25
+8000080>8000098,Dortmund Hbf -> Essen Hbf,1,25,75
+8000080>8000098,Dortmund Hbf -> Essen Hbf,2,75,100
+8000098>8000086,Essen Hbf -> Duisburg Hbf,0,0,50
+8000098>8000086,Essen Hbf -> Duisburg Hbf,1,50,100
+8000086>8000085,Duisburg Hbf -> Düsseldorf Hbf,0,0,25
+8000086>8000085,Duisburg Hbf -> Düsseldorf Hbf,1,25,75
+8000086>8000085,Duisburg Hbf -> Düsseldorf Hbf,2,75,100
+8000085>8003368,Düsseldorf Hbf -> Köln Messe/Deutz,0,0,16
+8000085>8003368,Düsseldorf Hbf -> Köln Messe/Deutz,1,16,50
+8000085>8003368,Düsseldorf Hbf -> Köln Messe/Deutz,2,50,83
+8000085>8003368,Düsseldorf Hbf -> Köln Messe/Deutz,3,83,100
+8003368>8000207,Köln Messe/Deutz -> Köln Hbf,0,0,100
+8003368>8005556,Köln Messe/Deutz -> Siegburg/Bonn,0,0,50
+8003368>8005556,Köln Messe/Deutz -> Siegburg/Bonn,1,50,100
+8005556>8000667,Siegburg/Bonn -> Montabaur,0,0,25
+8005556>8000667,Siegburg/Bonn -> Montabaur,1,25,75
+8005556>8000667,Siegburg/Bonn -> Montabaur,2,75,100
+8000667>8003680,Montabaur -> Limburg Süd,0,0,50
+8000667>8003680,Montabaur -> Limburg Süd,1,50,100
+8003680>8070003,Limburg Süd -> Frankfurt(M) Flughafen Fernbf,0,0,25
+8003680>8070003,Limburg Süd -> Frankfurt(M) Flughafen Fernbf,1,25,75
+8003680>8070003,Limburg Süd -> Frankfurt(M) Flughafen Fernbf,2,75,100
+8098160>8011160,Berlin Hbf (tief) -> Berlin Hbf,0,0,100
+8003368>8073368,Köln Messe/Deutz -> Köln Messe/Deutz Gl.11-12,0,0,100

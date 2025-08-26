@@ -22,3 +22,40 @@ Hanau Hbf,8000150,Frankfurt(Main)Süd,8002041,13,Frankfurt - Fulda,8000150>80020
 Frankfurt(Main)Süd,8002041,Frankfurt(Main)Hbf,8000105,11,Frankfurt Stadtverkehr,8002041>8000105,Frankfurt(Main)Süd -> Frankfurt(Main)Hbf
 Frankfurt(Main)Hbf,8000105,Frankfurt(M) Flughafen Fernbf,8070003,12,Frankfurt Stadtverkehr,8000105>8070003,Frankfurt(Main)Hbf -> Frankfurt(M) Flughafen Fernbf
 Frankfurt(M) Flughafen Fernbf,8070003,Frankfurt(Main)Süd,8002041,10,Frankfurt Stadtverkehr,8070003>8002041,Frankfurt(M) Flughafen Fernbf -> Frankfurt(Main)Süd
+Frankfurt(M) Flughafen Fernbf,8070003,Mannheim Hbf,8000244,31,Riedbahn,8070003>8000244,Frankfurt(M) Flughafen Fernbf -> Mannheim Hbf
+Mannheim Hbf,8000244,Vaihingen(Enz),8006053,31,SFS Mannheim - Stuttgart,8000244>8006053,Mannheim Hbf -> Vaihingen(Enz)
+Vaihingen(Enz),8006053,Stuttgart Hbf,8000096,14,SFS Mannheim - Stuttgart,8006053>8000096,Vaihingen(Enz) -> Stuttgart Hbf
+Vaihingen(Enz),8006053,Esslingen(Neckar),8001920,22,SFS Mannheim - Stuttgart,8006053>8001920,Vaihingen(Enz) -> Esslingen(Neckar)
+Stuttgart Hbf,8000096,Ulm Hbf,8000170,44,SFS Stuttgart - Ulm,8000096>8000170,Stuttgart Hbf -> Ulm Hbf
+Esslingen(Neckar),8001920,Ulm Hbf,8000170,35,SFS Stuttgart - Ulm,8001920>8000170,Esslingen(Neckar) -> Ulm Hbf
+Ulm Hbf,8000170,Augsburg Hbf,8000013,41,Ulm - Augsburg,8000170>8000013,Ulm Hbf -> Augsburg Hbf
+Augsburg Hbf,8000013,München-Pasing,8004158,22,Augsburg - München,8000013>8004158,Augsburg Hbf -> München-Pasing
+München-Pasing,8004158,München Ost,8000262,11,München Stadtverkehr,8004158>8000262,München-Pasing -> München Ost
+München-Pasing,8004158,München Hbf,8000261,7,München Stadtverkehr,8004158>8000261,München-Pasing -> München Hbf
+München Ost,8000262,München Hbf,8000261,10,München Stadtverkehr,8000262>8000261,München Ost -> München Hbf
+München Hbf,8000261,Ingolstadt Hbf,8000183,40,München - Ingolstadt,8000261>8000183,München Hbf -> Ingolstadt Hbf
+Ingolstadt Hbf,8000183,Nürnberg Hbf,8000284,30,SFS Nürnberg - Ingolstadt,8000183>8000284,Ingolstadt Hbf -> Nürnberg Hbf
+Nürnberg Hbf,8000284,Bamberg,8089478,36,SFS Nürnberg - Leipzig/Halle,8000284>8089478,Nürnberg Hbf -> Bamberg
+Bamberg,8089478,Erfurt Hbf,8010101,43,SFS Nürnberg - Leipzig/Halle,8089478>8010101,Bamberg -> Erfurt Hbf
+Erfurt Hbf,8010101,Halle(Saale)Hbf,8070814,30,SFS Nürnberg - Leipzig/Halle,8010101>8070814,Erfurt Hbf -> Halle(Saale)Hbf
+Halle(Saale)Hbf,8070814,Bitterfeld,8010050,16,Berlin - Halle/Leipzig,8070814>8010050,Halle(Saale)Hbf -> Bitterfeld
+Bitterfeld,8010050,Berlin Südkreuz,8011113,51,Berlin - Halle/Leipzig,8010050>8011113,Bitterfeld -> Berlin Südkreuz
+Berlin Südkreuz,8011113,Berlin Hbf,8011160,5,Berlin Stadtverkehr,8011113>8011160,Berlin Südkreuz -> Berlin Hbf
+Berlin Hbf (tief),8098160,Berlin Hbf,8011160,0,Geteilter Bahnhof,8098160>8011160,Berlin Hbf (tief) -> Berlin Hbf
+Berlin Hbf,8011160,Berlin-Spandau,8010404,10,Berlin Stadtverkehr,8011160>8010404,Berlin Hbf -> Berlin-Spandau
+Berlin-Spandau,8010404,Stendal Hbf,8010334,35,SFS Berlin - Hannover,8010404>8010334,Berlin-Spandau -> Stendal Hbf
+Stendal Hbf,8010334,Wolfsburg Hbf,8006552,26,SFS Berlin - Hannover,8010334>8006552,Stendal Hbf -> Wolfsburg Hbf
+Wolfsburg Hbf,8006552,Hannover Hbf,8000152,35,SFS Berlin - Hannover,8006552>8000152,Wolfsburg Hbf -> Hannover Hbf
+Hannover Hbf,8000152,Bielefeld Hbf,8000036,50,Hannover - Dortmund,8000152>8000036,Hannover Hbf -> Bielefeld Hbf
+Bielefeld Hbf,8000036,Hamm(Westf)Hbf,8000149,30,Hannover - Dortmund,8000036>8000149,Bielefeld Hbf -> Hamm(Westf)Hbf
+Hamm(Westf)Hbf,8000149,Dortmund Hbf,8000080,18,Hannover - Dortmund,8000149>8000080,Hamm(Westf)Hbf -> Dortmund Hbf
+Dortmund Hbf,8000080,Essen Hbf,8000098,22,Dortmund - Duisburg - Düsseldorf - Köln,8000080>8000098,Dortmund Hbf -> Essen Hbf
+Essen Hbf,8000098,Duisburg Hbf,8000086,12,Dortmund - Duisburg - Düsseldorf - Köln,8000098>8000086,Essen Hbf -> Duisburg Hbf
+Duisburg Hbf,8000086,Düsseldorf Hbf,8000085,11,Dortmund - Duisburg - Düsseldorf - Köln,8000086>8000085,Duisburg Hbf -> Düsseldorf Hbf
+Düsseldorf Hbf,8000085,Köln Messe/Deutz,8003368,20,Dortmund - Duisburg - Düsseldorf - Köln,8000085>8003368,Düsseldorf Hbf -> Köln Messe/Deutz
+Köln Messe/Deutz,8003368,Köln Messe/Deutz Gl.11-12,8073368,0,Geteilter Bahnhof,8003368>8073368,Köln Messe/Deutz -> Köln Messe/Deutz Gl.11-12
+Köln Messe/Deutz,8003368,Köln Hbf,8000207,3,Köln Stadtverkehr,8003368>8000207,Köln Messe/Deutz -> Köln Hbf
+Köln Messe/Deutz,8003368,Siegburg/Bonn,8005556,13,SFS Köln-Rhein/Main,8003368>8005556,Köln Messe/Deutz -> Siegburg/Bonn
+Siegburg/Bonn,8005556,Montabaur,8000667,19,SFS Köln-Rhein/Main,8005556>8000667,Siegburg/Bonn -> Montabaur
+Montabaur,8000667,Limburg Süd,8003680,10,SFS Köln-Rhein/Main,8000667>8003680,Montabaur -> Limburg Süd
+Limburg Süd,8003680,Frankfurt(M) Flughafen Fernbf,8070003,18,SFS Köln-Rhein/Main,8003680>8070003,Limburg Süd -> Frankfurt(M) Flughafen Fernbf

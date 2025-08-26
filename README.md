@@ -69,13 +69,14 @@ Sprinterstrecken:
 - Berlin - Nürnberg (pber Erfurt, Halle ohne Halt)
 
 Hauptstrecken:
-- Hamburg - Hannover
+X Hamburg - Hannover
 - Hamburg - Dortmund
-- Hannover - Dortmund - Duisburg - Köln
-- Hannover - Dortmund - Hagen - Köln
+- Hannover - Dortmund
+- Dortmund - Duisburg - Köln
+- Dortmund - Hagen - Köln
 - Hannover - Berlin
 - Hannover - Nürnberg
-- Hannover - Frankfurt
+X Hannover - Frankfurt
 - Göttingen - Wolfsburg
 - Frankfurt - Nürnberg
 - Frankfurt - Erfurt
