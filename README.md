@@ -157,6 +157,7 @@ X Echtzeitupdateunterstützung auf neue Stops und Ersatzfahrten erweitern
 - Nodes in PixelStudio festlegen
 - ggf. nochmal Pixeling überarbeiten
 - Stück für Stück alle Strecken zu Stations, Stretches, Stretch-Segments und LED Mapping hinzufügen.
+- Focus Mode: Ein Zug alleine auf der Map, planned path highlighted in der Farbe des Zugtyps in dunkel, Position des Zugs hell. 4 Stück, die nacheinander gezeigt werden für jeweils 30 Sekunden. Wenn über env Variablen eine Kategorie + Zugnummer gesetzt ist, wird das genommen, wenn nicht wird zufällig ein aktuell fahrender Zug ausgewählt. Ist der gesetzte Zug nicht auffindbar, wird auch automatisch ein anderer ausgewählt
 
 
 ## Infrastruktur Refactoring
