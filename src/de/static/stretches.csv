@@ -43,7 +43,7 @@ Bitterfeld,8010050,Berlin Südkreuz,8011113,51,Berlin - Halle/Leipzig,8010050>80
 Berlin Südkreuz,8011113,Berlin Hbf,8011160,5,Berlin Stadtverkehr,8011113>8011160,Berlin Südkreuz -> Berlin Hbf
 Berlin Hbf (tief),8098160,Berlin Hbf,8011160,1,Geteilter Bahnhof,8098160>8011160,Berlin Hbf (tief) -> Berlin Hbf
 Berlin Hbf,8011160,Berlin-Spandau,8010404,10,Berlin Stadtverkehr,8011160>8010404,Berlin Hbf -> Berlin-Spandau
-Berlin-Spandau,8010404,Berlin Südkreuz,8011113,35,Berlin Stadtverkehr,8010404>8011113,Berlin-Spandau -> Berlin Südkreuz
+Berlin-Spandau,8010404,Berlin Südkreuz,8011113,20,Berlin Stadtverkehr,8010404>8011113,Berlin-Spandau -> Berlin Südkreuz
 Berlin-Spandau,8010404,Stendal Hbf,8010334,35,SFS Berlin - Hannover,8010404>8010334,Berlin-Spandau -> Stendal Hbf
 Stendal Hbf,8010334,Wolfsburg Hbf,8006552,26,SFS Berlin - Hannover,8010334>8006552,Stendal Hbf -> Wolfsburg Hbf
 Wolfsburg Hbf,8006552,Hannover Hbf,8000152,35,SFS Berlin - Hannover,8006552>8000152,Wolfsburg Hbf -> Hannover Hbf
