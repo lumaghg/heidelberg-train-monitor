@@ -157,17 +157,17 @@ stretch_id,stretch_name,segment_number,lower_bound,upper_bound
 8010404>8010334,Berlin-Spandau -> Stendal Hbf,3,50,70
 8010404>8010334,Berlin-Spandau -> Stendal Hbf,4,70,90
 8010404>8010334,Berlin-Spandau -> Stendal Hbf,5,90,100
-8010334>8006552,Stendal Hbf -> Wolfsburg Hbf,0,0,12
-8010334>8006552,Stendal Hbf -> Wolfsburg Hbf,1,12,37
-8010334>8006552,Stendal Hbf -> Wolfsburg Hbf,2,37,62
-8010334>8006552,Stendal Hbf -> Wolfsburg Hbf,3,62,87
-8010334>8006552,Stendal Hbf -> Wolfsburg Hbf,4,87,100
-8006552>8000152,Wolfsburg Hbf -> Hannover Hbf,0,0,10
-8006552>8000152,Wolfsburg Hbf -> Hannover Hbf,1,10,30
-8006552>8000152,Wolfsburg Hbf -> Hannover Hbf,2,30,50
-8006552>8000152,Wolfsburg Hbf -> Hannover Hbf,3,50,70
-8006552>8000152,Wolfsburg Hbf -> Hannover Hbf,4,70,90
-8006552>8000152,Wolfsburg Hbf -> Hannover Hbf,5,90,100
+8010334>8006552,Stendal Hbf -> Wolfsburg Hbf,0,0,10
+8010334>8006552,Stendal Hbf -> Wolfsburg Hbf,1,10,30
+8010334>8006552,Stendal Hbf -> Wolfsburg Hbf,2,30,50
+8010334>8006552,Stendal Hbf -> Wolfsburg Hbf,3,50,70
+8010334>8006552,Stendal Hbf -> Wolfsburg Hbf,4,70,90
+8010334>8006552,Stendal Hbf -> Wolfsburg Hbf,5,90,100
+8006552>8000152,Wolfsburg Hbf -> Hannover Hbf,0,0,12
+8006552>8000152,Wolfsburg Hbf -> Hannover Hbf,1,12,37
+8006552>8000152,Wolfsburg Hbf -> Hannover Hbf,2,37,62
+8006552>8000152,Wolfsburg Hbf -> Hannover Hbf,3,62,87
+8006552>8000152,Wolfsburg Hbf -> Hannover Hbf,4,87,100
 8000152>8000036,Hannover Hbf -> Bielefeld Hbf,0,0,12
 8000152>8000036,Hannover Hbf -> Bielefeld Hbf,1,12,37
 8000152>8000036,Hannover Hbf -> Bielefeld Hbf,2,37,62
@@ -204,3 +204,14 @@ stretch_id,stretch_name,segment_number,lower_bound,upper_bound
 8003680>8070003,Limburg Süd -> Frankfurt(M) Flughafen Fernbf,2,75,100
 8098160>8011160,Berlin Hbf (tief) -> Berlin Hbf,0,0,100
 8003368>8073368,Köln Messe/Deutz -> Köln Messe/Deutz Gl.11-12,0,0,100
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,

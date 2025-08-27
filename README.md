@@ -64,10 +64,9 @@ TRAVEL COST AUCH BEI GETEILTEN BAHNHÖFEN MIND. 1 SONST DIVISION DURCH 0 ERROR
 
 Hauptstrecken:
 X Hamburg - Hannover
-- Hamburg - Dortmund
+- Hamburg - Dortmund - Hagen - Köln
 X Hannover - Dortmund
 X Dortmund - Duisburg - Köln
-- Dortmund - Hagen - Köln
 X Hannover - Berlin
 - Fulda - Nürnberg
 X Hannover - Frankfurt
@@ -75,7 +74,7 @@ X Hannover - Frankfurt
 - Hanau - Würzburg
 - Fulda - Erfurt
 X Berlin - Halle - Erfurt
-- Berlin - Leipzig - Halle
+- Bitterfeld - Leipzig - Erfurt
 X Erfurt - Nürnberg
 X München - Nürnberg
 X Köln - Montabaur - Frankfurt
@@ -127,7 +126,7 @@ Nebenstrecken:
 - Köln - Mönchengladbach - Utrecht
 - Duisburg - Oberhausen - Utrecht 
 - Duisburg - Oberhausen - Gelsenkirchen - Münster
-- Essen - Gelsenkirchen - Münster 
+- Essen - Gelsenkirchen
 - Dortmund - Paderborn - Kassel
 - Münster - Rheine - Leer - Norddeich (Mole)
 - Hannover - Osnabrück - Rheine - Amsterdam
@@ -151,13 +150,26 @@ ungepixelte Strecken:
 
 
 # Next Steps
-- neue Farben: Grün, Gelb, Rot, Lila
-- Echtzeitupdateunterstützung auf neue Stops und Ersatzfahrten erweitern
+X neue Farben: Grün, Gelb, Rot, Lila
+X Echtzeitupdateunterstützung auf neue Stops und Ersatzfahrten erweitern
 -> neue Stops bei bekannter Id: aus anderem Stop die category und number ziehen, Rest aus den fchg Daten nehmen
 -> neue Stops bei unbekannter Id: Wenn kein Trip Label -> keine Ersatzfahrt sondern Regionalverkehr, skippen / Wenn Trip Label -> prüfen auf Fernverkehr, wenn kein Fernverkehr, skippen / wenn Fernverkehr, neuen Stop mit category und number aus dem Trip Label und id aus dem fchg stop anlegen
 - Nodes in PixelStudio festlegen
 - ggf. nochmal Pixeling überarbeiten
 - Stück für Stück alle Strecken zu Stations, Stretches, Stretch-Segments und LED Mapping hinzufügen.
+
+
+## Infrastruktur Refactoring
+
+- Mappings aus dem animation Ordner in die einzelnen Ordner verschieben
+- Animationscode so anpassen, dass sie immer eine LED und eine Farbe beinhalten, alles dafür in den jeweiligen Ordnern berechnen
+- Webserver bauen, der die animationcode files auf routes verfügbar macht
+- Alles so bauen, dass man einfach ein zweites stretch_segments und mapping für eine andere LED Dimension oder Darstellung machen könnte und dafür dann auch die animationcodes berechnet werden und unter eigenen routes exposed werden
+- de/db/rnv Ordner => Server
+- animation Ordner => Client
+- Server berechnet alle x Minuten / Sekunden immer die animationcodes und hält die Dateien lokal aktuell, jedes Mal wenn der Client etwas anzeigen will (z.B. alle 15 Sekunden), fragt der Client die entsprechenden neuen Animationcodes (LED + Farbe) an, der Server schickt dann einfach den aktuellen State des jeweiligen Files zurück
+- Ausprobieren, ob der Raspi Pico ausreicht für das Powern des Displays, ansonsten entweder Server mieten oder alten Raspberry von Manuel als Server umfunktionieren mit Fritzbox VPN
+
 
 # Optional Improvements
 - Follow - Highlighting
