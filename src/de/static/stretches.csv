@@ -18,7 +18,7 @@ Hannover Hbf,8000152,Göttingen,8000128,34,SFS Hannover - Würzburg,8000152>8000
 Göttingen,8000128,Kassel-Wilhelmshöhe,8003200,19,SFS Hannover - Würzburg,8000128>8003200,Göttingen -> Kassel-Wilhelmshöhe
 Kassel-Wilhelmshöhe,8003200,Fulda,8000115,30,SFS Hannover - Würzburg,8003200>8000115,Kassel-Wilhelmshöhe -> Fulda
 Fulda,8000115,Hanau Hbf,8000150,40,Frankfurt - Fulda,8000115>8000150,Fulda -> Hanau Hbf
-Hanau Hbf,8000150,Frankfurt(Main)Süd,8002041,13,Frankfurt - Fulda,8000150>8002041,Hanau Hbf -> Frankfurt(Main)Süd
+Hanau Hbf,8000150,Frankfurt(Main)Süd,8002041,13,Frankfurt - Fulda / Frankfurt - Würzburg,8000150>8002041,Hanau Hbf -> Frankfurt(Main)Süd
 Frankfurt(Main)Süd,8002041,Frankfurt(Main)Hbf,8000105,11,Frankfurt Stadtverkehr,8002041>8000105,Frankfurt(Main)Süd -> Frankfurt(Main)Hbf
 Frankfurt(Main)Hbf,8000105,Frankfurt(M) Flughafen Fernbf,8070003,12,Frankfurt Stadtverkehr,8000105>8070003,Frankfurt(Main)Hbf -> Frankfurt(M) Flughafen Fernbf
 Frankfurt(M) Flughafen Fernbf,8070003,Frankfurt(Main)Süd,8002041,10,Frankfurt Stadtverkehr,8070003>8002041,Frankfurt(M) Flughafen Fernbf -> Frankfurt(Main)Süd
@@ -43,7 +43,7 @@ Bitterfeld,8010050,Berlin Südkreuz,8011113,51,Berlin - Halle/Leipzig,8010050>80
 Berlin Südkreuz,8011113,Berlin Hbf,8011160,5,Berlin Stadtverkehr,8011113>8011160,Berlin Südkreuz -> Berlin Hbf
 Berlin Hbf (tief),8098160,Berlin Hbf,8011160,1,Geteilter Bahnhof,8098160>8011160,Berlin Hbf (tief) -> Berlin Hbf
 Berlin Hbf,8011160,Berlin-Spandau,8010404,10,Berlin Stadtverkehr,8011160>8010404,Berlin Hbf -> Berlin-Spandau
-Berlin-Spandau,8010404,Berlin Südkreuz,8011113,35,Berlin Stadtverkehr,8010404>8010334,Berlin-Spandau -> Stendal Hbf
+Berlin-Spandau,8010404,Berlin Südkreuz,8011113,35,Berlin Stadtverkehr,8010404>8011113,Berlin-Spandau -> Berlin Südkreuz
 Berlin-Spandau,8010404,Stendal Hbf,8010334,35,SFS Berlin - Hannover,8010404>8010334,Berlin-Spandau -> Stendal Hbf
 Stendal Hbf,8010334,Wolfsburg Hbf,8006552,26,SFS Berlin - Hannover,8010334>8006552,Stendal Hbf -> Wolfsburg Hbf
 Wolfsburg Hbf,8006552,Hannover Hbf,8000152,35,SFS Berlin - Hannover,8006552>8000152,Wolfsburg Hbf -> Hannover Hbf
@@ -60,3 +60,28 @@ Köln Messe/Deutz,8003368,Siegburg/Bonn,8005556,13,SFS Köln-Rhein/Main,8003368>
 Siegburg/Bonn,8005556,Montabaur,8000667,19,SFS Köln-Rhein/Main,8005556>8000667,Siegburg/Bonn -> Montabaur
 Montabaur,8000667,Limburg Süd,8003680,10,SFS Köln-Rhein/Main,8000667>8003680,Montabaur -> Limburg Süd
 Limburg Süd,8003680,Frankfurt(M) Flughafen Fernbf,8070003,18,SFS Köln-Rhein/Main,8003680>8070003,Limburg Süd -> Frankfurt(M) Flughafen Fernbf
+Hamburg-Harburg,8000147,Bremen Hbf,8000050,41,Rollbahn,8000147>8000050,Hamburg-Harburg -> Bremen Hbf
+Bremen Hbf,8000050,Osnabrück Hbf,8000294,52,Rollbahn,8000050>8000294,Bremen Hbf -> Osnabrück Hbf
+Osnabrück Hbf,8000294,Münster(Westf)Hbf,8000263,23,Rollbahn,8000294>8000263,Osnabrück Hbf -> Münster(Westf)Hbf
+Münster(Westf)Hbf,8000263,Dortmund Hbf,8000080,29,Münster - Dortmund,8000263>8000080,Münster(Westf)Hbf -> Dortmund Hbf
+Dortmund Hbf,8000080,Hagen Hbf,8000142,20,Dortmund - Wuppertal - Köln,8000080>8000142,Dortmund Hbf -> Hagen Hbf
+Hagen Hbf,8000142,Wuppertal Hbf,8000266,15,Dortmund - Wuppertal - Köln,8000142>8000266,Hagen Hbf -> Wuppertal Hbf
+Wuppertal Hbf,8000266,Köln Messe/Deutz,8003368,33,Dortmund - Wuppertal - Köln,8000266>8003368,Wuppertal Hbf -> Köln Messe/Deutz
+Hamburg Hbf,8002549,Hamburg-Bergedorf,8002554,10,Hamburg Stadtverkehr,8002549>8002554,Hamburg Hbf -> Hamburg-Bergedorf
+Hamburg-Bergedorf,8002554,Büchen,8000058,13,Hamburg - Berlin,8002554>8000058,Hamburg-Bergedorf -> Büchen
+Büchen,8000058,Ludwigslust,8010216,28,Hamburg - Berlin,8000058>8010216,Büchen -> Ludwigslust
+Ludwigslust,8010216,Wittenberge,8010382,18,Hamburg - Berlin,8010216>8010382,Ludwigslust -> Wittenberge
+Wittenberge,8010382,Berlin-Spandau,8010404,43,Hamburg - Berlin,8010382>8010404,Wittenberge -> Berlin-Spandau
+Hanau Hbf,8000150,Aschaffenburg Hbf,8000010,14,Frankfurt - Fulda / Frankfurt - Würzburg,8000150>8000010,Hanau Hbf -> Aschaffenburg Hbf
+Aschaffenburg Hbf,8000010,Würzburg Hbf,8000260,38,Frankfurt - Würzburg,8000010>8000260,Aschaffenburg Hbf -> Würzburg Hbf
+Würzburg Hbf,8000260,Nürnberg Hbf,8000284,55,Würzburg - Nürnberg,8000260>8000284,Würzburg Hbf -> Nürnberg Hbf
+Fulda,8000115,Würzburg Hbf,8000260,34,SFS Hannover - Würzburg,8000115>8000260,Fulda -> Würzburg Hbf
+Karlsruhe Hbf,8000191,Bruchsal,8000055,11,Karlsruhe - Heidelberg / Karlsruhe - Stuttgart,8000191>8000055,Karlsruhe Hbf -> Bruchsal
+Bruchsal,8000055,Vaihingen(Enz),8006053,14,Karlsruhe - Stuttgart,8000055>8006053,Bruchsal -> Vaihingen(Enz)
+Fulda,8000115,Eisenach Hbf,8010097,49,Fulda - Erfurt,8000115>8010097,Fulda -> Eisenach Hbf
+Eisenach Hbf,8010097,Erfurt Hbf,8010101,25,Fulda - Erfurt,8010097>8010101,Eisenach Hbf -> Erfurt Hbf
+Erfurt Hbf,8010101,Leipzig Hbf,8010205,42,SFS Nürnberg - Leipzig/Halle,8010101>8010205,Erfurt Hbf -> Leipzig Hbf
+Leipzig Hbf,8010205,Bitterfeld,8010050,19,Leipzig - Bitterfeld,8010205>8010050,Leipzig Hbf -> Bitterfeld
+Leipzig Hbf,8010205,Halle(Saale)Hbf,8070814,21,Leipzig - Halle,8010205>8070814,Leipzig Hbf -> Halle(Saale)Hbf
+Göttingen,8000128,Braunschweig Hbf,8000049,52,Göttingen - Wolfsburg,8000128>8000049,Göttingen -> Braunschweig Hbf
+Braunschweig Hbf,8000049,Wolfsburg Hbf,8006552,18,Göttingen - Wolfsburg,8000049>8006552,Braunschweig Hbf -> Wolfsburg Hbf
