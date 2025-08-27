@@ -311,3 +311,10 @@ stretch_id,stretch_name,segment_number,lower_bound,upper_bound
 8000128>8000049,Göttingen -> Braunschweig Hbf,6,91,100
 8000049>8006552,Braunschweig Hbf -> Wolfsburg Hbf,0,0,50
 8000049>8006552,Braunschweig Hbf -> Wolfsburg Hbf,1,50,100
+8000168>8010334,Uelzen -> Stendal Hbf,0,0,8
+8000168>8010334,Uelzen -> Stendal Hbf,1,8,25
+8000168>8010334,Uelzen -> Stendal Hbf,2,25,41
+8000168>8010334,Uelzen -> Stendal Hbf,3,41,58
+8000168>8010334,Uelzen -> Stendal Hbf,4,58,75
+8000168>8010334,Uelzen -> Stendal Hbf,5,75,91
+8000168>8010334,Uelzen -> Stendal Hbf,6,91,100
