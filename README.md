@@ -64,33 +64,33 @@ TRAVEL COST AUCH BEI GETEILTEN BAHNHÖFEN MIND. 1 SONST DIVISION DURCH 0 ERROR
 
 Hauptstrecken:
 X Hamburg - Hannover
-- Hamburg - Dortmund - Hagen - Köln
+X Hamburg - Dortmund - Hagen - Köln
 X Hannover - Dortmund
 X Dortmund - Duisburg - Köln
 X Hannover - Berlin
-- Fulda - Nürnberg
+X Fulda - Nürnberg
 X Hannover - Frankfurt
-- Göttingen - Wolfsburg
-- Hanau - Würzburg
-- Fulda - Erfurt
+X Göttingen - Wolfsburg
+X Hanau - Würzburg
+X Fulda - Erfurt
 X Berlin - Halle - Erfurt
-- Bitterfeld - Leipzig - Erfurt
+X Bitterfeld - Leipzig - Erfurt
 X Erfurt - Nürnberg
 X München - Nürnberg
 X Köln - Montabaur - Frankfurt
-- Mannheim - Basel 
 X Frankfurt - Stuttgart - München
-- Karlsruhe - Vaihingen
-- Hamburg - Berlin (gerade gesperrt)
+X Karlsruhe - Vaihingen
+X Hamburg - Berlin (gerade gesperrt)
+- Mannheim - Basel 
 
 Nebenstrecken:
 
-- Hamburg - Westerland
-- Hamburg - Padborg
+X Hamburg - Westerland
+- Hamburg - Padborg - Kopenhagen - Malmö
 - Hamburg - Kiel
 - Hamburg - Lübeck - Puttgarden
 - Hamburg - Rostock - Stralsund - Ostseebad Binz
-- Hamburg - Stendal 
+X Uelzen - Stendal 
 - Berlin - Rostock - Warnemünde
 - Stendal - Rostock
 - Hannover - Braunschweig - Leipzig
@@ -111,26 +111,32 @@ Nebenstrecken:
 - Ulm - Lindau - Bregenz - Feldkirch
 - Basel - Zürich
 - Augsburg - Nürnberg
-- Augsburg - Würzburg
-- Nürnberg - Stuttgart
+- Augsburg - Ansbach - Würzburg
+- Nürnberg - Ansbach - Stuttgart
 - Karlsruhe - Pforzheim - Stuttgart
 - Karlsruhe - Paris
 - Mannheim - Saarbrücken - Paris
-- Frankfurt - Darmstadt - Mannheim
-- Frankfurt - Darmstadt - Heidelberg - Stuttgart
+- Frankfurt - Weinheim
+- Weinheim - Mannheim
+- Weinheim - Heidelberg
 - Mannheim - Heidelberg
+- Heidelberg - Vaihingen
+- Heidelberg - Bruchsal
 - Mannheim - Ludwigshafen - Mainz - Koblenz - Bonn - Köln
-- Frankfurt - Mainz - Wiesbaden - Siegburg - Köln
+- Frankfurt - Mainz - Wiesbaden - Limburg Süd
 - Frankfurt - Gießen - Kassel
 - Köln - Aachen - Brüssel
 - Köln - Mönchengladbach - Utrecht
-- Duisburg - Oberhausen - Utrecht 
-- Duisburg - Oberhausen - Gelsenkirchen - Münster
+- Duisburg - Oberhausen
+- Oberhausen - Utrecht 
+- Oberhausen - Gelsenkirchen - Münster
 - Essen - Gelsenkirchen
 - Dortmund - Paderborn - Kassel
-- Münster - Rheine - Leer - Norddeich (Mole)
 - Hannover - Osnabrück - Rheine - Amsterdam
-- Hannover - Bremen - Leer - Norddeich (Mole)
+- Münster - Rheine - Leer
+- Hannover - Bremen - Leer
+- Leer - Norddeich(Mole)
+
 
 
 ungepixelte Strecken:
@@ -171,9 +177,6 @@ X Echtzeitupdateunterstützung auf neue Stops und Ersatzfahrten erweitern
 - Server berechnet alle x Minuten / Sekunden immer die animationcodes und hält die Dateien lokal aktuell, jedes Mal wenn der Client etwas anzeigen will (z.B. alle 15 Sekunden), fragt der Client die entsprechenden neuen Animationcodes (LED + Farbe) an, der Server schickt dann einfach den aktuellen State des jeweiligen Files zurück
 - Ausprobieren, ob der Raspi Pico ausreicht für das Powern des Displays, ansonsten entweder Server mieten oder alten Raspberry von Manuel als Server umfunktionieren mit Fritzbox VPN
 
-
-# Optional Improvements
-- Follow - Highlighting
 
 # Rejected Improvements
 - Trails
