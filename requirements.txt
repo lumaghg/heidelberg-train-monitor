@@ -6,3 +6,4 @@ xmltodict
 opencv-python
 pillow
 networkx
+pyproj

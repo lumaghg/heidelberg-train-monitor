@@ -337,3 +337,7 @@ statuscode,readable,leds_primary,leds_secondary
 8500010>8503000_1,Basel SBB -> Zürich HB_1,,
 8500010>8503000_2,Basel SBB -> Zürich HB_2,,
 8500010>8503000_3,Basel SBB -> Zürich HB_3,,
+8000244>8000191_0,Mannheim Hbf -> Karlsruhe Hbf_0,,
+8000244>8000191_1,Mannheim Hbf -> Karlsruhe Hbf_1,,
+8000244>8000191_2,Mannheim Hbf -> Karlsruhe Hbf_2,,
+8000244>8000191_3,Mannheim Hbf -> Karlsruhe Hbf_3,,

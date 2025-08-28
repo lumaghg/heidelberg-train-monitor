@@ -337,3 +337,7 @@ stretch_id,stretch_name,segment_number,lower_bound,upper_bound
 8500010>8503000,Basel SBB -> Zürich HB,1,16,50
 8500010>8503000,Basel SBB -> Zürich HB,2,50,83
 8500010>8503000,Basel SBB -> Zürich HB,3,83,100
+8000244>8000191,Mannheim Hbf -> Karlsruhe Hbf,0,0,16
+8000244>8000191,Mannheim Hbf -> Karlsruhe Hbf,1,16,50
+8000244>8000191,Mannheim Hbf -> Karlsruhe Hbf,2,50,83
+8000244>8000191,Mannheim Hbf -> Karlsruhe Hbf,3,83,100

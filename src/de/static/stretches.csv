@@ -86,6 +86,7 @@ Leipzig Hbf,8010205,Halle(Saale)Hbf,8070814,21,Leipzig - Halle,8010205>8070814,L
 Göttingen,8000128,Braunschweig Hbf,8000049,52,Göttingen - Wolfsburg,8000128>8000049,Göttingen -> Braunschweig Hbf
 Braunschweig Hbf,8000049,Wolfsburg Hbf,8006552,18,Göttingen - Wolfsburg,8000049>8006552,Braunschweig Hbf -> Wolfsburg Hbf
 Uelzen,8000168,Stendal Hbf,8010334,55,Ausweichstrecke Hamburg - Berlin,8000168>8010334,Uelzen -> Stendal Hbf
+Mannheim Hbf,8000244,Karlsruhe Hbf,8000191,23,SFS Mannheim - Karlsruhe,8000244>8000191,Mannheim Hbf -> Karlsruhe Hbf
 Karlsruhe Hbf,8000191,Freiburg(Breisgau) Hbf,8000107,61,Karlsruhe - Basel,8000191>8000107,Karlsruhe Hbf -> Freiburg(Breisgau) Hbf
 Freiburg(Breisgau) Hbf,8000107,Basel Bad Bf,8000026,32,Karlsruhe - Basel,8000107>8000026,Freiburg(Breisgau) Hbf -> Basel Bad Bf
 Basel Bad Bf,8000026,Basel SBB,8500010,8,Basel Stadtverkehr,8000026>8500010,Basel Bad Bf -> Basel SBB
