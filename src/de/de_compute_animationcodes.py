@@ -343,7 +343,7 @@ def get_color_for_category(category: str):
         return "A00000"
     
     if category in ['NJ','EN','ES','DN','D','SJ']:
-        return "#8900AC"
+        return "8900AC"
     
     return "FFFF00"
 
