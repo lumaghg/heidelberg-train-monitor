@@ -194,7 +194,7 @@ def compute_animation_color(category):
     
     if category in ['ICE']:
         # White
-        return "FFF777"
+        return "FFFCCC"
     
     if category in ['IC', 'EC']:
         # Türkis
