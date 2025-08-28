@@ -271,7 +271,7 @@ def get_route_color(route_id:str):
     if route_id.startswith("23"):
         return "FF9900"   
     if route_id.startswith("24"):
-        return '8D2176'   
+        return 'FF3BD5'   
     if route_id.startswith("26"):
         return "FE7F7F"   
     return 'FFFFFF'
