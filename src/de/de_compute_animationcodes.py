@@ -331,19 +331,19 @@ def get_color_for_category(category: str):
         return "008F8F"
     
     if category in ['ICE']:
-        return "AAA888"
+        return "ADA869"
     
     if category in ['FLX','WB']:
         return "008F00"
     
     if category in ['RJ', 'RJX', 'ECE']:
-        return "8F5F00"
+        return "A96000"
     
     if category in ['EST','TGV']:
-        return "8F0000"
+        return "A00000"
     
     if category in ['NJ','EN','ES','DN','D','SJ']:
-        return "72008F"
+        return "#8900AC"
     
     return "FFFF00"
 
@@ -353,7 +353,7 @@ def get_color_for_delay(delay: str):
     if delay > 15:
         return "877100"
     else:
-        return "008F4B"
+        return "328F00"
 
 
 # In[ ]:
