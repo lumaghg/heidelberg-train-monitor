@@ -331,7 +331,7 @@ def get_color_for_category(category: str):
         return "008F8F"
     
     if category in ['ICE']:
-        return "BFB419"
+        return "AAA555"
     
     if category in ['FLX','WB']:
         return "008F00"
