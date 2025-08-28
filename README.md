@@ -122,8 +122,9 @@ X Uelzen - Stendal
 - Mannheim - Heidelberg
 - Heidelberg - Vaihingen
 - Heidelberg - Bruchsal
-- Mannheim - Ludwigshafen - Mainz - Koblenz - Bonn - Köln
-- Frankfurt - Mainz - Wiesbaden - Limburg Süd
+- Mannheim - Mainz - Koblenz - Bonn - Köln
+- Mainz - Wiesbaden - Limburg Süd
+- Frankfurt - Mainz
 - Frankfurt - Gießen - Kassel
 - Köln - Aachen - Brüssel
 - Köln - Mönchengladbach - Utrecht
@@ -136,15 +137,15 @@ X Uelzen - Stendal
 - Münster - Rheine - Leer
 - Hannover - Bremen - Leer
 - Leer - Norddeich(Mole)
-
+- Ulm - Oberstdorf
+- Augsburg - Oberstdorf 
+- Stuttgart - Zürich
 
 
 ungepixelte Strecken:
 - Berlin - Cottbus (IC zählt als RE)
 - Dresden - Chemnitz (IC zählt als RE)
 - München - Berchtesgarden (keine Züge)
-- Ulm - Oberstdorf (nur 1 IC pro Tag)
-- Augsburg - Oberstdorf (nur 1 IC pro Tag)
 - Stuttgart - Tübingen (nur 1 IC pro Tag)
 - Stuttgart - Tuttlingen (nur 1 IC pro Tag, der nicht als RE zählt)
 - Offenburg - Konstanz (nur 1 ICE pro Tag im Sommer)
