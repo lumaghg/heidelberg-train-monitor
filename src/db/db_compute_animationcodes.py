@@ -180,13 +180,9 @@ def compute_animation_color(category):
         return "01FF5A"
     
     # maybe change RE to bwegt yellow color
-    if category in ['RB']:
+    if category in ['RB','RE']:
         # Color of DB Regional Trains (Verkehrsrot)
         return "FD1621"
-    
-    if category in ['RE']:
-        # yellow
-        return "FFC924"
     
     if category in ['FLX']:
         # Color of Flixtrains
