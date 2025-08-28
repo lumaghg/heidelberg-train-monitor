@@ -81,7 +81,7 @@ X Köln - Montabaur - Frankfurt
 X Frankfurt - Stuttgart - München
 X Karlsruhe - Vaihingen
 X Hamburg - Berlin (gerade gesperrt)
-- Mannheim - Basel 
+X Mannheim - Basel 
 
 Nebenstrecken:
 
@@ -106,10 +106,10 @@ X Uelzen - Stendal
 - Nürnberg - Passau - Linz
 - München - Salzburg - Bischofshofen - Graz
 - München - Kufstein - Wörgl
-- München - Seefeld
+- München - Seefeld - Innsbruck
 - München - Lindau - Bregenz - Zürich
-- Ulm - Lindau - Bregenz - Feldkirch
-- Basel - Zürich
+- Ulm - Lindau - Bregenz - Feldkirch - Innsbruck
+X Basel - Zürich
 - Augsburg - Nürnberg
 - Augsburg - Ansbach - Würzburg
 - Nürnberg - Ansbach - Stuttgart
