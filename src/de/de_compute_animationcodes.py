@@ -311,10 +311,10 @@ def compute_category_priority(category: str):
     if category in ['ICE']:
         return 0
     
-    if category in ['IC', 'EC']:
+    if category in ['IC']:
         return 1
 
-    if category in ['FLX','WB', 'RJ', 'RJX', 'ECE', 'EST','TGV', 'NJ','EN','ES','DN','D','SJ']:
+    if category in ['EC','FLX','WB', 'RJ', 'RJX', 'ECE', 'EST','TGV', 'NJ','EN','ES','DN','D','SJ']:
         return 2
     
 df_trip_statuses['category_priority'] = df_trip_statuses['category'].map(compute_category_priority)
@@ -327,23 +327,26 @@ df_trip_statuses['category_priority'] = df_trip_statuses['category'].map(compute
 # color mapping for animationcodes
 
 def get_color_for_category(category: str):
-    if category in ['IC', 'EC']:
-        return "008F8F"
+    if category in ['IC']:
+        return "#008F8F"
+    
+    if category in ['EC']:
+        return "#0000AA"
     
     if category in ['ICE']:
-        return "ADA869"
+        return "#ADA869"
     
     if category in ['FLX','WB']:
-        return "008F00"
+        return "#008F00"
     
     if category in ['RJ', 'RJX', 'ECE']:
-        return "A96000"
+        return "#A96000"
     
     if category in ['EST','TGV']:
-        return "A00000"
+        return "#A00000"
     
     if category in ['NJ','EN','ES','DN','D','SJ']:
-        return "8900AC"
+        return "#8900AC"
     
     return "FFFF00"
 
