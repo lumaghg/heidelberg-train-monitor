@@ -323,7 +323,7 @@ df_trip_statuses['category_priority'] = df_trip_statuses['category'].map(compute
     
 
 
-# In[235]:
+# In[ ]:
 
 
 # color mapping for animationcodes
@@ -349,6 +349,31 @@ def get_color_for_category(category: str):
     
     if category in ['NJ','EN','ES','DN','D','SJ']:
         return "8900AC"
+    
+    return "FFFF00"
+
+
+def get_fullbright_color_for_category(category: str):
+    if category in ['IC']:
+        return "00FFFF"
+    
+    if category in ['EC']:
+        return "0000FF"
+    
+    if category in ['ICE']:
+        return "FFF99E"
+    
+    if category in ['FLX','WB']:
+        return "00FF00"
+    
+    if category in ['RJ', 'RJX', 'ECE']:
+        return "FF9100"
+    
+    if category in ['EST','TGV']:
+        return "FF0000"
+    
+    if category in ['NJ','EN','ES','DN','D','SJ']:
+        return "CC00FF"
     
     return "FFFF00"
 
@@ -451,8 +476,8 @@ for index, focus_signature_row in df_focus_signatures.iterrows():
     
     focus_trip = focus_trip_candidate.iloc[0]
     
-    color_position = get_color_for_category(focus_trip['category'])
-    color_way_highlighting = dim_hex_color(color_position, 0.6)
+    color_position = get_fullbright_color_for_category(focus_trip['category'])
+    color_way_highlighting = dim_hex_color(color_position, 0.4)
     
     focus_animationcodes = pd.DataFrame(columns=['animationcode'])
     
