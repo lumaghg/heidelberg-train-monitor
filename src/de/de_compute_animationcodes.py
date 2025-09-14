@@ -411,7 +411,7 @@ def dim_hex_color(hex_color, factor):
     return "{:02X}{:02X}{:02X}".format(r, g, b)
 
 
-# In[239]:
+# In[ ]:
 
 
 import os
@@ -452,7 +452,7 @@ for index, focus_signature_row in df_focus_signatures.iterrows():
     focus_trip = focus_trip_candidate.iloc[0]
     
     color_position = get_color_for_category(focus_trip['category'])
-    color_way_highlighting = dim_hex_color(color_position, 0.4)
+    color_way_highlighting = dim_hex_color(color_position, 0.6)
     
     focus_animationcodes = pd.DataFrame(columns=['animationcode'])
     
