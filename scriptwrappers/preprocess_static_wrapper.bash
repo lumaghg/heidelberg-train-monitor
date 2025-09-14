@@ -10,3 +10,5 @@ sudo /home/robin/Documents/github/heidelberg-train-monitor/venv/bin/python ./db_
 
 cd /home/robin/Documents/github/heidelberg-train-monitor/src/de
 sudo /home/robin/Documents/github/heidelberg-train-monitor/venv/bin/python ./de_preprocess_static.py
+sudo /home/robin/Documents/github/heidelberg-train-monitor/venv/bin/python ./de_create_tripid_stretchid_mapping.py
+

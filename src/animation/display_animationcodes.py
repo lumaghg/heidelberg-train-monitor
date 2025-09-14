@@ -75,13 +75,45 @@ class DisplayCSV(MatrixBase):
                 df_de_delay_animationcodes = pd.read_csv('../de/de_delay_animationcodes.csv', dtype=str)
 
                 # always do two ticks of db, then two ticks of rnv
-                if tick_counter in range(0,6):
+                if tick_counter in range(0,4):
                     overlay = base_overlay_de.copy()
                     df_animationcodes = df_de_delay_animationcodes
                     
-                if tick_counter in range(6,12):
+                if tick_counter in range(4,8):
                     overlay = base_overlay_de.copy()
                     df_animationcodes = df_de_category_animationcodes
+                    
+                if tick_counter in range(8,9):
+                    # if file doesnt exist (because not enough focus trains are running), just skip tick and go to the next one
+                    try:
+                        overlay = base_overlay_de.copy()
+                        df_animationcodes = pd.read_csv('../de/de_focus_animationcodes_0.csv', dtype=str)
+                    except:
+                        continue
+                    
+                if tick_counter in range(9,10):
+                    # if file doesnt exist (because not enough focus trains are running), just skip tick and go to the next one
+                    try:
+                        overlay = base_overlay_de.copy()
+                        df_animationcodes = pd.read_csv('../de/de_focus_animationcodes_1.csv', dtype=str)
+                    except:
+                        continue
+                    
+                if tick_counter in range(10,11):
+                   # if file doesnt exist (because not enough focus trains are running), just skip tick and go to the next one
+                    try:
+                        overlay = base_overlay_de.copy()
+                        df_animationcodes = pd.read_csv('../de/de_focus_animationcodes_2.csv', dtype=str)
+                    except:
+                        continue
+                    
+                if tick_counter in range(11,12):
+                    # if file doesnt exist (because not enough focus trains are running), just skip tick and go to the next one
+                    try:
+                        overlay = base_overlay_de.copy()
+                        df_animationcodes = pd.read_csv('../de/de_focus_animationcodes_3.csv', dtype=str)
+                    except:
+                        continue
                     
                 if tick_counter in range(12,16):
                     overlay = base_overlay_rnv.copy()
