@@ -91,3 +91,11 @@ Karlsruhe Hbf,8000191,Freiburg(Breisgau) Hbf,8000107,61,Karlsruhe - Basel,800019
 Freiburg(Breisgau) Hbf,8000107,Basel Bad Bf,8000026,32,Karlsruhe - Basel,8000107>8000026,Freiburg(Breisgau) Hbf -> Basel Bad Bf
 Basel Bad Bf,8000026,Basel SBB,8500010,8,Basel Stadtverkehr,8000026>8500010,Basel Bad Bf -> Basel SBB
 Basel SBB,8500010,Zürich HB,8503000,54,Basel - Zürich,8500010>8503000,Basel SBB -> Zürich HB
+Elmshorn,8000092,Neumünster,8000271,20,Hamburg - Kiel,8000092>8000271,Elmshorn -> Neumünster
+Neumünster,8000271,Kiel Hbf,8000199,17,Hamburg - Kiel ,8000271>8000199,Neumünster -> Kiel Hbf
+Neumünster,8000271,Schleswig,8005362,39,Jütlandlinie,8000271>8005362,Neumünster -> Schleswig
+Schleswig,8005362,Flensburg,8000103,23,Jütlandlinie,8005362>8000103,Schleswig -> Flensburg
+Flensburg,8000103,Padborg st,8650100,10,Jütlandlinie,8000103>8650100,Flensburg -> Padborg st
+Padborg st,8650100,Koebenhavn H,8601309,150,Jütlandlinie,8650100>8601309,Padborg st -> Koebenhavn H
+Koebenhavn H,8601309,Malmö Central,7400004,40,Jütlandlinie,8601309>7400004,Koebenhavn H -> Malmö Central
+Hamburg Hbf,8002549,Lübeck Hbf,8000237,49,Vogelfluglinie,8002549>8000237,Hamburg Hbf -> Lübeck Hbf
