@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[43]:
+# In[45]:
 
 
 import pandas as pd
@@ -24,7 +24,7 @@ edges = [(edge[0], edge[1], {'station_name_from': edge[2], 'station_name_to': ed
 G.add_edges_from(edges)
 
 
-# In[44]:
+# In[46]:
 
 
 df_stoptimes_planned = pd.read_csv('./stoptimes_planned.csv').dropna(how='all')

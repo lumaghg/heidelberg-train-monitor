@@ -10,7 +10,7 @@
 # 6. lookup the stretch segment each stretch is on
 # 7. put the statuscode together and output
 
-# In[212]:
+# In[226]:
 
 
 import datetime
@@ -70,7 +70,7 @@ print(DBDatetimeToDatetime("2508101222"))
 print(datetimeToDBDateAndHourTuple(datetime.datetime(2025, 8, 10, 12, 22)))
 
 
-# In[213]:
+# In[227]:
 
 
 df_stoptimes = pd.read_csv(STOPTIMES_PATH, dtype="string", parse_dates=['arrival', "departure"]).dropna(how='all')
@@ -81,7 +81,7 @@ df_stoptimes = pd.read_csv(STOPTIMES_PATH, dtype="string", parse_dates=['arrival
 df_stoptimes = df_stoptimes.drop(labels=['request_timestamp'], axis=1)
 
 
-# In[214]:
+# In[228]:
 
 
 # find active trip ids
@@ -109,7 +109,7 @@ no_active_trips = df_stoptimes['trip_id'].unique().shape[0]
 print(f"found {no_active_trips} active trips")
 
 
-# In[215]:
+# In[229]:
 
 
 # find the two stations, between which each train is traveling (standing at a station until departure counts to being between the two stations. 
@@ -127,7 +127,7 @@ next_stations = next_stations.drop(labels=['has_departed_station'], axis=1)
 df_trip_statuses = pd.merge(how='inner', left=previous_stations, right=next_stations, on=['trip_id', 'category', 'number'], suffixes=("_previous", "_next"))
 
 
-# In[216]:
+# In[230]:
 
 
 # load graph representation of network
@@ -155,7 +155,7 @@ G.add_edges_from(edges)
 
 
 
-# In[217]:
+# In[231]:
 
 
 # calculate where the train is
@@ -241,7 +241,7 @@ df_trip_statuses['position'] = df_trip_statuses.apply(compute_position_on_graph,
 #df_trip_statuses = df_trip_statuses.drop(['station_name_previous','station_uic_previous','arrival_previous','departure_previous','station_name_next','station_uic_next','arrival_next','departure_next'], axis=1)
 
 
-# In[218]:
+# In[232]:
 
 
 # lookup row in stretch_id + % to stretch_segment / LED mapping
@@ -282,7 +282,7 @@ def compute_primary_statuscode(row):
 df_trip_statuses['primary_statuscode'] = df_trip_statuses.apply(compute_primary_statuscode, axis=1)
 
 
-# In[219]:
+# In[233]:
 
 
 # compute delay
@@ -304,7 +304,7 @@ df_trip_statuses['delay'] = df_trip_statuses.apply(compute_delay, axis=1)
 # if the memory is needed, drop the old delay columns
 
 
-# In[220]:
+# In[234]:
 
 
 # add category priority (higher number = higher priority)
@@ -323,7 +323,7 @@ df_trip_statuses['category_priority'] = df_trip_statuses['category'].map(compute
     
 
 
-# In[221]:
+# In[235]:
 
 
 # color mapping for animationcodes
@@ -361,7 +361,7 @@ def get_color_for_delay(delay: str):
         return "328F00"
 
 
-# In[222]:
+# In[236]:
 
 
 # build animationcodes
@@ -382,7 +382,7 @@ primary_category_animationcodes = pd.DataFrame(data={'animationcode': df_trip_st
 primary_delay_animationcodes = pd.DataFrame(data={'animationcode': df_trip_statuses.sort_values(by=['delay']).apply(compute_primary_animationcodes, axis=1, args=('delay',))})
 
 
-# In[223]:
+# In[237]:
 
 
 primary_category_animationcodes.to_csv('de_category_animationcodes.csv', index=False)
@@ -393,7 +393,7 @@ primary_delay_animationcodes.to_csv('de_delay_animationcodes.csv', index=False)
 # 
 # if the focus signature train is running, pick it. Do that until either all focus signatures have been looked up or a maximum of 4 focus trips is reached
 
-# In[224]:
+# In[238]:
 
 
 def dim_hex_color(hex_color, factor):
@@ -411,7 +411,7 @@ def dim_hex_color(hex_color, factor):
     return "{:02X}{:02X}{:02X}".format(r, g, b)
 
 
-# In[225]:
+# In[239]:
 
 
 import os
@@ -465,7 +465,7 @@ for index, focus_signature_row in df_focus_signatures.iterrows():
     stretch_segments_for_this_trip['primary_statuscode'] = stretch_segments_for_this_trip.apply(lambda row: f"{row['stretch_id']}_{row['segment_number']}", axis=1)
     focus_animationcodes['animationcode'] = stretch_segments_for_this_trip['primary_statuscode'].map(lambda statuscode: f"DE:{statuscode}:{color_way_highlighting}")
 
-    position_animationcode_row = pd.DataFrame({'animationcode': [f"{focus_trip['primary_statuscode']}_{color_position}"]})
+    position_animationcode_row = pd.DataFrame({'animationcode': [f"DE:{focus_trip['primary_statuscode']}:{color_position}"]})
     focus_animationcodes = pd.concat([focus_animationcodes, position_animationcode_row])
     
     focus_animationcodes.to_csv(f'./de_focus_animationcodes_{focus_trips_found}.csv', index=False)
