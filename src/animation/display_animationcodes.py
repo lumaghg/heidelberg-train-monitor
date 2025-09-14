@@ -64,6 +64,7 @@ class DisplayCSV(MatrixBase):
         
         while True:
             try:
+                tick_counter = tick_counter + 1 if tick_counter != 20 else 0
                 
                 # background: 
                 overlay = None
@@ -73,6 +74,9 @@ class DisplayCSV(MatrixBase):
                 df_rnv_animationcodes = pd.read_csv('../rnv/rnv_animationcodes.csv', dtype=str)
                 df_de_category_animationcodes = pd.read_csv('../de/de_category_animationcodes.csv', dtype=str)
                 df_de_delay_animationcodes = pd.read_csv('../de/de_delay_animationcodes.csv', dtype=str)
+                
+                # if file doesnt exist (because not enough focus trains are running), gets caught by try catch and just goes to the next tick
+              
 
                 # always do two ticks of db, then two ticks of rnv
                 if tick_counter in range(0,4):
@@ -84,36 +88,24 @@ class DisplayCSV(MatrixBase):
                     df_animationcodes = df_de_category_animationcodes
                     
                 if tick_counter in range(8,9):
-                    # if file doesnt exist (because not enough focus trains are running), just skip tick and go to the next one
-                    try:
-                        overlay = base_overlay_de.copy()
-                        df_animationcodes = pd.read_csv('../de/de_focus_animationcodes_0.csv', dtype=str)
-                    except:
-                        continue
+                    overlay = base_overlay_de.copy()
+                    df_animationcodes = pd.read_csv('../de/de_focus_animationcodes_0.csv', dtype=str)
+                
                     
                 if tick_counter in range(9,10):
-                    # if file doesnt exist (because not enough focus trains are running), just skip tick and go to the next one
-                    try:
-                        overlay = base_overlay_de.copy()
-                        df_animationcodes = pd.read_csv('../de/de_focus_animationcodes_1.csv', dtype=str)
-                    except:
-                        continue
+                    overlay = base_overlay_de.copy()
+                    df_animationcodes = pd.read_csv('../de/de_focus_animationcodes_1.csv', dtype=str)
+                    
                     
                 if tick_counter in range(10,11):
-                   # if file doesnt exist (because not enough focus trains are running), just skip tick and go to the next one
-                    try:
-                        overlay = base_overlay_de.copy()
-                        df_animationcodes = pd.read_csv('../de/de_focus_animationcodes_2.csv', dtype=str)
-                    except:
-                        continue
+                    overlay = base_overlay_de.copy()
+                    df_animationcodes = pd.read_csv('../de/de_focus_animationcodes_2.csv', dtype=str)
+                    
                     
                 if tick_counter in range(11,12):
-                    # if file doesnt exist (because not enough focus trains are running), just skip tick and go to the next one
-                    try:
-                        overlay = base_overlay_de.copy()
-                        df_animationcodes = pd.read_csv('../de/de_focus_animationcodes_3.csv', dtype=str)
-                    except:
-                        continue
+                    overlay = base_overlay_de.copy()
+                    df_animationcodes = pd.read_csv('../de/de_focus_animationcodes_3.csv', dtype=str)
+
                     
                 if tick_counter in range(12,16):
                     overlay = base_overlay_rnv.copy()
@@ -122,10 +114,7 @@ class DisplayCSV(MatrixBase):
                 if tick_counter in range(16,20):
                     overlay = base_overlay_db.copy()
                     df_animationcodes = df_db_animationcodes
-                     
-                tick_counter = tick_counter + 1 if tick_counter != 20 else 0
                 
-                #df_animationcodes = pd.concat([df_db_animationcodes, df_rnv_animationcodes])
                 
 
                 df_db_rfv_mapping = pd.read_csv('./mappings/db_rfv_mapping.csv', dtype=str)
