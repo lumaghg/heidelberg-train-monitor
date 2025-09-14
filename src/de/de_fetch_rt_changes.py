@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[191]:
+# In[1]:
 
 
 import datetime
@@ -19,7 +19,7 @@ STATIONS_PATH = './static/stations.csv'
 FV_CATEGORIES = ["IC", "EC", "ICE", "FLX", "WB", "RJ", "RJX", "ECE", "EST", "TGV", "NJ", "EN", "ES", "DN", "D", "SJ"]
 
 
-# In[192]:
+# In[2]:
 
 
 # chatgpt generiert lol
@@ -64,7 +64,7 @@ print(DBDatetimeToDatetime("2508101222"))
 print(datetimeToDBDateAndHourTuple(datetime.datetime(2025, 8, 10, 12, 22)))
 
 
-# In[193]:
+# In[3]:
 
 
 # load stations that need to be requested
@@ -72,7 +72,7 @@ df_stations = pd.read_csv(STATIONS_PATH, dtype=str).dropna(how='all')
 print(df_stations)
 
 
-# In[194]:
+# In[4]:
 
 
 # helper functions
@@ -99,7 +99,7 @@ def extract_tripid_from_stopid(stop_id: str):
 # Fall 2: id ist nicht bekannt => neuer Trip. Trip hat planned data und trip label, neuen stop anlegen.
 # 
 
-# In[ ]:
+# In[5]:
 
 
 # request and process changes

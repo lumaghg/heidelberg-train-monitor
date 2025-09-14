@@ -21,3 +21,4 @@ trip_statuses.csv
 stoptimes_planned.csv
 stoptimes.csv
 request_log.csv
+tripid_stretchid.csv

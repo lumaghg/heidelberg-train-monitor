@@ -13,7 +13,7 @@
 
 # ### helper functions for handling db dates
 
-# In[7]:
+# In[19]:
 
 
 import datetime
@@ -71,7 +71,7 @@ print(DBDatetimeToDatetime("2508101222"))
 print(datetimeToDBDateAndHourTuple(datetime.datetime(2025, 8, 10, 12, 22)))
 
 
-# In[8]:
+# In[20]:
 
 
 # helper functions
@@ -91,7 +91,7 @@ def extract_tripid_from_stopid(stop_id: str):
     return trip_id
 
 
-# In[9]:
+# In[21]:
 
 
 # calculate which times need to be requested
@@ -110,7 +110,7 @@ print(date_hour_tuples_to_request)
 
 
 
-# In[10]:
+# In[22]:
 
 
 # load stations that need to be requested
@@ -118,7 +118,7 @@ df_stations = pd.read_csv(STATIONS_PATH, dtype=str).dropna(how='all')
 print(df_stations)
 
 
-# In[11]:
+# In[23]:
 
 
 # request and process timetables
@@ -145,7 +145,7 @@ if path.exists(PLANNED_STOPTIMES_PATH):
     df_stoptimes = df_stoptimes.drop(df_stoptimes[df_stoptimes['request_timestamp'] < request_timestamp_four_hours_ago].index)
     
 else:
-    df_stoptimes = pd.DataFrame(columns=['trip_id', 'category', 'number', 'station_name', 'arrival_planned_dbdatetime', 'departure_planned_dbdatetime', 'request_timestamp','station_uic'])
+    df_stoptimes = pd.DataFrame(columns=['trip_id', 'category', 'number', 'station_name', 'arrival_planned_dbdatetime', 'departure_planned_dbdatetime', 'arrival_ppth', 'departure_ppth', 'request_timestamp','station_uic'])
 
 
 
@@ -244,10 +244,12 @@ for index, station_row in df_stations.iterrows():
                     
                     # arrival
                     arrival_planned_dbdatetime = None
+                    arrival_ppth = None
                     
                     if 'ar' in timetable_stop:
                         arrival = timetable_stop['ar']
                         arrival_planned_dbdatetime = arrival['@pt']
+                        arrival_ppth = arrival['@ppth']
                         
                     # departure
                     departure_planned_dbdatetime = None
@@ -255,9 +257,10 @@ for index, station_row in df_stations.iterrows():
                     if 'dp' in timetable_stop:
                         departure = timetable_stop['dp']
                         departure_planned_dbdatetime = departure['@pt']   
+                        departure_ppth = departure['@ppth']
                     
                             
-                    stoptimes_row = pd.DataFrame(data={'trip_id': [trip_id], 'category':[category], 'number': [number], 'station_name':[station_name], 'arrival_planned_dbdatetime': [arrival_planned_dbdatetime], 'departure_planned_dbdatetime':[departure_planned_dbdatetime], 'request_timestamp': [request_timestamp], 'station_uic': station_uic})
+                    stoptimes_row = pd.DataFrame(data={'trip_id': [trip_id], 'category':[category], 'number': [number], 'station_name':[station_name], 'arrival_planned_dbdatetime': [arrival_planned_dbdatetime], 'departure_planned_dbdatetime':[departure_planned_dbdatetime], 'arrival_ppth': [arrival_ppth], 'departure_ppth': [departure_ppth], 'request_timestamp': [request_timestamp], 'station_uic': station_uic})
 
                     df_stoptimes = pd.concat([df_stoptimes, stoptimes_row], ignore_index=True)
                     
@@ -290,7 +293,7 @@ for index, station_row in df_stations.iterrows():
     df_request_log.to_csv(REQUEST_LOG_PATH, index=False)
 
 
-# In[12]:
+# In[24]:
 
 
 # sort dataframe by tripid and departure
