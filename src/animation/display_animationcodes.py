@@ -64,7 +64,7 @@ class DisplayCSV(MatrixBase):
         
         while True:
             try:
-                tick_counter = tick_counter + 1 if tick_counter != 20 else 0
+                tick_counter = tick_counter + 1 if tick_counter != 18 else 0
                 
                 # background: 
                 overlay = None
@@ -79,39 +79,46 @@ class DisplayCSV(MatrixBase):
               
 
                 # always do two ticks of db, then two ticks of rnv
-                if tick_counter in range(0,4):
+                if tick_counter in range(0,3):
                     overlay = base_overlay_de.copy()
                     df_animationcodes = df_de_delay_animationcodes
                     
-                if tick_counter in range(4,8):
+                if tick_counter in range(3,6):
                     overlay = base_overlay_de.copy()
                     df_animationcodes = df_de_category_animationcodes
                     
-                if tick_counter in range(8,9):
+                if tick_counter in range(6,7):
                     overlay = base_overlay_de.copy()
                     df_animationcodes = pd.read_csv('../de/de_focus_animationcodes_0.csv', dtype=str)
                 
                     
-                if tick_counter in range(9,10):
+                if tick_counter in range(7,8):
                     overlay = base_overlay_de.copy()
                     df_animationcodes = pd.read_csv('../de/de_focus_animationcodes_1.csv', dtype=str)
                     
                     
-                if tick_counter in range(10,11):
+                if tick_counter in range(8,9):
                     overlay = base_overlay_de.copy()
                     df_animationcodes = pd.read_csv('../de/de_focus_animationcodes_2.csv', dtype=str)
                     
                     
-                if tick_counter in range(11,12):
+                if tick_counter in range(9,10):
                     overlay = base_overlay_de.copy()
                     df_animationcodes = pd.read_csv('../de/de_focus_animationcodes_3.csv', dtype=str)
 
+                if tick_counter in range(10,11):
+                    overlay = base_overlay_de.copy()
+                    df_animationcodes = pd.read_csv('../de/de_focus_animationcodes_4.csv', dtype=str)
                     
-                if tick_counter in range(12,16):
+                if tick_counter in range(11,12):
+                    overlay = base_overlay_de.copy()
+                    df_animationcodes = pd.read_csv('../de/de_focus_animationcodes_5.csv', dtype=str)
+                
+                if tick_counter in range(12,15):
                     overlay = base_overlay_rnv.copy()
                     df_animationcodes = df_rnv_animationcodes
                     
-                if tick_counter in range(16,20):
+                if tick_counter in range(15,18):
                     overlay = base_overlay_db.copy()
                     df_animationcodes = df_db_animationcodes
                 

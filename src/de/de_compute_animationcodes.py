@@ -448,7 +448,7 @@ focus_trips_found = 0
 
 # remove all old focus trips, in case there were 4 found and now only 3, so that the fourth one doesnt go stale
 
-for i in range(4):
+for i in range(6):
     filename = f"de_focus_animationcodes_{i}.csv"
     if os.path.exists(filename):
         os.remove(filename)
@@ -460,7 +460,7 @@ for i in range(4):
 
 for index, focus_signature_row in df_focus_signatures.iterrows():
     
-    if focus_trips_found >= 4:
+    if focus_trips_found >= 6:
         break
     
     category = focus_signature_row['category']
