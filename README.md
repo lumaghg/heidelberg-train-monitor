@@ -88,7 +88,7 @@ Nebenstrecken:
 X Hamburg - Westerland
 X Hamburg - Padborg - Kopenhagen - Malmö
 X Hamburg - Kiel
-X Hamburg - Lübeck - Puttgarden
+X Hamburg - Lübeck
 - Hamburg - Rostock - Stralsund - Ostseebad Binz
 X Uelzen - Stendal 
 - Berlin - Rostock - Warnemünde
@@ -103,7 +103,7 @@ X Uelzen - Stendal
 - Leipzig - Jena - Nürnberg
 - Erfurt - Gera
 - Erfurt - Kassel 
-- Nürnberg - Passau - Linz
+- Nürnberg - Passau - Wels - Linz
 - München - Salzburg - Bischofshofen - Graz
 - München - Kufstein - Wörgl
 - München - Seefeld - Innsbruck
@@ -119,7 +119,7 @@ X Mannheim - Saarbrücken - Paris
 X Frankfurt - Weinheim
 X Weinheim - Mannheim
 X Weinheim - Heidelberg
-- Mannheim - Heidelberg
+X Mannheim - Heidelberg
 X Heidelberg - Vaihingen
 X Heidelberg - Bruchsal
 X Mannheim - Mainz - Koblenz - Bonn - Köln
@@ -140,6 +140,10 @@ X Frankfurt - Gießen - Kassel
 - Ulm - Oberstdorf
 - Augsburg - Oberstdorf 
 - Stuttgart - Zürich
+- Strasbourg - Lyon
+- Salzburg - Wels
+- Feldkirch - Zürich
+- Lübeck - Puttgarden - Kopenhagen (wenn irgendwann fertig in 10 Jahren)
 
 
 ungepixelte Strecken:
