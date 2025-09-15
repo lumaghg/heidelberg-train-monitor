@@ -435,7 +435,7 @@ stretch_id,stretch_name,segment_number,lower_bound,upper_bound,out_of_map
 8700023>8700019,Strasbourg -> Metz Ville,4,58,75,
 8700023>8700019,Strasbourg -> Metz Ville,5,75,91,
 8700023>8700019,Strasbourg -> Metz Ville,6,91,100,
-8700019>8700011,Metz Ville -> Paris Est,0,0,100,
+8700019>8700011,Metz Ville -> Paris Est,0,0,100,true
 8000191>8700023,Karlsruhe Hbf -> Strasbourg,0,0,10,
 8000191>8700023,Karlsruhe Hbf -> Strasbourg,1,10,30,
 8000191>8700023,Karlsruhe Hbf -> Strasbourg,2,30,50,
