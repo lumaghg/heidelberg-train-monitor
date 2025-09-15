@@ -69,10 +69,10 @@ Dortmund Hbf,8000080,Hagen Hbf,8000142,20,Dortmund - Wuppertal - Köln,8000080>8
 Hagen Hbf,8000142,Wuppertal Hbf,8000266,15,Dortmund - Wuppertal - Köln,8000142>8000266,Hagen Hbf -> Wuppertal Hbf
 Wuppertal Hbf,8000266,Köln Messe/Deutz,8003368,33,Dortmund - Wuppertal - Köln,8000266>8003368,Wuppertal Hbf -> Köln Messe/Deutz
 Hamburg Hbf,8002549,Hamburg-Bergedorf,8002554,10,Hamburg Stadtverkehr,8002549>8002554,Hamburg Hbf -> Hamburg-Bergedorf
-Hamburg-Bergedorf,8002554,Büchen,8000058,913,Hamburg - Berlin,8002554>8000058,Hamburg-Bergedorf -> Büchen
-Büchen,8000058,Ludwigslust,8010216,928,Hamburg - Berlin,8000058>8010216,Büchen -> Ludwigslust
-Ludwigslust,8010216,Wittenberge,8010382,918,Hamburg - Berlin,8010216>8010382,Ludwigslust -> Wittenberge
-Wittenberge,8010382,Berlin-Spandau,8010404,943,Hamburg - Berlin,8010382>8010404,Wittenberge -> Berlin-Spandau
+Hamburg-Bergedorf,8002554,Büchen,8000058,113,Hamburg - Berlin,8002554>8000058,Hamburg-Bergedorf -> Büchen
+Büchen,8000058,Ludwigslust,8010216,128,Hamburg - Berlin,8000058>8010216,Büchen -> Ludwigslust
+Ludwigslust,8010216,Wittenberge,8010382,118,Hamburg - Berlin,8010216>8010382,Ludwigslust -> Wittenberge
+Wittenberge,8010382,Berlin-Spandau,8010404,143,Hamburg - Berlin,8010382>8010404,Wittenberge -> Berlin-Spandau
 Hanau Hbf,8000150,Aschaffenburg Hbf,8000010,14,Frankfurt - Fulda / Frankfurt - Würzburg,8000150>8000010,Hanau Hbf -> Aschaffenburg Hbf
 Aschaffenburg Hbf,8000010,Würzburg Hbf,8000260,38,Frankfurt - Würzburg,8000010>8000260,Aschaffenburg Hbf -> Würzburg Hbf
 Würzburg Hbf,8000260,Nürnberg Hbf,8000284,55,Würzburg - Nürnberg,8000260>8000284,Würzburg Hbf -> Nürnberg Hbf
