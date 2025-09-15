@@ -486,8 +486,6 @@ for index, focus_signature_row in df_focus_signatures.iterrows():
     
     stretchids_for_this_trip = df_tripid_stretchid[df_tripid_stretchid['trip_id'] == focus_trip['trip_id']]
     
-    print(stretchids_for_this_trip)
-    
     stretch_segments_for_this_trip = pd.merge(right=stretchids_for_this_trip, left=stretch_segments, on=['stretch_id'])
     
     stretch_segments_for_this_trip['primary_statuscode'] = stretch_segments_for_this_trip.apply(lambda row: f"{row['stretch_id']}_{row['segment_number']}", axis=1)
