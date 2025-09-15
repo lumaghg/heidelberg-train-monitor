@@ -103,6 +103,7 @@ Hamburg Hbf,8002549,Lübeck Hbf,8000237,49,Vogelfluglinie,8002549>8000237,Hambur
 Bruchsal,8000055,Heidelberg Hbf,8000156,18,Baden-Kurpfalz-Bahn,8000055>8000156,Bruchsal -> Heidelberg Hbf
 Heidelberg Hbf,8000156,Weinheim(Bergstr)Hbf,8000377,12,Main-Neckar-Bahn,8000156>8000377,Heidelberg Hbf -> Weinheim(Bergstr)Hbf
 Mannheim Hbf,8000244,Weinheim(Bergstr)Hbf,8000377,14,Main-Neckar-Bahn,8000244>8000377,Mannheim Hbf -> Weinheim(Bergstr)Hbf
+Mannheim Hbf,8000244,Heidelberg Hbf,8000156,11,Mannheim - Heidelberg,8000244>8000156,Mannheim Hbf -> Heidelberg Hbf
 Weinheim(Bergstr)Hbf,8000377,Darmstadt Hbf,8000068,20,Main-Neckar-Bahn,8000377>8000068,Weinheim(Bergstr)Hbf -> Darmstadt Hbf
 Darmstadt Hbf,8000068,Frankfurt(Main)Süd,8002041,15,Main-Neckar-Bahn,8000068>8002041,Darmstadt Hbf -> Frankfurt(Main)Süd
 Frankfurt(Main)Hbf,8000105,Gießen,8000124,44,Main-Weser-Bahn,8000105>8000124,Frankfurt(Main)Hbf -> Gießen

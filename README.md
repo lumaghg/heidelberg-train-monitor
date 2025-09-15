@@ -86,9 +86,9 @@ X Mannheim - Basel
 Nebenstrecken:
 
 X Hamburg - Westerland
-- Hamburg - Padborg - Kopenhagen - Malmö
-- Hamburg - Kiel
-- Hamburg - Lübeck - Puttgarden
+X Hamburg - Padborg - Kopenhagen - Malmö
+X Hamburg - Kiel
+X Hamburg - Lübeck - Puttgarden
 - Hamburg - Rostock - Stralsund - Ostseebad Binz
 X Uelzen - Stendal 
 - Berlin - Rostock - Warnemünde
@@ -114,18 +114,18 @@ X Basel - Zürich
 - Augsburg - Ansbach - Würzburg
 - Nürnberg - Ansbach - Stuttgart
 - Karlsruhe - Pforzheim - Stuttgart
-- Karlsruhe - Paris
-- Mannheim - Saarbrücken - Paris
-- Frankfurt - Weinheim
-- Weinheim - Mannheim
-- Weinheim - Heidelberg
+X Karlsruhe - Paris
+X Mannheim - Saarbrücken - Paris
+X Frankfurt - Weinheim
+X Weinheim - Mannheim
+X Weinheim - Heidelberg
 - Mannheim - Heidelberg
-- Heidelberg - Vaihingen
-- Heidelberg - Bruchsal
-- Mannheim - Mainz - Koblenz - Bonn - Köln
-- Mainz - Wiesbaden - Limburg Süd
-- Frankfurt - Mainz
-- Frankfurt - Gießen - Kassel
+X Heidelberg - Vaihingen
+X Heidelberg - Bruchsal
+X Mannheim - Mainz - Koblenz - Bonn - Köln
+X Mainz - Wiesbaden - Limburg Süd
+X Frankfurt - Mainz
+X Frankfurt - Gießen - Kassel
 - Köln - Aachen - Brüssel
 - Köln - Mönchengladbach - Utrecht
 - Duisburg - Oberhausen

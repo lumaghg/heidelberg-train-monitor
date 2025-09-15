@@ -442,3 +442,5 @@ stretch_id,stretch_name,segment_number,lower_bound,upper_bound,out_of_map
 8000191>8700023,Karlsruhe Hbf -> Strasbourg,3,50,70,
 8000191>8700023,Karlsruhe Hbf -> Strasbourg,4,70,90,
 8000191>8700023,Karlsruhe Hbf -> Strasbourg,5,90,100,
+8000244>8000156,Mannheim Hbf -> Heidelberg Hbf,0,0,50,
+8000244>8000156,Mannheim Hbf -> Heidelberg Hbf,1,50,100,
