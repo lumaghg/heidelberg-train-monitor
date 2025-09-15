@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[1]:
+# In[11]:
 
 
 import datetime
@@ -19,7 +19,7 @@ STATIONS_PATH = './static/stations.csv'
 FV_CATEGORIES = ["IC", "EC", "ICE", "FLX", "WB", "RJ", "RJX", "ECE", "EST", "TGV", "NJ", "EN", "ES", "DN", "D", "SJ"]
 
 
-# In[2]:
+# In[12]:
 
 
 # chatgpt generiert lol
@@ -64,7 +64,7 @@ print(DBDatetimeToDatetime("2508101222"))
 print(datetimeToDBDateAndHourTuple(datetime.datetime(2025, 8, 10, 12, 22)))
 
 
-# In[3]:
+# In[13]:
 
 
 # load stations that need to be requested
@@ -72,7 +72,7 @@ df_stations = pd.read_csv(STATIONS_PATH, dtype=str).dropna(how='all')
 print(df_stations)
 
 
-# In[4]:
+# In[14]:
 
 
 # helper functions
@@ -99,7 +99,7 @@ def extract_tripid_from_stopid(stop_id: str):
 # Fall 2: id ist nicht bekannt => neuer Trip. Trip hat planned data und trip label, neuen stop anlegen.
 # 
 
-# In[5]:
+# In[15]:
 
 
 # request and process changes
@@ -299,6 +299,19 @@ for index, station_row in df_stations.iterrows():
                     # request timestamp would be the hour in which the trains planned departure or arrival is. So take the planned departure and if not exists the planned 
                     # arrival and just cut of the minutes
                     request_timestamp = arrival_planned_dbdatetime[:-2] if arrival_planned_dbdatetime is not None else departure_planned_dbdatetime[:-2]
+                    
+                    
+                    # ignore the entry, if the actual arrival / departure is outside of the +- 5 hour window from now. Sometimes updates from the last day that still remain 
+                    # in the dataset can mess up calculation, especially for long running night trains
+                    actual_arrival_or_departure_dbdatetime = arrival_actual_dbdatetime if arrival_actual_dbdatetime is not None else departure_actual_dbdatetime
+                    actual_arrival_or_departure = DBDatetimeToDatetime(actual_arrival_or_departure_dbdatetime)
+                    
+                    in_five_hours = datetime.datetime.now() + datetime.timedelta(hours=5)
+                    five_hours_ago = datetime.datetime.now() - datetime.timedelta(hours=5)
+                    
+                    if not(five_hours_ago < actual_arrival_or_departure < in_five_hours):
+                        print(f"skipping date: {actual_arrival_or_departure}")
+                        continue    
                             
                             
                     # wenn category Fernverkehr, neuen Stop anlegen
@@ -315,8 +328,6 @@ for index, station_row in df_stations.iterrows():
                         'request_timestamp': [request_timestamp]})
                     
                     df_stoptimes = pd.concat([df_stoptimes, additional_stop])
-                    print(additional_stop)
-                
             
             except Exception as e:
                 print("error during processing timetable stop}", timetable_fchg_stop)
