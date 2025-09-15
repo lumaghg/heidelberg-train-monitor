@@ -24,6 +24,7 @@ Frankfurt(Main)Hbf,8000105,Frankfurt(M) Flughafen Fernbf,8070003,12,Frankfurt St
 Frankfurt(M) Flughafen Fernbf,8070003,Frankfurt(Main)Süd,8002041,10,Frankfurt Stadtverkehr,8070003>8002041,Frankfurt(M) Flughafen Fernbf -> Frankfurt(Main)Süd
 Frankfurt(M) Flughafen Fernbf,8070003,Mannheim Hbf,8000244,31,Riedbahn,8070003>8000244,Frankfurt(M) Flughafen Fernbf -> Mannheim Hbf
 Mannheim Hbf,8000244,Vaihingen(Enz),8006053,31,SFS Mannheim - Stuttgart,8000244>8006053,Mannheim Hbf -> Vaihingen(Enz)
+Bruchsal,8000055,Vaihingen(Enz),8006053,15,SFS Mannheim - Stuttgart,8000055>8006053,Bruchsal -> Vaihingen(Enz)
 Vaihingen(Enz),8006053,Stuttgart Hbf,8000096,14,SFS Mannheim - Stuttgart,8006053>8000096,Vaihingen(Enz) -> Stuttgart Hbf
 Vaihingen(Enz),8006053,Esslingen(Neckar),8001920,22,SFS Mannheim - Stuttgart,8006053>8001920,Vaihingen(Enz) -> Esslingen(Neckar)
 Stuttgart Hbf,8000096,Ulm Hbf,8000170,44,SFS Stuttgart - Ulm,8000096>8000170,Stuttgart Hbf -> Ulm Hbf
@@ -76,7 +77,7 @@ Hanau Hbf,8000150,Aschaffenburg Hbf,8000010,14,Frankfurt - Fulda / Frankfurt - W
 Aschaffenburg Hbf,8000010,Würzburg Hbf,8000260,38,Frankfurt - Würzburg,8000010>8000260,Aschaffenburg Hbf -> Würzburg Hbf
 Würzburg Hbf,8000260,Nürnberg Hbf,8000284,55,Würzburg - Nürnberg,8000260>8000284,Würzburg Hbf -> Nürnberg Hbf
 Fulda,8000115,Würzburg Hbf,8000260,34,SFS Hannover - Würzburg,8000115>8000260,Fulda -> Würzburg Hbf
-Karlsruhe Hbf,8000191,Bruchsal,8000055,11,Karlsruhe - Heidelberg / Karlsruhe - Stuttgart,8000191>8000055,Karlsruhe Hbf -> Bruchsal
+Karlsruhe Hbf,8000191,Bruchsal,8000055,11,Baden-Kurpfalz-Bahn,8000191>8000055,Karlsruhe Hbf -> Bruchsal
 Bruchsal,8000055,Vaihingen(Enz),8006053,14,Karlsruhe - Stuttgart,8000055>8006053,Bruchsal -> Vaihingen(Enz)
 Fulda,8000115,Eisenach Hbf,8010097,49,Fulda - Erfurt,8000115>8010097,Fulda -> Eisenach Hbf
 Eisenach Hbf,8010097,Erfurt Hbf,8010101,25,Fulda - Erfurt,8010097>8010101,Eisenach Hbf -> Erfurt Hbf
@@ -99,3 +100,26 @@ Flensburg,8000103,Padborg st,8650100,10,Jütlandlinie,8000103>8650100,Flensburg 
 Padborg st,8650100,Koebenhavn H,8601309,150,Jütlandlinie,8650100>8601309,Padborg st -> Koebenhavn H
 Koebenhavn H,8601309,Malmö Central,7400004,40,Jütlandlinie,8601309>7400004,Koebenhavn H -> Malmö Central
 Hamburg Hbf,8002549,Lübeck Hbf,8000237,49,Vogelfluglinie,8002549>8000237,Hamburg Hbf -> Lübeck Hbf
+Bruchsal,8000055,Heidelberg Hbf,8000156,18,Baden-Kurpfalz-Bahn,8000055>8000156,Bruchsal -> Heidelberg Hbf
+Heidelberg Hbf,8000156,Weinheim(Bergstr)Hbf,8000377,12,Main-Neckar-Bahn,8000156>8000377,Heidelberg Hbf -> Weinheim(Bergstr)Hbf
+Mannheim Hbf,8000244,Weinheim(Bergstr)Hbf,8000377,14,Main-Neckar-Bahn,8000244>8000377,Mannheim Hbf -> Weinheim(Bergstr)Hbf
+Weinheim(Bergstr)Hbf,8000377,Darmstadt Hbf,8000068,20,Main-Neckar-Bahn,8000377>8000068,Weinheim(Bergstr)Hbf -> Darmstadt Hbf
+Darmstadt Hbf,8000068,Frankfurt(Main)Süd,8002041,15,Main-Neckar-Bahn,8000068>8002041,Darmstadt Hbf -> Frankfurt(Main)Süd
+Frankfurt(Main)Hbf,8000105,Gießen,8000124,44,Main-Weser-Bahn,8000105>8000124,Frankfurt(Main)Hbf -> Gießen
+Gießen,8000124,Marburg(Lahn),8000337,17,Main-Weser-Bahn,8000124>8000337,Gießen -> Marburg(Lahn)
+Marburg(Lahn),8000337,Kassel-Wilhelmshöhe,8003200,60,Main-Weser-Bahn,8000337>8003200,Marburg(Lahn) -> Kassel-Wilhelmshöhe
+Köln Hbf,8000207,Bonn Hbf,8000044,20,Linke Rheinstrecke,8000207>8000044,Köln Hbf -> Bonn Hbf
+Bonn Hbf,8000044,Koblenz Hbf,8000206,30,Linke Rheinstrecke,8000044>8000206,Bonn Hbf -> Koblenz Hbf
+Koblenz Hbf,8000206,Mainz Hbf,8000240,51,Linke Rheinstrecke,8000206>8000240,Koblenz Hbf -> Mainz Hbf
+Mainz Hbf,8000240,Wiesbaden Hbf,8000250,10,Taunusbahn,8000240>8000250,Mainz Hbf -> Wiesbaden Hbf
+Wiesbaden Hbf,8000250,Limburg Süd,8003680,22,Anbindung SFS Köln - Rhein/Main,8000250>8003680,Wiesbaden Hbf -> Limburg Süd
+Mainz Hbf,8000240,Frankfurt(M) Flughafen Fernbf,8070003,16,Taunusbahn,8000240>8070003,Mainz Hbf -> Frankfurt(M) Flughafen Fernbf
+Mainz Hbf,8000240,Worms Hbf,8000257,26,Linke Rheinstrecke,8000240>8000257,Mainz Hbf -> Worms Hbf
+Worms Hbf,8000257,Ludwigshafen(Rh)Hbf,8000236,11,Linke Rheinstrecke,8000257>8000236,Worms Hbf -> Ludwigshafen(Rh)Hbf
+Ludwigshafen(Rh)Hbf,8000236,Mannheim Hbf,8000244,4,Mannheim - Saarbrücken,8000236>8000244,Ludwigshafen(Rh)Hbf -> Mannheim Hbf
+Ludwigshafen(Rh)Hbf,8000236,Kaiserslautern Hbf,8000189,43,Mannheim - Saarbrücken,8000236>8000189,Ludwigshafen(Rh)Hbf -> Kaiserslautern Hbf
+Kaiserslautern Hbf,8000189,Saarbrücken Hbf,8000323,35,Mannheim - Saarbrücken,8000189>8000323,Kaiserslautern Hbf -> Saarbrücken Hbf
+Saarbrücken Hbf,8000323,Metz Ville,8700019,27,LGV Est,8000323>8700019,Saarbrücken Hbf -> Metz Ville
+Karlsruhe Hbf,8000191,Strasbourg,8700023,42,Karlsruhe - Strasbourg,8000191>8700023,Karlsruhe Hbf -> Strasbourg
+Strasbourg,8700023,Metz Ville,8700019,48,LGV Est,8700023>8700019,Strasbourg -> Metz Ville
+Metz Ville,8700019,Paris Est,8700011,85,LGV Est,8700019>8700011,Metz Ville -> Paris Est
