@@ -361,7 +361,7 @@ statuscode,readable,leds_primary,leds_secondary
 8002549>8000237_0,Hamburg Hbf -> Lübeck Hbf_0,12-16,
 8002549>8000237_1,Hamburg Hbf -> Lübeck Hbf_1,11-15,
 8002549>8000237_2,Hamburg Hbf -> Lübeck Hbf_2,10-14,
-8002549>8000237_3,Hamburg Hbf -> Lübeck Hbf_3,10-13,
+8002549>8000237_3,Hamburg Hbf -> Lübeck Hbf_3,9-13,
 8000055>8000156_0,Bruchsal -> Heidelberg Hbf_0,49-21,
 8000055>8000156_1,Bruchsal -> Heidelberg Hbf_1,48-21,
 8000055>8000156_2,Bruchsal -> Heidelberg Hbf_2,47-21,
