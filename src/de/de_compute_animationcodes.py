@@ -414,6 +414,9 @@ primary_category_animationcodes.to_csv('de_category_animationcodes.csv', index=F
 primary_delay_animationcodes.to_csv('de_delay_animationcodes.csv', index=False)
 
 
+df_trip_statuses.to_csv('temp.csv', index=False)
+
+
 # ### Focus animationscodes
 # 
 # if the focus signature train is running, pick it. Do that until either all focus signatures have been looked up or a maximum of 4 focus trips is reached
