@@ -13,7 +13,7 @@
 
 # ### helper functions for handling db dates
 
-# In[1]:
+# In[4]:
 
 
 import datetime
@@ -58,7 +58,7 @@ print(DBDateToDate("250810"))
 print(DBDatetimeToDatetime("2508101222"))
 
 
-# In[2]:
+# In[5]:
 
 
 # download all 23 available timeslots for the day
@@ -102,7 +102,7 @@ for hour in range(1,24):
 # 
 # now that we have saved all the xmls we need, we can go through them one by one, extract the relevant attributes and save them in a dataframe 
 
-# In[3]:
+# In[6]:
 
 
 import pandas as pd
@@ -152,20 +152,23 @@ def process_timetable_stop(timetable_stop):
 timetable_rows = []
 
 for response_xml in responses_xml:
-    # convert response_xml to dict
-    timetable = xmltodict.parse(response_xml.content)
+    try:
+        
+        # convert response_xml to dict
+        timetable = xmltodict.parse(response_xml.content)
 
-    timetable_stops = timetable['timetable']['s']
-    
-    # if there is only one trip in the requested hour, the xml parser parses the timetable stop entry into a dict rather than a list
-    if isinstance(timetable_stops, list):
-        for timetable_stop in timetable_stops:
-            timetable_row = process_timetable_stop(timetable_stop)
+        timetable_stops = timetable['timetable']['s']
+        
+        # if there is only one trip in the requested hour, the xml parser parses the timetable stop entry into a dict rather than a list
+        if isinstance(timetable_stops, list):
+            for timetable_stop in timetable_stops:
+                timetable_row = process_timetable_stop(timetable_stop)
+                timetable_rows.append(timetable_row)
+        else:
+            timetable_row = process_timetable_stop(timetable_stops)
             timetable_rows.append(timetable_row)
-    else:
-        timetable_row = process_timetable_stop(timetable_stops)
-        timetable_rows.append(timetable_row)
-
+    except:
+        print(f"error while processing timetable response. maybe this timetable was empty?")
 df_timetable = pd.concat(timetable_rows, ignore_index=True)
 print(df_timetable.head(5))
 
@@ -173,7 +176,7 @@ print(df_timetable.head(5))
 
 # finally, sort the list by arrival_dbdatetime and save the timetable to disk for later use throughout the day
 
-# In[4]:
+# In[7]:
 
 
 df_timetable = df_timetable.drop_duplicates()
