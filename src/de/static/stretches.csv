@@ -124,3 +124,21 @@ Saarbrücken Hbf,8000323,Metz Ville,8700019,27,LGV Est,8000323>8700019,Saarbrüc
 Karlsruhe Hbf,8000191,Strasbourg,8700023,42,Karlsruhe - Strasbourg,8000191>8700023,Karlsruhe Hbf -> Strasbourg
 Strasbourg,8700023,Metz Ville,8700019,48,LGV Est,8700023>8700019,Strasbourg -> Metz Ville
 Metz Ville,8700019,Paris Est,8700011,85,LGV Est,8700019>8700011,Metz Ville -> Paris Est
+Hannover Hbf,8000152,Bremen Hbf,8000050,60,Hannover - Bremen,8000152>8000050,Hannover Hbf -> Bremen Hbf
+Hannover Hbf,8000152,Osnabrück Hbf,8000294,68,Hannover - Amsterdam,8000152>8000294,Hannover Hbf -> Osnabrück Hbf
+Hamm(Westf)Hbf,8000149,Paderborn Hbf,8000297,40,Hamm - Kassel,8000149>8000297,Hamm(Westf)Hbf -> Paderborn Hbf
+Paderborn Hbf,8000297,Kassel-Wilhelmshöhe,8003200,65,Hamm - Kassel,8000297>8003200,Paderborn Hbf -> Kassel-Wilhelmshöhe
+Kassel-Wilhelmshöhe,8003200,Eisenach Hbf,8010097,55,Kassel - Erfurt,8003200>8010097,Kassel-Wilhelmshöhe -> Eisenach Hbf
+Ludwigslust,8010216,Stendal Hbf,8010334,54,-,8010216>8010334,Ludwigslust -> Stendal Hbf
+Magdeburg Hbf,8089178,Stendal Hbf,8010334,35,-,8089178>8010334,Magdeburg Hbf -> Stendal Hbf
+Magdeburg Hbf,8089178,Berlin Hbf,8011160,86,-,8089178>8011160,Magdeburg Hbf -> Berlin Hbf
+Magdeburg Hbf,8089178,Halle(Saale)Hbf,8070814,48,-,8089178>8070814,Magdeburg Hbf -> Halle(Saale)Hbf
+Magdeburg Hbf,8089178,Braunschweig Hbf,8000049,45,-,8089178>8000049,Magdeburg Hbf -> Braunschweig Hbf
+Karlsruhe Hbf,8000191,Pforzheim Hbf,8000299,20,-,8000191>8000299,Karlsruhe Hbf -> Pforzheim Hbf
+Pforzheim Hbf,8000299,Vaihingen(Enz),8006053,15,-,8000299>8006053,Pforzheim Hbf -> Vaihingen(Enz)
+Augsburg Hbf,8000013,Donauwörth,8000078,20,-,8000013>8000078,Augsburg Hbf -> Donauwörth
+Donauwörth,8000078,Nürnberg Hbf,8000284,50,-,8000078>8000284,Donauwörth -> Nürnberg Hbf
+Ansbach,8000009,Donauwörth,8000078,55,-,8000009>8000078,Ansbach -> Donauwörth
+Ansbach,8000009,Nürnberg Hbf,8000284,28,-,8000009>8000284,Ansbach -> Nürnberg Hbf
+Ansbach,8000009,Würzburg Hbf,8000260,55,-,8000009>8000260,Ansbach -> Würzburg Hbf
+Ansbach,8000009,Stuttgart Hbf,8000096,106,-,8000009>8000096,Ansbach -> Stuttgart Hbf
