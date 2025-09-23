@@ -132,7 +132,7 @@ Paderborn Hbf,8000297,Kassel-Wilhelmshöhe,8003200,65,Hamm - Kassel,8000297>8003
 Kassel-Wilhelmshöhe,8003200,Eisenach Hbf,8010097,55,Kassel - Erfurt,8003200>8010097,Kassel-Wilhelmshöhe -> Eisenach Hbf
 Ludwigslust,8010216,Stendal Hbf,8010334,54,-,8010216>8010334,Ludwigslust -> Stendal Hbf
 Magdeburg Hbf,8089178,Stendal Hbf,8010334,35,-,8089178>8010334,Magdeburg Hbf -> Stendal Hbf
-Magdeburg Hbf,8089178,Berlin Hbf,8011160,86,-,8089178>8011160,Magdeburg Hbf -> Berlin Hbf
+Magdeburg Hbf,8089178,Berlin Hbf,8011160,76,-,8089178>8011160,Magdeburg Hbf -> Berlin Hbf
 Magdeburg Hbf,8089178,Halle(Saale)Hbf,8070814,48,-,8089178>8070814,Magdeburg Hbf -> Halle(Saale)Hbf
 Magdeburg Hbf,8089178,Braunschweig Hbf,8000049,45,-,8089178>8000049,Magdeburg Hbf -> Braunschweig Hbf
 Hannover Hbf,8000152,Braunschweig Hbf,8000049,32,-,8000152>8000049,Hannover Hbf -> Braunschweig Hbf
