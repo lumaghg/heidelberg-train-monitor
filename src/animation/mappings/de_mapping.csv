@@ -535,3 +535,7 @@ statuscode,readable,leds_primary,leds_secondary
 8000009>8000096_3,Ansbach -> Stuttgart Hbf_3,52-17,
 8000009>8000096_4,Ansbach -> Stuttgart Hbf_4,52-18,
 8000009>8000096_5,Ansbach -> Stuttgart Hbf_5,52-19,
+8000152>8000049_0,Hannover Hbf -> Braunschweig Hbf_0,,
+8000152>8000049_1,Hannover Hbf -> Braunschweig Hbf_1,,
+8000152>8000049_2,Hannover Hbf -> Braunschweig Hbf_2,,
+8000152>8000049_3,Hannover Hbf -> Braunschweig Hbf_3,,

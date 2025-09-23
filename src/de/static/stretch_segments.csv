@@ -538,3 +538,7 @@ stretch_id,stretch_name,segment_number,lower_bound,upper_bound,out_of_map
 8000009>8000096,Ansbach -> Stuttgart Hbf,3,50,70,
 8000009>8000096,Ansbach -> Stuttgart Hbf,4,70,90,
 8000009>8000096,Ansbach -> Stuttgart Hbf,5,90,100,
+8000152>8000049,Hannover Hbf -> Braunschweig Hbf,0,0,16,
+8000152>8000049,Hannover Hbf -> Braunschweig Hbf,1,16,50,
+8000152>8000049,Hannover Hbf -> Braunschweig Hbf,2,50,83,
+8000152>8000049,Hannover Hbf -> Braunschweig Hbf,3,83,100,

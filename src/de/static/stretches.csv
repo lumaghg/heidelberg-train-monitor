@@ -134,6 +134,7 @@ Magdeburg Hbf,8089178,Stendal Hbf,8010334,35,-,8089178>8010334,Magdeburg Hbf -> 
 Magdeburg Hbf,8089178,Berlin Hbf,8011160,86,-,8089178>8011160,Magdeburg Hbf -> Berlin Hbf
 Magdeburg Hbf,8089178,Halle(Saale)Hbf,8070814,48,-,8089178>8070814,Magdeburg Hbf -> Halle(Saale)Hbf
 Magdeburg Hbf,8089178,Braunschweig Hbf,8000049,45,-,8089178>8000049,Magdeburg Hbf -> Braunschweig Hbf
+Hannover Hbf,8000152,Braunschweig Hbf,8000049,32,-,8000152>8000049,Hannover Hbf -> Braunschweig Hbf
 Karlsruhe Hbf,8000191,Pforzheim Hbf,8000299,20,-,8000191>8000299,Karlsruhe Hbf -> Pforzheim Hbf
 Pforzheim Hbf,8000299,Vaihingen(Enz),8006053,15,-,8000299>8006053,Pforzheim Hbf -> Vaihingen(Enz)
 Augsburg Hbf,8000013,Donauwörth,8000078,20,-,8000013>8000078,Augsburg Hbf -> Donauwörth
