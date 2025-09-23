@@ -92,10 +92,11 @@ X Hamburg - Lübeck
 - Hamburg - Rostock - Stralsund - Ostseebad Binz
 X Uelzen - Stendal 
 - Berlin - Rostock - Warnemünde
-- Stendal - Rostock
-- Hannover - Braunschweig - Leipzig
-- Magdeburg - Stendal 
-- Magdeburg - Berlin
+X Stendal - Ludwigslust
+- Ludwigslust - Rostock
+X Hannover - Braunschweig - Leipzig
+X Magdeburg - Stendal 
+X Magdeburg - Berlin
 - Berlin - Stralsund
 - Berlin - Frankfurt (Oder)
 - Berlin - Dresden - Prag
@@ -110,10 +111,10 @@ X Uelzen - Stendal
 - München - Lindau - Bregenz - Zürich
 - Ulm - Lindau - Bregenz - Feldkirch - Innsbruck
 X Basel - Zürich
-- Augsburg - Nürnberg
-- Augsburg - Ansbach - Würzburg
-- Nürnberg - Ansbach - Stuttgart
-- Karlsruhe - Pforzheim - Stuttgart
+X Augsburg - Nürnberg
+X Augsburg - Ansbach - Würzburg
+X Nürnberg - Ansbach - Stuttgart
+X Karlsruhe - Pforzheim - Stuttgart
 X Karlsruhe - Paris
 X Mannheim - Saarbrücken - Paris
 X Frankfurt - Weinheim
@@ -126,21 +127,20 @@ X Mannheim - Mainz - Koblenz - Bonn - Köln
 X Mainz - Wiesbaden - Limburg Süd
 X Frankfurt - Mainz
 X Frankfurt - Gießen - Kassel
-- Köln - Aachen - Brüssel
-- Köln - Mönchengladbach - Utrecht
-- Duisburg - Oberhausen
-- Oberhausen - Utrecht 
-- Oberhausen - Gelsenkirchen - Münster
-- Essen - Gelsenkirchen
-- Dortmund - Paderborn - Kassel
-- Hannover - Osnabrück - Rheine - Amsterdam
-- Münster - Rheine - Leer
-- Hannover - Bremen - Leer
-- Leer - Norddeich(Mole)
+X Köln - Aachen - Brüssel
+X Duisburg - Oberhausen
+X Oberhausen - Utrecht 
+X Oberhausen - Gelsenkirchen - Münster
+X Essen - Gelsenkirchen
+X Dortmund - Paderborn - Kassel
+X Hannover - Osnabrück - Rheine - Amsterdam
+X Münster - Rheine - Leer
+X Hannover - Bremen - Leer
+X Leer - Norddeich(Mole)
 - Ulm - Oberstdorf
 - Augsburg - Oberstdorf 
 - Stuttgart - Zürich
-- Strasbourg - Lyon
+X Strasbourg - Lyon
 - Salzburg - Wels
 - Feldkirch - Zürich
 - Lübeck - Puttgarden - Kopenhagen (wenn irgendwann fertig in 10 Jahren)
