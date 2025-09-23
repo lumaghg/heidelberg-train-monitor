@@ -65,6 +65,7 @@ Hamburg-Harburg,8000147,Bremen Hbf,8000050,41,Rollbahn,8000147>8000050,Hamburg-H
 Bremen Hbf,8000050,Osnabrück Hbf,8000294,52,Rollbahn,8000050>8000294,Bremen Hbf -> Osnabrück Hbf
 Osnabrück Hbf,8000294,Münster(Westf)Hbf,8000263,23,Rollbahn,8000294>8000263,Osnabrück Hbf -> Münster(Westf)Hbf
 Münster(Westf)Hbf,8000263,Dortmund Hbf,8000080,29,Münster - Dortmund,8000263>8000080,Münster(Westf)Hbf -> Dortmund Hbf
+Münster(Westf)Hbf,8000263,Hamm(Westf)Hbf,8000149,23,Münster - Hamm,8000263>8000149,Münster(Westf)Hbf -> Hamm(Westf)Hbf
 Dortmund Hbf,8000080,Hagen Hbf,8000142,20,Dortmund - Wuppertal - Köln,8000080>8000142,Dortmund Hbf -> Hagen Hbf
 Hagen Hbf,8000142,Wuppertal Hbf,8000266,15,Dortmund - Wuppertal - Köln,8000142>8000266,Hagen Hbf -> Wuppertal Hbf
 Wuppertal Hbf,8000266,Köln Messe/Deutz,8003368,33,Dortmund - Wuppertal - Köln,8000266>8003368,Wuppertal Hbf -> Köln Messe/Deutz
@@ -143,3 +144,23 @@ Ansbach,8000009,Donauwörth,8000078,55,-,8000009>8000078,Ansbach -> Donauwörth
 Ansbach,8000009,Nürnberg Hbf,8000284,28,-,8000009>8000284,Ansbach -> Nürnberg Hbf
 Ansbach,8000009,Würzburg Hbf,8000260,55,-,8000009>8000260,Ansbach -> Würzburg Hbf
 Ansbach,8000009,Stuttgart Hbf,8000096,106,-,8000009>8000096,Ansbach -> Stuttgart Hbf
+Duisburg Hbf,8000086,Oberhausen Hbf,8000286,5,-,8000086>8000286,Duisburg Hbf -> Oberhausen Hbf
+Oberhausen Hbf,8000286,Gelsenkirchen Hbf,8000118,10,-,8000286>8000118,Oberhausen Hbf -> Gelsenkirchen Hbf
+Essen Hbf,8000098,Gelsenkirchen Hbf,8000118,12,-,8000098>8000118,Essen Hbf -> Gelsenkirchen Hbf
+Gelsenkirchen Hbf,8000118,Münster(Westf)Hbf,8000263,43,-,8000118>8000263,Gelsenkirchen Hbf -> Münster(Westf)Hbf
+Oberhausen Hbf,8000286,Arnhem Centraal,8400071,54,-,8000286>8400071,Oberhausen Hbf -> Arnhem Centraal
+Arnhem Centraal,8400071,Amsterdam Centraal,8400058,61,-,8400071>8400058,Arnhem Centraal -> Amsterdam Centraal
+Bremen Hbf,8000050,Oldenburg(Oldb)Hbf,8000291,30,-,8000050>8000291,Bremen Hbf -> Oldenburg(Oldb)Hbf
+Oldenburg(Oldb)Hbf,8000291,Leer(Ostfriesl),8000225,42,-,8000291>8000225,Oldenburg(Oldb)Hbf -> Leer(Ostfriesl)
+Leer(Ostfriesl),8000225,Norddeich Mole,8007768,58,-,8000225>8007768,Leer(Ostfriesl) -> Norddeich Mole
+Münster(Westf)Hbf,8000263,Rheine,8000316,23,-,8000263>8000316,Münster(Westf)Hbf -> Rheine
+Rheine,8000316,Leer(Ostfriesl),8000225,70,-,8000316>8000225,Rheine -> Leer(Ostfriesl)
+Osnabrück Hbf,8000294,Rheine,8000316,27,-,8000294>8000316,Osnabrück Hbf -> Rheine
+Rheine,8000316,Apeldoorn,8400066,82,-,8000316>8400066,Rheine -> Apeldoorn
+Apeldoorn,8400066,Amsterdam Centraal,8400058,60,-,8400066>8400058,Apeldoorn -> Amsterdam Centraal
+Düsseldorf Hbf,8000085,Mönchengladbach Hbf,8000253,25,-,8000085>8000253,Düsseldorf Hbf -> Mönchengladbach Hbf
+Duisburg Hbf,8000086,Mönchengladbach Hbf,8000253,32,-,8000086>8000253,Duisburg Hbf -> Mönchengladbach Hbf
+Mönchengladbach Hbf,8000253,Aachen Hbf,8000001,50,-,8000253>8000001,Mönchengladbach Hbf -> Aachen Hbf
+Aachen Hbf,8000001,Köln Hbf,8000207,38,-,8000001>8000207,Aachen Hbf -> Köln Hbf
+Strasbourg,8700023,Besançon Franche-Comté TGV,8730086,96,-,8700023>8730086,Strasbourg -> Besançon Franche-Comté TGV
+Besançon Franche-Comté TGV,8730086,Marseille-St-Charles,8700464,240,-,8730086>8700464,Besançon Franche-Comté TGV -> Marseille-St-Charles
