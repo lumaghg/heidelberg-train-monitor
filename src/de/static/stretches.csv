@@ -165,3 +165,26 @@ Mönchengladbach Hbf,8000253,Aachen Hbf,8000001,50,-,8000253>8000001,Mönchengla
 Aachen Hbf,8000001,Köln Hbf,8000207,38,-,8000001>8000207,Aachen Hbf -> Köln Hbf
 Strasbourg,8700023,Besançon Franche-Comté TGV,8730086,96,-,8700023>8730086,Strasbourg -> Besançon Franche-Comté TGV
 Besançon Franche-Comté TGV,8730086,Marseille-St-Charles,8700464,240,-,8730086>8700464,Besançon Franche-Comté TGV -> Marseille-St-Charles
+Stuttgart Hbf,8000096,Singen(Hohentwiel),8000073,120,-,8000096>8000073,Stuttgart Hbf -> Singen(Hohentwiel)
+Singen(Hohentwiel),8000073,Zürich HB,8503000,52,-,8000073>8503000,Singen(Hohentwiel) -> Zürich HB
+Zürich HB,8503000,Bregenz,8100090,87,-,8503000>8100090,Zürich HB -> Bregenz
+Bregenz,8100090,Lindau-Reutin,8003693,7,-,8100090>8003693,Bregenz -> Lindau-Reutin
+Lindau-Reutin,8003693,Memmingen,8000249,48,-,8003693>8000249,Lindau-Reutin -> Memmingen
+Memmingen,8000249,Buchloe,8000057,22,-,8000249>8000057,Memmingen -> Buchloe
+Buchloe,8000057,München Hbf,8000261,40,-,8000057>8000261,Buchloe -> München Hbf
+München Hbf,8000261,München Hbf Gl.27-36,8098261,1,geteilter Bahnhof,8000261>8098261,München Hbf -> München Hbf Gl.27-36
+Lindau-Reutin,8003693,Ulm Hbf,8000170,100,-,8003693>8000170,Lindau-Reutin -> Ulm Hbf
+Memmingen,8000249,Ulm Hbf,8000170,35,-,8000249>8000170,Memmingen -> Ulm Hbf
+Memmingen,8000249,Oberstdorf,8004585,90,-,8000249>8004585,Memmingen -> Oberstdorf
+Oberstdorf,8004585,Buchloe,8000057,116,-,8004585>8000057,Oberstdorf -> Buchloe
+Buchloe,8000057,Augsburg Hbf,8000013,28,-,8000057>8000013,Buchloe -> Augsburg Hbf
+München Hbf,8000261,Rosenheim,8000320,37,-,8000261>8000320,München Hbf -> Rosenheim
+Rosenheim,8000320,Wörgl Hbf,8100099,30,-,8000320>8100099,Rosenheim -> Wörgl Hbf
+Wörgl Hbf,8100099,Innsbruck Hbf,8100108,30,-,8100099>8100108,Wörgl Hbf -> Innsbruck Hbf
+Innsbruck Hbf,8100108,Garmisch-Partenkirchen,8002187,94,-,8100108>8002187,Innsbruck Hbf -> Garmisch-Partenkirchen
+Garmisch-Partenkirchen,8002187,München Hbf,8000261,100,-,8002187>8000261,Garmisch-Partenkirchen -> München Hbf
+Innsbruck Hbf,8100108,Landeck-Zams,8100063,44,-,8100108>8100063,Innsbruck Hbf -> Landeck-Zams
+Landeck-Zams,8100063,Feldkirch,8100197,68,-,8100063>8100197,Landeck-Zams -> Feldkirch
+Feldkirch,8100197,Sargans,8509411,35,-,8100197>8509411,Feldkirch -> Sargans
+Sargans,8509411,Zürich HB,8503000,55,-,8509411>8503000,Sargans -> Zürich HB
+Feldkirch,8100197,Bregenz,8100090,30,-,8100197>8100090,Feldkirch -> Bregenz
