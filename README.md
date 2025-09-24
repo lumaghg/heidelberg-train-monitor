@@ -106,10 +106,10 @@ X Magdeburg - Berlin
 - Erfurt - Kassel 
 - Nürnberg - Passau - Wels - Linz
 - München - Salzburg - Bischofshofen - Graz
-- München - Kufstein - Wörgl
-- München - Seefeld - Innsbruck
-- München - Lindau - Bregenz - Zürich
-- Ulm - Lindau - Bregenz - Feldkirch - Innsbruck
+X München - Kufstein - Wörgl
+X München - Seefeld - Innsbruck
+X München - Lindau - Bregenz - Zürich
+X Ulm - Lindau - Bregenz - Feldkirch - Innsbruck
 X Basel - Zürich
 X Augsburg - Nürnberg
 X Augsburg - Ansbach - Würzburg
@@ -137,14 +137,15 @@ X Hannover - Osnabrück - Rheine - Amsterdam
 X Münster - Rheine - Leer
 X Hannover - Bremen - Leer
 X Leer - Norddeich(Mole)
-- Ulm - Oberstdorf
-- Augsburg - Oberstdorf 
-- Stuttgart - Zürich
+X Ulm - Oberstdorf
+X Augsburg - Oberstdorf 
+X Stuttgart - Zürich
 X Strasbourg - Lyon
 - Salzburg - Wels
-- Feldkirch - Zürich
+X Feldkirch - Zürich
 - Lübeck - Puttgarden - Kopenhagen (wenn irgendwann fertig in 10 Jahren)
-
+X Duisburg - M'gladbach - Aachen 
+X Düsseldorf - M'gladbach - Aachen 
 
 ungepixelte Strecken:
 - Berlin - Cottbus (IC zählt als RE)
@@ -155,8 +156,7 @@ ungepixelte Strecken:
 - Offenburg - Konstanz (nur 1 ICE pro Tag im Sommer)
 - Koblenz - Luxemburg (keine Züge)
 - Dortmund - Siegen - Frankfurt (Zug zählt als RE)
-- Duisburg - M'gladbach - Aachen (1 Zug pro Tag)
-- Düsseldorf - M'gladbach - Aachen (1 Zug pro Tag)
+
 
 
 
