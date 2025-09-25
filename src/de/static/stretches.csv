@@ -140,10 +140,10 @@ Hannover Hbf,8000152,Braunschweig Hbf,8000049,32,-,8000152>8000049,Hannover Hbf 
 Karlsruhe Hbf,8000191,Pforzheim Hbf,8000299,20,-,8000191>8000299,Karlsruhe Hbf -> Pforzheim Hbf
 Pforzheim Hbf,8000299,Vaihingen(Enz),8006053,15,-,8000299>8006053,Pforzheim Hbf -> Vaihingen(Enz)
 Augsburg Hbf,8000013,Donauwörth,8000078,20,-,8000013>8000078,Augsburg Hbf -> Donauwörth
-Donauwörth,8000078,Nürnberg Hbf,8000284,50,-,8000078>8000284,Donauwörth -> Nürnberg Hbf
-Ansbach,8000009,Donauwörth,8000078,55,-,8000009>8000078,Ansbach -> Donauwörth
+Donauwörth,8000078,Nürnberg Hbf,8000284,51,-,8000078>8000284,Donauwörth -> Nürnberg Hbf
+Ansbach,8000009,Donauwörth,8000078,47,-,8000009>8000078,Ansbach -> Donauwörth
 Ansbach,8000009,Nürnberg Hbf,8000284,28,-,8000009>8000284,Ansbach -> Nürnberg Hbf
-Ansbach,8000009,Würzburg Hbf,8000260,55,-,8000009>8000260,Ansbach -> Würzburg Hbf
+Ansbach,8000009,Würzburg Hbf,8000260,50,-,8000009>8000260,Ansbach -> Würzburg Hbf
 Ansbach,8000009,Stuttgart Hbf,8000096,106,-,8000009>8000096,Ansbach -> Stuttgart Hbf
 Duisburg Hbf,8000086,Oberhausen Hbf,8000286,5,-,8000086>8000286,Duisburg Hbf -> Oberhausen Hbf
 Oberhausen Hbf,8000286,Gelsenkirchen Hbf,8000118,10,-,8000286>8000118,Oberhausen Hbf -> Gelsenkirchen Hbf
