@@ -89,23 +89,23 @@ X Hamburg - Westerland
 X Hamburg - Padborg - Kopenhagen - Malmö
 X Hamburg - Kiel
 X Hamburg - Lübeck
-- Hamburg - Rostock - Stralsund - Ostseebad Binz
+X Hamburg - Rostock - Stralsund - Ostseebad Binz
 X Uelzen - Stendal 
-- Berlin - Rostock - Warnemünde
+X Berlin - Rostock - Warnemünde
 X Stendal - Ludwigslust
-- Ludwigslust - Rostock
+X Ludwigslust - Rostock
 X Hannover - Braunschweig - Leipzig
 X Magdeburg - Stendal 
 X Magdeburg - Berlin
-- Berlin - Stralsund
-- Berlin - Frankfurt (Oder)
-- Berlin - Dresden - Prag
-- Leipzig - Dresden
-- Leipzig - Jena - Nürnberg
-- Erfurt - Gera
-- Erfurt - Kassel 
-- Nürnberg - Passau - Wels - Linz
-- München - Salzburg - Bischofshofen - Graz
+X Berlin - Stralsund
+X Berlin - Frankfurt (Oder)
+X Berlin - Dresden - Prag
+X Leipzig - Dresden
+X Leipzig - Jena - Nürnberg
+X Erfurt - Gera
+X Erfurt - Kassel 
+X Nürnberg - Passau - Wels - Linz
+X München - Salzburg - Bischofshofen - Graz
 X München - Kufstein - Wörgl
 X München - Seefeld - Innsbruck
 X München - Lindau - Bregenz - Zürich
@@ -141,7 +141,7 @@ X Ulm - Oberstdorf
 X Augsburg - Oberstdorf 
 X Stuttgart - Zürich
 X Strasbourg - Lyon
-- Salzburg - Wels
+X Salzburg - Wels
 X Feldkirch - Zürich
 - Lübeck - Puttgarden - Kopenhagen (wenn irgendwann fertig in 10 Jahren)
 X Duisburg - M'gladbach - Aachen 
