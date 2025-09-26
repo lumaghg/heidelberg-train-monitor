@@ -188,3 +188,37 @@ Landeck-Zams,8100063,Feldkirch,8100197,68,-,8100063>8100197,Landeck-Zams -> Feld
 Feldkirch,8100197,Sargans,8509411,35,-,8100197>8509411,Feldkirch -> Sargans
 Sargans,8509411,Zürich HB,8503000,55,-,8509411>8503000,Sargans -> Zürich HB
 Feldkirch,8100197,Bregenz,8100090,30,-,8100197>8100090,Feldkirch -> Bregenz
+Rosenheim,8000320,Salzburg Hbf,8100002,64,-,8000320>8100002,Rosenheim -> Salzburg Hbf
+Salzburg Hbf,8100002,Bischofshofen,8100042,40,-,8100002>8100042,Salzburg Hbf -> Bischofshofen
+Bischofshofen,8100042,Schladming,8100137,38,-,8100042>8100137,Bischofshofen -> Schladming
+Schladming,8100137,Graz Hbf,8100173,144,-,8100137>8100173,Schladming -> Graz Hbf
+Bischofshofen,8100042,Klagenfurt Hbf,8100085,121,-,8100042>8100085,Bischofshofen -> Klagenfurt Hbf
+Salzburg Hbf,8100002,Wels Hbf,8100014,57,-,8100002>8100014,Salzburg Hbf -> Wels Hbf
+Wels Hbf,8100014,Linz Hbf,8100013,14,-,8100014>8100013,Wels Hbf -> Linz Hbf
+Wels Hbf,8100014,Passau Hbf,8000298,43,-,8100014>8000298,Wels Hbf -> Passau Hbf
+Passau Hbf,8000298,Regensburg Hbf,8000309,56,-,8000298>8000309,Passau Hbf -> Regensburg Hbf
+Regensburg Hbf,8000309,Nürnberg Hbf,8000284,52,-,8000309>8000284,Regensburg Hbf -> Nürnberg Hbf
+Bamberg,8089478,Jena-Göschwitz,8010133,114,-,8089478>8010133,Bamberg -> Jena-Göschwitz
+Jena-Göschwitz,8010133,Gera Hbf,8010125,33,-,8010133>8010125,Jena-Göschwitz -> Gera Hbf
+Jena-Göschwitz,8010133,Naumburg(Saale)Hbf,8010240,35,-,8010133>8010240,Jena-Göschwitz -> Naumburg(Saale)Hbf
+Naumburg(Saale)Hbf,8010240,Leipzig Hbf,8010205,39,-,8010240>8010205,Naumburg(Saale)Hbf -> Leipzig Hbf
+Erfurt Hbf,8010101,Weimar,8010366,13,-,8010101>8010366,Erfurt Hbf -> Weimar
+Weimar,8010366,Jena-Göschwitz,8010133,41,-,8010366>8010133,Weimar -> Jena-Göschwitz
+Weimar,8010366,Naumburg(Saale)Hbf,8010240,25,-,8010366>8010240,Weimar -> Naumburg(Saale)Hbf
+Leipzig Hbf,8010205,Dresden Hbf,8010085,67,-,8010205>8010085,Leipzig Hbf -> Dresden Hbf
+Dresden Hbf,8010085,Berlin Südkreuz,8011113,120,-,8010085>8011113,Dresden Hbf -> Berlin Südkreuz
+Berlin Hbf,8011160,Berlin Ostbahnhof,8010255,8,-,8011160>8010255,Berlin Hbf -> Berlin Ostbahnhof
+Berlin Ostbahnhof,8010255,Frankfurt(Oder),8010113,48,-,8010255>8010113,Berlin Ostbahnhof -> Frankfurt(Oder)
+Berlin Ostbahnhof,8010255,Berlin Südkreuz,8011113,10,-,8010255>8011113,Berlin Ostbahnhof -> Berlin Südkreuz
+Büchen,8000058,Schwerin Hbf,8010324,31,-,8000058>8010324,Büchen -> Schwerin Hbf
+Ludwigslust,8010216,Schwerin Hbf,8010324,23,-,8010216>8010324,Ludwigslust -> Schwerin Hbf
+Schwerin Hbf,8010324,Rostock Hbf,8010304,54,-,8010324>8010304,Schwerin Hbf -> Rostock Hbf
+Rostock Hbf,8010304,Warnemünde,8013236,21,-,8010304>8013236,Rostock Hbf -> Warnemünde
+Rostock Hbf,8010304,Stralsund Hbf,8010338,50,-,8010304>8010338,Rostock Hbf -> Stralsund Hbf
+Stralsund Hbf,8010338,Ostseebad Binz,8011191,48,-,8010338>8011191,Stralsund Hbf -> Ostseebad Binz
+Stralsund Hbf,8010338,Greifswald,8010139,21,-,8010338>8010139,Stralsund Hbf -> Greifswald
+Greifswald,8010139,Berlin Gesundbrunnen,8011102,142,-,8010139>8011102,Greifswald -> Berlin Gesundbrunnen
+Berlin Gesundbrunnen,8011102,Rostock Hbf,8010304,117,-,8011102>8010304,Berlin Gesundbrunnen -> Rostock Hbf
+Berlin Gesundbrunnen,8011102,Berlin Ostbahnhof,8010255,10,-,8011102>8010255,Berlin Gesundbrunnen -> Berlin Ostbahnhof
+Berlin Gesundbrunnen,8011102,Berlin Hbf,8011160,5,-,8011102>8011160,Berlin Gesundbrunnen -> Berlin Hbf
+Berlin Gesundbrunnen,8011102,Berlin-Spandau,8010404,10,-,8011102>8010404,Berlin Gesundbrunnen -> Berlin-Spandau
