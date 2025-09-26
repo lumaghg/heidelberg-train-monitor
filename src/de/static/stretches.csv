@@ -198,7 +198,8 @@ Wels Hbf,8100014,Linz Hbf,8100013,14,-,8100014>8100013,Wels Hbf -> Linz Hbf
 Wels Hbf,8100014,Passau Hbf,8000298,43,-,8100014>8000298,Wels Hbf -> Passau Hbf
 Passau Hbf,8000298,Regensburg Hbf,8000309,56,-,8000298>8000309,Passau Hbf -> Regensburg Hbf
 Regensburg Hbf,8000309,Nürnberg Hbf,8000284,52,-,8000309>8000284,Regensburg Hbf -> Nürnberg Hbf
-Bamberg,8089478,Jena-Göschwitz,8010133,114,-,8089478>8010133,Bamberg -> Jena-Göschwitz
+Bamberg,8089478,Saalfeld(Saale),8010309,82,-,8089478>8010309,Bamberg -> Saalfeld(Saale)
+Saalfeld(Saale),8010309,Jena-Göschwitz,8010133,30,-,8010309>8010133,Saalfeld(Saale) -> Jena-Göschwitz
 Jena-Göschwitz,8010133,Gera Hbf,8010125,33,-,8010133>8010125,Jena-Göschwitz -> Gera Hbf
 Jena-Göschwitz,8010133,Naumburg(Saale)Hbf,8010240,35,-,8010133>8010240,Jena-Göschwitz -> Naumburg(Saale)Hbf
 Naumburg(Saale)Hbf,8010240,Leipzig Hbf,8010205,39,-,8010240>8010205,Naumburg(Saale)Hbf -> Leipzig Hbf
