@@ -335,7 +335,7 @@ for index, station_row in df_stations.iterrows():
                 
 
     except Exception as e:
-        raise e
+        print(e)
     
 # POSTPROCESS BEFORE SAVING
 
